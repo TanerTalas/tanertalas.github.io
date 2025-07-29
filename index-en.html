@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taner Talas | Portfolio</title>
+    <meta name="author" content="Taner Talas">
+    <meta name="description"
+        content="This is the personal portfolio website of Taner Talas, showcasing user interface-focused projects and front-end development work.">
+
+    <meta name="theme-color" content="#3D83F8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta property="og:title" content="Taner Talas | Front-End Portfolio">
+    <meta property="og:description"
+        content="Explore my personal projects focused on interactive web interfaces and user experience.">
+    <!-- <meta property="og:image" content="https://tanertalas.github.io/images/banner.png"> görsel -->
+    <meta property="og:url" content="https://tanertalas.github.io">
+    <meta property="og:type" content="website">
+    <meta name="robots" content="index, follow">
+
+    <!-- <link rel="canonical" href="https://tanertalas.github.io"> -->
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="./images/icons/logo.svg">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- nav - start -->
+    <nav>
+        <img src="./images/icons/logo.svg" alt="Logo" id="navbarLogo">
+
+        <ul id="navbarMenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <button id="modeSwitch"><img src="./images/icons/sunup.svg" alt="light mode" id="modeIcon"></button>
+        <button id="menu"><img src="./images/icons/menuicon.svg" alt="menu" id="menuIcon"></button>
+        <div id="languageSwitcher">
+            <button id="langToggle">Language</button>
+            <div id="langOptions">
+                <a href="index.html" class="langBtn">TR</a>
+                <a href="index-en.html" class="activeLang">EN</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- nav - end -->
+
+    <!-- header - start -->
+    <header id="header">
+        <div id="hero">
+            <div id="heroText">
+                <h1>Hello, I'm Taner <br>
+                    <span id="typedText"></span><span id="cursor">|</span>
+                </h1>
+                <p>I'm constantly learning new things to improve myself. I designed and coded this website entirely by
+                    myself!</p>
+                <div id="headerLinks">
+                    <a href="https://github.com/TanerTalas" target="_blank"><img src="./images/icons/githubhero.svg"
+                            alt="Github Icon"></a>
+                    <a href="https://www.linkedin.com/in/taner-talas-a43a2236a/" target="_blank"><img
+                            src="./images/icons/linkedinhero.svg" alt="Linkedin Icon"></a>
+                </div>
+                <a href="#about" id="headerButton">Continue</a>
+            </div>
+            <div id="heroImg">
+                <img src="./images/avatar.svg" alt="">
+            </div>
+        </div>
+        <img src="./images/clouds/light/8.svg" id="c1" class="clouds" alt="">
+        <img src="./images/clouds/light/7.svg" id="c2" class="clouds" alt="">
+        <img src="./images/clouds/light/6.svg" id="c3" class="clouds" alt="">
+        <img src="./images/clouds/light/5.svg" id="c4" class="clouds" alt="">
+        <img src="./images/clouds/light/4.svg" id="c5" class="clouds" alt="">
+        <img src="./images/clouds/light/3.svg" id="c6" class="clouds" alt="">
+        <img src="./images/clouds/light/2.svg" id="c7" class="clouds" alt="">
+        <img src="./images/clouds/light/1.svg" id="c8" class="clouds" alt="">
+    </header>
+    <!-- header - end -->
+
+    <!-- about - start -->
+    <section id="about" class="container">
+        <h2>About Me</h2>
+        <h3>Let Me Introduce Myself</h3>
+        <p> I'm currently studying Computer Programming at Istanbul Gedik University. Before starting university, I
+            developed a habit of self-learning — and I’ve been maintaining it ever since. Right now, I'm focused on
+            Front-End development and continue to work toward my goal of becoming a Full-Stack developer in the future.
+        </p>
+        <h3 style="margin-top: 40px;">Technologies I Use</h3>
+        <p>I develop user-friendly interfaces using modern web technologies. While specializing in Front-End
+            development, I also explore different programming languages to strengthen my technical foundation.</p>
+        <div id="technologies">
+            <div><img src="./images/toolicons/htmlicon.svg" alt="">HTML</div>
+            <div><img src="./images/toolicons/cssicon.svg" alt="">CSS</div>
+            <div><img src="./images/toolicons/javascripticon.svg" alt="">JavaScript</div>
+            <div><img src="./images/toolicons/figmaicon.svg" alt="">Figma</div>
+            <div><img src="./images/toolicons/giticon.svg" alt="">Git</div>
+            <div><img src="./images/toolicons/mysqlicon.svg" alt="">MySQL</div>
+            <div><img src="./images/toolicons/javaicon.svg" alt="">Java</div>
+            <div><img src="./images/toolicons/pythonicon.svg" alt="">Python</div>
+        </div>
+    </section>
+    <!-- about - end -->
+
+    <!-- services - start -->
+    <section id="services" class="container">
+        <h2>My Services</h2>
+        <h3>What I Offer</h3>
+
+        <div id="allServices">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="./images/frontendicon.svg" alt="Front-End Icon">
+                        <h4>Front-End Development</h4>
+                    </div>
+                    <div class="card-back">
+                        <img src="./images/frontendicon.svg" alt="Front-End Icon">
+                        <h4>Front-End Development</h4>
+                        <p>I build fast, responsive, and user-friendly websites using modern web technologies — focusing
+                            on both design and functionality.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="./images/designicon.svg" alt="Design Icon">
+                        <h4>Design</h4>
+                    </div>
+                    <div class="card-back">
+                        <img src="./images/designicon.svg" alt="Design Icon">
+                        <h4>Design</h4>
+                        <p>I create designs that enhance user experience by establishing a clean and intuitive visual
+                            language.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- services - end -->
+
+    <!-- projects - start -->
+    <section id="projects" class="container">
+        <h2>My Projects</h2>
+        <h3>Projects Are on the Way!</h3>
+        <!-- <div id="allProjects">
+            <div>
+                <img src="" alt="">
+                <h4></h4>
+                <p></p>
+                <button></button>
+            </div>
+            <div>
+                <img src="" alt="">
+                <h4></h4>
+                <p></p>
+                <button></button>
+            </div>
+            <div>
+                <img src="" alt="">
+                <h4></h4>
+                <p></p>
+                <button></button>
+            </div>
+        </div>
+        <button></button> -->
+    </section>
+    <!-- projects - end -->
+
+    <!-- contact - start -->
+    <section id="contact" class="container">
+        <h2>Contact Me</h2>
+        <h3>Get in Touch</h3>
+        <p>Whether you’d like to learn more about me and my work — or just want to say hi — feel free to reach out!</p>
+        <address id="contactInfo">
+            <div id="info">
+                <strong>Email</strong>
+                <a href=""><img src="./images/icons/mailcontact.svg" alt=""> r7byx0@gmail.com</a>
+                <strong>Address</strong>
+                <a href=""><img src="./images/icons/mappincontact.svg" alt=""> Turkey, Istanbul, Sultanbeyli</a>
+                <strong>Links</strong>
+                <a href="https://github.com/TanerTalas" target="_blank"><img src="./images/icons/githubcontact.svg"
+                        alt="">Github / Taner Talas</a>
+                <a href="https://www.linkedin.com/in/taner-talas-a43a2236a/" target="_blank"><img
+                        src="./images/icons/linkedincontact.svg" alt="">LinkedIn / Taner Talas</a>
+            </div>
+            <div id="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48201.61320578417!2d29.237114850521568!3d40.96832271686841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cad05ff4c5d567%3A0xb011010aa2dc68c0!2sSultanbeyli%2C%20%C4%B0stanbul!5e0!3m2!1str!2str!4v1753281008325!5m2!1str!2str"
+                    width="100%" style="border:0; border-radius: 16px;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </address>
+    </section>
+    <!-- contact - end -->
+
+    <!-- askQuestion - start -->
+
+    <div id="characterContainer">
+        <img id="stick" src="./images/character/stick.svg" />
+        <img id="body" src="./images/character/body.svg" />
+        <img id="head" src="./images/character/head.svg" />
+        <div id="textBubble"><span id="bubbleText"></span><span class="cursor">|</span>
+        </div>
+    </div>
+    <img id="leftHand" src="./images/character/left-hand.svg" />
+    <img id="rightHand" src="./images/character/right-hand.svg" />
+
+
+    <!-- askQuestion - end -->
+
+    <!-- footer - start -->
+    <footer>
+        <p>Made with <img src="./images/icons/heart.svg" alt="heart"> by Taner Talas</p>
+        <p>This page design was inspired by <a href="https://aakash-sharma.netlify.app" target="_blank">Aakash
+                Sharma</a></p>
+    </footer>
+    <!-- footer - end -->
+
+</body>
+
+</html>
