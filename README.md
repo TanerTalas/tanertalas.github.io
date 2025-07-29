@@ -15,7 +15,7 @@ This is the source code of my personal portfolio website — designed, coded, an
 - Language Switcher (TR / EN)
 - Interactive Elements and Animations
 
-🔗 **Live Demo**: [tanertalas.github.io](https://tanertalas.github.io/index-en.html)
+🔗 **Live Demo**: [tanertalas.github.io](https://tanertalas.github.io)
 
 
 ---
@@ -35,7 +35,7 @@ Bu repo, kişisel portföy sitemin kaynak kodlarını içerir. Tasarım ve geli�
 - TR / EN Dil Seçici
 - Etkileşimli öğeler ve animasyonlar
 
-🔗 **Canlı Site**: [tanertalas.github.io](https://tanertalas.github.io)
+🔗 **Canlı Site**: [tanertalas.github.io](https://tanertalas.github.io/index-tr.html)
 
 ---
 
