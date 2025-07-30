@@ -846,9 +846,9 @@ footer p a:hover {
 
 /* footer - end */
 
-@media (max-width: 1199.98px) {
+@media (max-width: 1199.98px), (max-height: 639.99px) {
     #heroText {
-        z-index: 8;
+        z-index: 10;
     }
 }
 
