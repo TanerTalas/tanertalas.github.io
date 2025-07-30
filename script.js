@@ -32,6 +32,13 @@ if (langToggle && langOptions) {
     });
 }
 
+// Services flipcard onclick eventi
+document.querySelectorAll('.card-inner').forEach(card => {
+    card.addEventListener('click', () => {
+        card.classList.toggle('flipped');
+    });
+});
+
 // Tema değiştirme
 const toggleBtn = document.getElementById("modeSwitch");
 const modeIcon = document.getElementById("modeIcon");

@@ -529,6 +529,7 @@ header {
     width: 300px;
     height: 460px;
     perspective: 1000px;
+    transition: transform 0.6s ease;
 }
 
 .card-inner {
@@ -538,9 +539,18 @@ header {
     transform-style: preserve-3d;
     position: relative;
     text-align: center;
+    transition: transform 0.6s ease;
 }
 
-.card:hover .card-inner {
+@media (hover: hover) {
+
+    .card:hover,
+    .card-inner {
+        transform: scale(1.03);
+    }
+}
+
+.card-inner.flipped {
     transform: rotateY(180deg);
 }
 
