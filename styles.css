@@ -37,7 +37,6 @@ section,
 
 body {
     font-family: 'Roboto', sans-serif;
-
 }
 
 
@@ -125,15 +124,24 @@ h3+p {
 nav {
     position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
+    width: 100%;
+    height: 72px;
     background-color: var(--background-nav-footer);
     color: white;
     display: flex;
-    align-items: center;
+    justify-content: center;
     z-index: 2000;
-    padding: 12px 24px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 25%);
+    padding: 0 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.253);
+}
+
+.nav-container {
+    position: relative;
+    padding: 12px 0;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
 }
 
 #navbarLogo {
@@ -160,7 +168,6 @@ nav {
     padding: 8px 12px;
     border-radius: 4px;
     transition: color 0.3s;
-
 }
 
 #navbarMenu a:hover {
@@ -208,25 +215,55 @@ nav {
     transform: scale(1.2);
 }
 
+/* nav - end */
+
+/* Language Button - Start */
 #languageSwitcher {
-    position: relative;
+    position: absolute;
+    top: 72px;
+    right: 0;
+    background-color: var(--background-nav-footer);
+    color: white;
+    border-radius: 0px 0px 4px 4px;
     display: flex;
     align-items: center;
     gap: 8px;
-    margin-left: 24px;
+    z-index: 19;
 }
 
 #langToggle {
-    display: none;
+    min-width: 88px;
+    text-align: center;
+    background: none;
+    color: inherit;
+    padding: 12px 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 500;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#langToggle.active {
+    background-color: #3B82F6;
 }
 
 #langOptions {
-    display: flex;
+    display: none;
+    align-items: center;
+    justify-content: center;
     gap: 16px;
+    border-radius: 8px;
+    z-index: 999;
+    padding: 0 16px;
+}
+
+#langOptions.show {
+    display: flex;
 }
 
 #langOptions a {
-    border: 1px solid rgba(255, 255, 255, 0.8);
     color: white;
     padding: 4px 8px;
     border-radius: 4px;
@@ -243,7 +280,7 @@ nav {
 }
 
 .langBtn:hover {
-    background-color: #3B82F6;
+    background-color: #ff480020;
 }
 
 .activeLang {
@@ -252,7 +289,7 @@ nav {
     pointer-events: none;
 }
 
-/* nav - end */
+/* Language Button - End */
 
 /* header - start */
 
@@ -846,7 +883,8 @@ footer p a:hover {
 
 /* footer - end */
 
-@media (max-width: 1199.98px), (max-height: 639.99px) {
+@media (max-width: 1199.98px),
+(max-height: 639.99px) {
     #heroText {
         z-index: 10;
     }
@@ -860,52 +898,6 @@ footer p a:hover {
     #heroImg {
         display: none;
     }
-
-    #languageSwitcher {
-        flex-direction: column;
-        align-items: flex-end;
-    }
-
-    #langToggle {
-        display: inline-block;
-        background: none;
-        color: white;
-        padding: 8px 8px;
-        border: 1px solid white;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 1rem;
-        line-height: 1.5;
-        font-weight: 500;
-        transition: background-color 0.3s, transform 0.2s;
-    }
-
-    #langToggle.active {
-        background-color: #3B82F6;
-        transform: scale(1.05);
-    }
-
-    #langOptions {
-        display: none;
-        position: absolute;
-        flex-direction: column;
-        top: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-        padding: 8px;
-        border-radius: 8px;
-        margin-top: 4px;
-        z-index: 999;
-    }
-
-    #langOptions.show {
-        display: flex;
-    }
-
-    #langOptions a {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
 }
 
 @media (max-width: 767.98px) {
@@ -917,6 +909,7 @@ footer p a:hover {
         position: fixed;
         top: 72px;
         right: -100%;
+        margin-right: 0;
         width: 160px;
         background-color: var(--background-nav-footer);
         flex-direction: column;
@@ -924,8 +917,6 @@ footer p a:hover {
         padding: 24px 24px;
         transition: right 0.5s ease-in-out;
         z-index: 20;
-        margin: 16px 0;
-        border-top-left-radius: 8px;
         border-bottom-left-radius: 8px;
 
     }
