@@ -119,8 +119,7 @@ h3+p {
 
 /* sections-settings - end */
 
-/* nav - start */
-
+/* ******************** NAVIGATION SECTION - START ******************** */
 nav {
     position: fixed;
     top: 0;
@@ -130,34 +129,38 @@ nav {
     color: white;
     display: flex;
     justify-content: center;
-    z-index: 2000;
+    align-items: center;
     padding: 0 24px;
+    z-index: 2000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.253);
 }
 
 .nav-container {
     position: relative;
-    padding: 12px 0;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1248px; /* padding-y: +48px */
     display: flex;
     align-items: center;
 }
 
-#navbarLogo {
+/* Navigation Logo - Start */
+#navLogo {
     display: inline-block;
     width: 48px;
     margin-right: auto;
+    pointer-events: none;
 }
+/* Navigation Logo - End */
 
-#navbarMenu {
+/* Navigation Menu and Menu Button - Start */
+#navMenu {
     display: flex;
     gap: 16px;
     list-style: none;
-    margin-right: 48px;
+    margin-right: 32px;
 }
 
-#navbarMenu a {
+#navMenu a {
     display: inline-block;
     color: white;
     text-decoration: none;
@@ -167,36 +170,18 @@ nav {
     letter-spacing: 0.15px;
     padding: 8px 12px;
     border-radius: 4px;
-    transition: color 0.3s;
+    transition: background-color 0.2s;
 }
 
-#navbarMenu a:hover {
-    background-color: #3B82F6;
+#navMenu a:hover {
+    background-color: rgba(59, 131, 246, 0.15);
 }
 
-#navbarMenu a.active {
-    background-color: #3B82F6;
+#navMenu a.active {
+    background-color:rgb(59, 131, 246);
 }
 
-#modeSwitch {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-#modeIcon {
-    width: 48px;
-    transition: transform 0.2s;
-}
-
-#modeIcon:hover {
-    transform: scale(1.2);
-}
-
-#menu {
+#menuButton {
     display: none;
     justify-content: center;
     align-items: center;
@@ -208,30 +193,47 @@ nav {
 
 #menuIcon {
     width: 48px;
-    transition: transform 0.2s;
+}
+/* Navigation Menu and Menu Button - End */
+
+/* Theme Button - Start */
+#themeButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
-#menuIcon:hover {
+#themeIcon {
+    width: 48px;
+    transition: transform 0.2s;
+    pointer-events: none;
+}
+
+#themeButton:hover > #themeIcon {
     transform: scale(1.2);
 }
-
-/* nav - end */
+/* Theme Button - End */
 
 /* Language Button - Start */
 #languageSwitcher {
     position: absolute;
-    top: 72px;
+    top: 80px;
     right: 0;
     background-color: var(--background-nav-footer);
     color: white;
-    border-radius: 0px 0px 4px 4px;
+    border-radius: 4px;
     display: flex;
     align-items: center;
     gap: 8px;
     z-index: 19;
+    overflow: hidden;
 }
 
-#langToggle {
+
+#languageToggle {
     min-width: 88px;
     text-align: center;
     background: none;
@@ -245,11 +247,15 @@ nav {
     transition: background-color 0.3s, transform 0.2s;
 }
 
-#langToggle.active {
-    background-color: #3B82F6;
+#languageToggle:hover {
+    background-color: rgba(59, 131, 246, 0.15);
 }
 
-#langOptions {
+#languageToggle.active {
+    background-color: rgb(59, 131, 246);
+}
+
+#languageOptions {
     display: none;
     align-items: center;
     justify-content: center;
@@ -259,11 +265,11 @@ nav {
     padding: 0 16px;
 }
 
-#langOptions.show {
+#languageOptions.show {
     display: flex;
 }
 
-#langOptions a {
+#languageOptions a {
     color: white;
     padding: 4px 8px;
     border-radius: 4px;
@@ -275,21 +281,23 @@ nav {
     text-decoration: none;
 }
 
-.langBtn {
-    background-color: #ff480039;
+.nonActiveLanguage {
+    background-color: rgba(255, 72, 0, 0.2);
 }
 
-.langBtn:hover {
-    background-color: #ff480020;
+.nonActiveLanguage:hover {
+    background-color: rgba(255, 72, 0, 0.12);
 }
 
-.activeLang {
-    background-color: #3B82F6 !important;
-    cursor: default !important;
+.activeLanguage {
+    background-color: rgb(0, 98, 255);
+    cursor: default;
     pointer-events: none;
 }
-
 /* Language Button - End */
+
+/* ******************** NAVIGATION SECTION - END ******************** */
+
 
 /* header - start */
 
@@ -905,7 +913,7 @@ footer p a:hover {
         font-size: 14px;
     }
 
-    #navbarMenu {
+    #navMenu {
         position: fixed;
         top: 72px;
         right: -100%;
@@ -921,11 +929,15 @@ footer p a:hover {
 
     }
 
-    #navbarMenu.menu-open {
+    #navMenu.menu-open {
         right: 0;
     }
 
-    #menu {
+    #themeIcon:hover {
+        transform: none;
+    }
+
+    #menuButton {
         display: flex;
     }
 

@@ -1,4 +1,4 @@
-// Sayfa yüklenmeden önce scroll pozisyonunu sıfırla
+// ******************** Reset scrolling before page load ********************
 if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
 }
@@ -7,41 +7,26 @@ if (window.location.hash) {
     history.replaceState(null, null, " ");
     window.scrollTo(0, 0);
 }
+// ******************** Menu Section Observer ********************
+const sections = document.querySelectorAll("section, header");
+const navLinks = document.querySelectorAll("#navMenu a");
 
-// Menü butonu
-const menuBtn = document.getElementById("menu");
-const navbarMenu = document.getElementById("navbarMenu");
-const menuIcon = document.getElementById("menuIcon");
-
-if (menuBtn && navbarMenu && menuIcon) {
-    menuBtn.addEventListener("click", () => {
-        const isOpen = navbarMenu.classList.toggle("menu-open");
-        menuIcon.src = isOpen ? "./images/icons/close.svg" : "./images/icons/menuicon.svg";
-        menuIcon.alt = isOpen ? "close menu" : "open menu";
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const id = entry.target.getAttribute("id");
+            navLinks.forEach(link => {
+                link.classList.toggle("active", link.getAttribute("href") === `#${id}`);
+            });
+        }
     });
-}
-
-// Dil değiştirme butonu
-const langToggle = document.getElementById("langToggle");
-const langOptions = document.getElementById("langOptions");
-
-if (langToggle && langOptions) {
-    langToggle.addEventListener("click", () => {
-        langOptions.classList.toggle("show");
-        langToggle.classList.toggle("active");
-    });
-}
-
-// Services flipcard onclick eventi
-document.querySelectorAll('.card-inner').forEach(card => {
-    card.addEventListener('click', () => {
-        card.classList.toggle('flipped');
-    });
+}, {
+    rootMargin: "-50% 0px -49% 0px",
+    threshold: 0
 });
-
-// Tema değiştirme
-const toggleBtn = document.getElementById("modeSwitch");
-const modeIcon = document.getElementById("modeIcon");
+// ******************** Theme Button ********************
+const toggleBtn = document.getElementById("themeButton");
+const modeIcon = document.getElementById("themeIcon");
 const htmlEl = document.documentElement;
 
 if (toggleBtn && modeIcon) {
@@ -50,7 +35,7 @@ if (toggleBtn && modeIcon) {
         modeIcon.src = isDark ? "./images/icons/sundown.svg" : "./images/icons/sunup.svg";
         modeIcon.alt = isDark ? "dark mode" : "light mode";
 
-        // Bulut görsellerini güncelle
+        // Clouds color
         const cloudCount = 8;
         const themeFolder = isDark ? "dark" : "light";
         for (let i = 1; i <= cloudCount; i++) {
@@ -59,6 +44,43 @@ if (toggleBtn && modeIcon) {
         }
     });
 }
+// ******************** Menu Button and Language Button ********************
+const menuBtn = document.getElementById("menuButton");
+const navbarMenu = document.getElementById("navMenu");
+const menuIcon = document.getElementById("menuIcon");
+const langToggle = document.getElementById("languageToggle");
+const langOptions = document.getElementById("languageOptions");
+// Menu
+if (menuBtn && navbarMenu && menuIcon) {
+    menuBtn.addEventListener("click", () => {
+        // Checking if language button is active or not
+        if (langToggle?.classList.contains("active")) {
+            langToggle.classList.remove("active");
+            langOptions?.classList.remove("show");
+        }
+
+        const isOpen = navbarMenu.classList.toggle("menu-open");
+        menuIcon.src = isOpen
+            ? "./images/icons/close.svg"
+            : "./images/icons/menuicon.svg";
+        menuIcon.alt = isOpen ? "close menu" : "open menu";
+    });
+}
+// Language
+if (langToggle && langOptions) {
+    langToggle.addEventListener("click", () => {
+        langOptions.classList.toggle("show");
+        langToggle.classList.toggle("active");
+    });
+}
+
+
+//******* */ Services flipcard onclick eventi
+document.querySelectorAll('.card-inner').forEach(card => {
+    card.addEventListener('click', () => {
+        card.classList.toggle('flipped');
+    });
+});
 
 // Yazı yazma animasyonu (typedText)
 const typedText = document.getElementById("typedText");
@@ -127,24 +149,6 @@ window.addEventListener("load", () => {
 
     document.querySelectorAll("#technologies div").forEach(item => {
         techObserver.observe(item);
-    });
-
-    // Menü link aktifliği (scroll takip)
-    const sections = document.querySelectorAll("section, header");
-    const navLinks = document.querySelectorAll("#navbarMenu a");
-
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const id = entry.target.getAttribute("id");
-                navLinks.forEach(link => {
-                    link.classList.toggle("active", link.getAttribute("href") === `#${id}`);
-                });
-            }
-        });
-    }, {
-        rootMargin: "-50% 0px -49% 0px",
-        threshold: 0
     });
 
     sections.forEach(section => observer.observe(section));
