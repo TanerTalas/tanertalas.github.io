@@ -108,19 +108,6 @@ const observer2 = new IntersectionObserver(
 )
 fadeElements.forEach(el => observer2.observe(el))
 
-// ******************** Project Section - Read More ******************** 
-document.querySelectorAll('.project').forEach(project => {
-  const readMoreBtn = project.querySelector('.projectReadMore');
-  const hiddenInfo = project.querySelector('.hiddenProjectInfo');
-
-  if (!readMoreBtn || !hiddenInfo) return;
-
-  readMoreBtn.addEventListener('click', () => {
-    readMoreBtn.style.display = 'none';   // butonu gizle
-    hiddenInfo.classList.add('showP');     // içeriği göster
-  });
-});
-
 // Sayfa yüklendiğinde yapılacaklar
 window.addEventListener("load", () => {
     // Bulut animasyonu
