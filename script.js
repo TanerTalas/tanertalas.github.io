@@ -85,7 +85,7 @@ document.querySelectorAll('.card-inner').forEach(card => {
 // Yazı yazma animasyonu (typedText)
 const typedText = document.getElementById("typedText");
 const lang = document.documentElement.lang;
-const typedMessage = lang === "en" ? "I'm a Front-End Developer" : "Front-End Geliştiricisiyim";
+const typedMessage = lang === "en" ? "I'm a Front End Developer" : "Front End Geliştiricisiyim";
 let index = 0;
 
 function typeChar() {
@@ -134,8 +134,8 @@ window.addEventListener("load", () => {
 
     // Hero animasyonu ve yazı
     setTimeout(() => {
-        document.getElementById("heroText")?.classList.add("hero-visible");
-        document.getElementById("heroImg")?.classList.add("hero-visible");
+        document.getElementById("header-left")?.classList.add("hero-visible");
+        document.getElementById("header-right")?.classList.add("hero-visible");
     }, 300);
 
     setTimeout(typeChar, 1500);
