@@ -27,6 +27,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
     <link rel="icon" href="./images/icons/logo.svg">
     <script src="script.js" defer></script>
 </head>
@@ -66,7 +67,7 @@
     <header id="header">
         <div id="header-container">
             <div id="header-left">
-                <h1>Hello, I'm Taner <br>
+                <h1 class="montserratFont">Hello, I'm Taner <br>
                     <span id="typedText"></span><span id="cursor">|</span>
                 </h1>
                 <p>I'm constantly learning new things to improve myself. I designed and coded this website entirely by
@@ -98,15 +99,15 @@
     <!-- about - start -->
     <section id="about">
         <div class="about-container">
-            <h2 class="fade-up">About Me</h2>
-            <h3 class="fade-up">Me in Short</h3>
+            <h2 class="fade-up montserratFont">About Me</h2>
+            <h3 class="fade-up montserratFont">Me in Short</h3>
             <p class="fade-up"> I'm currently studying Computer Programming at Istanbul Gedik University. Before
                 starting university, I
                 developed a habit of self-learning — and I’ve been maintaining it ever since. Right now, I'm focused on
                 Front-End development and continue to work toward my goal of becoming a Full-Stack developer in the
                 future.
             </p>
-            <h3 style="margin-top: 32px;" class="fade-up">My Working Style and Skills</h3>
+            <h3 style="margin-top: 32px;" class="fade-up montserratFont">My Working Style and Skills</h3>
             <p class="fade-up">I develop user-friendly interfaces using modern web technologies. While specializing in
                 Front-End
                 development, I also explore different programming languages to strengthen my technical foundation.</p>
@@ -164,8 +165,8 @@
     <!-- services - start -->
     <section id="services">
         <div class="services-container">
-            <h2 class="fade-up">My Services</h2>
-            <h3 class="fade-up">Services I Can Provide</h3>
+            <h2 class="fade-up montserratFont">My Services</h2>
+            <h3 class="fade-up montserratFont">Services I Can Provide</h3>
             <div class="myServices">
                 <div class="fade-up">
                     <div class="service">
@@ -203,29 +204,53 @@
     <!-- projects - start -->
     <section id="projects">
         <div class="projects-container">
-            <h2>My Projects</h2>
-            <h3>Projects Are on the Way!</h3>
-            <!-- <div id="allProjects">
-            <div>
-                <img src="" alt="">
-                <h4></h4>
-                <p></p>
-                <button></button>
+            <h2 class="montserratFont fade-up">My Projects</h2>
+            <h3 class="montserratFont fade-up">A Few of My Projects</h3>
+            <div class="projectShowcase">
+                <div class="fade-up">
+                    <div class="project">
+                        <img src="./images/projects/restaurant-promotion.svg" alt="">
+                        <h4>Restaurant Promotion</h4>
+                        <p>This project showcases a modern café website concept inspired by contemporary French
+                            design. </p>
+                        <a href="https://github.com/TanerTalas/restaurant-promotion" class="projectGithubLink"
+                            target="_blank">
+                            <img src="./images/icons/githubcontact.svg" alt="Github Icon"><span class="codeFont">More
+                                Info &amp; Code &gt;</span>
+                        </a>
+                        <div class="projectWebsiteLink-wrapper">
+                            <a href="https://tanertalas.github.io/restaurant-promotion/"
+                                class="projectWebsiteLink codeFont" target="_blank">Live Website</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fade-up">
+                    <div class="project">
+                        <img src="./images/projects/mondrian-css.svg" alt="">
+                        <h4>Mondrian CSS</h4>
+                        <p>Front end project featuring CSS recreations of Mondrian paintings, focusing on layout,
+                            responsive design, and artistic interpretation.</p>
+                        <a href="https://github.com/TanerTalas/mondrian-css" class="projectGithubLink" target="_blank">
+                            <img src="./images/icons/githubcontact.svg" alt="Github Icon"><span class="codeFont">More
+                                Info &amp; Code &gt;</span>
+                        </a>
+                        <div class="projectWebsiteLink-wrapper">
+                            <a href="https://tanertalas.github.io/mondrian-css/" class="projectWebsiteLink codeFont"
+                                target="_blank">Live Website</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div>
-                <img src="" alt="">
-                <h4></h4>
-                <p></p>
-                <button></button>
+            <div class="projectsButton-wrapper fade-up">
+                <a href="" class="projectsButton">
+                    <span>See All Projects</span>
+                    <span class="chevrons">
+                        <img src="./images/icons/chevron-right.svg" alt=""><img src="./images/icons/chevron-right.svg"
+                            alt=""><img src="./images/icons/chevron-right.svg" alt="">
+                    </span>
+                </a>
             </div>
-            <div>
-                <img src="" alt="">
-                <h4></h4>
-                <p></p>
-                <button></button>
-            </div>
-        </div>
-        <button></button> -->
         </div>
     </section>
     <!-- projects - end -->

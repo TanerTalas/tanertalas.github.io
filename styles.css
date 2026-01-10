@@ -39,10 +39,16 @@ body {
 }
 
 
-.montserrat-regular {
+.montserratFont {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.codeFont {
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
     font-style: normal;
 }
 
@@ -81,7 +87,7 @@ h3 {
     color: rgb(59, 131, 246);
     font-size: 2rem;
     line-height: 1.25;
-    font-weight: 500;
+    font-weight: 600 !important;
     margin-bottom: 16px;
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.10);
 }
@@ -526,7 +532,8 @@ header {
     justify-content: center;
 }
 
-.about-container, .services-container {
+.about-container,
+.services-container {
     padding: 0 24px;
     width: 100%;
     max-width: 1248px;
@@ -583,7 +590,8 @@ header {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 48px;
+    column-gap: 48px;
+    row-gap: 24px;
 }
 
 /* Card Settings - Start */
@@ -603,21 +611,22 @@ header {
     box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.25);
 }
 
-.service > h4 {
+.service>h4 {
     color: black;
     display: flex;
     align-items: center;
     gap: 16px;
 }
 
-.service > h4 + p {
+.service>h4+p {
     color: black;
 }
 
-.service> h4 > img {
+.service>h4>img {
     width: 48px;
     pointer-events: none;
 }
+
 /* Card Settings - End */
 
 /* Card Tools - Start */
@@ -627,7 +636,7 @@ header {
     gap: 16px;
 }
 
-.serviceTools > div {
+.serviceTools>div {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -641,7 +650,7 @@ header {
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.serviceTools > div:hover {
+.serviceTools>div:hover {
     transform: scale(1.03);
     background-color: black;
 }
@@ -650,16 +659,174 @@ header {
     width: 32px;
     pointer-events: none;
 }
+
 /* Card Tools - End */
 /* ******************** SERVICES SECTION - END ******************** */
 
-/* projects - start */
-
+/* ******************** PROJECTS SECTION - START ******************** */
+/* Project Settings - Start */
 #projects {
     background-color: var(--background-odd);
+    display: flex;
+    justify-content: center;
 }
 
-/* projects - end */
+.projects-container {
+    padding: 24px;
+    width: 100%;
+    max-width: 1248px;
+}
+
+/* Project Settings - End */
+
+/* Project - Start */
+.projectShowcase {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    margin-bottom: 48px;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.25);
+    width: auto;
+    max-width: 500px;
+    min-height: 520px;
+    padding-bottom: 24px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.project:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.6);
+}
+
+.project> :not(img:first-child) {
+    /* Not selecting img the first child */
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.project>img {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.project>p {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 300;
+    letter-spacing: 0.15px;
+    color: #E8E8E8;
+    text-align: justify;
+    margin-bottom: 16px;
+}
+
+.projectGithubLink {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: 8px;
+    color: white;
+    text-decoration: none;
+    padding: 0 !important;
+    margin-left: 24px;
+    margin-top: auto;
+    margin-bottom: 16px;
+    font-weight: 300;
+}
+
+.projectGithubLink:hover {
+    opacity: 0.7;
+}
+
+.projectGithubLink>img {
+    width: 24px;
+}
+
+.projectWebsiteLink-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.projectWebsiteLink {
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 8px 16px;
+    background-color: white;
+    color: black;
+    font-weight: 600;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    will-change: transform;
+}
+
+.projectWebsiteLink:hover {
+    transform: scale(1.02);
+    opacity: 0.8;
+}
+
+/* Project - End */
+.projectsButton-wrapper {
+    text-align: center;
+}
+
+.projectsButton {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    letter-spacing: 0.15px;
+    font-weight: 400;
+    transition: opacity 0.3s ease;
+}
+
+.projectsButton:hover {
+    opacity: 0.8;
+}
+
+.projectsButton > :first-child {
+    border-bottom: 1px solid white;
+}
+
+.chevrons {
+    position: relative;
+    width: 24px;
+    height: 24px;
+}
+
+.projectsButton > .chevrons img {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    transition: transform .4s ease;
+}
+
+.projectsButton:hover .chevrons img:nth-child(1) {
+    transform: translate(6px, -50%);
+}
+
+.projectsButton:hover .chevrons img:nth-child(2) {
+    transform: translate(12px, -50%);
+}
+
+.projectsButton:hover .chevrons img:nth-child(3) {
+    transform: translate(18px, -50%);
+}
+
+/* ******************** PROJECTS SECTION - END ******************** */
 
 /* contact - start */
 
@@ -949,13 +1116,16 @@ footer p a:hover {
         display: none;
     }
 
-    .card {
-        width: 300px;
-        height: 360px;
-    }
-
     .tool {
         min-width: 180px;
+    }
+
+    .projectShowcase {
+        flex-wrap: wrap;
+    }
+
+    .project {
+        min-height: auto;
     }
 }
 
