@@ -533,7 +533,7 @@ header {
 }
 
 .about-container,
-.services-container {
+.services-container, .contact-container, .projects-container {
     padding: 0 24px;
     width: 100%;
     max-width: 1248px;
@@ -670,23 +670,15 @@ header {
     display: flex;
     justify-content: center;
 }
-
-.projects-container {
-    padding: 24px;
-    width: 100%;
-    max-width: 1248px;
-}
-
-/* Project Settings - End */
-
-/* Project - Start */
 .projectShowcase {
     display: flex;
     justify-content: center;
     gap: 48px;
     margin-bottom: 48px;
 }
+/* Project Settings - End */
 
+/* Project - Start */
 .project {
     display: flex;
     flex-direction: column;
@@ -828,73 +820,59 @@ header {
 
 /* ******************** PROJECTS SECTION - END ******************** */
 
-/* contact - start */
-
+/* ******************** CONTACT SECTION - START ******************** */
 #contact {
     background-color: var(--background-even-tech);
+    display: flex;
+    justify-content: center;
 }
 
 #contactInfo {
     display: flex;
-    max-width: 1248px;
-    padding: 0 24px;
-    margin: auto;
-    gap: 60px;
+    justify-content: space-between;
+    gap: 32px;
 }
 
-#info {
-    align-items: center;
-    flex: 1;
-}
-
-#info strong {
-    display: block;
-    margin: 24px 0 0;
-    font-size: 1.75rem;
-    line-height: 1.286;
-    font-weight: 600;
-    font-style: normal;
-    color: white;
+.contactLinkWrapper {
+    margin-bottom: 24px;
 }
 
 #info a img {
     display: inline-block;
     margin-right: 12px;
     width: 24px;
+    transition: filter 0.3s ease;
 }
 
 #info a {
-    color: #c977ff;
+    color: white;
     margin-top: 8px;
     display: flex;
     width: max-content;
     text-decoration: none;
     font-style: normal;
-    font-size: 1.5rem;
-    line-height: 1.33;
+    font-size: 1.2rem;
+    font-weight: 300;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
 }
 
 #info a:hover {
-    color: #AB39F7;
+    opacity: 1;
 }
 
 #info a:active {
-    color: #D8A4FB;
+    color: white;
 }
 
 #map iframe {
     margin-top: 24px;
-    width: 100%;
+    width: 500px;
     max-width: 100%;
     height: 316px;
     border-radius: 12px;
 }
-
-#map {
-    flex: 1;
-}
-
-/* contact - end */
+/* ******************** CONTACT SECTION - END ******************** */
 
 /* askQuestion - start */
 
