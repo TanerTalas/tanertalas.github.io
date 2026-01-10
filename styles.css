@@ -30,8 +30,7 @@ html {
 header,
 footer,
 nav,
-section,
-#technologies div {
+section {
     transition: background-color 0.4s ease, color 0.4s ease;
 }
 
@@ -48,7 +47,6 @@ body {
 }
 
 /* sections-settings - start */
-
 header h1 {
     color: white;
     font-size: 3.5625rem;
@@ -66,55 +64,60 @@ h1+p {
     text-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
-.container {
+section {
     padding: 64px 0;
 }
 
-.container h2 {
+h2 {
     color: #FFFFFF;
     font-size: 2.8125rem;
     line-height: 1.155;
     font-weight: 800;
     text-align: center;
+    margin-bottom: 16px;
 }
 
 h3 {
-    color: #3D83F8;
+    color: rgb(59, 131, 246);
     font-size: 2rem;
     line-height: 1.25;
     font-weight: 500;
-    max-width: 1248px;
-    width: 100%;
-    padding-left: 24px;
-    margin: 24px auto 0;
+    margin-bottom: 16px;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.10);
 }
 
 h3+p {
-    color: #e8e8e8de;
+    color: rgba(255, 255, 255, 0.85);
     font-size: 1.375rem;
     line-height: 1.27;
-    max-width: 1248px;
-    width: 100%;
-    padding: 0 24px;
-    margin: 16px auto auto auto;
     text-align: justify;
+    margin-bottom: 8px;
 }
 
-.container h4 {
+h4 {
     font-size: 1.75rem;
     line-height: 1.286;
     font-weight: 600;
     font-style: normal;
     color: white;
-    margin: 16px auto;
+    margin-bottom: 8px;
 }
 
-.container h4+p {
+h4+p {
     color: #E8E8E8;
     font-size: 1.375rem;
     line-height: 1.27;
     text-align: justify;
+    margin-bottom: 32px;
+}
 
+h5 {
+    font-size: 1.5rem;
+    line-height: 1.286;
+    font-weight: 600;
+    font-style: normal;
+    color: black;
+    margin-bottom: 8px;
 }
 
 /* sections-settings - end */
@@ -138,7 +141,8 @@ nav {
     position: relative;
     width: 100%;
     padding: 0 24px;
-    max-width: 1248px; /* padding-y: +48px */
+    max-width: 1248px;
+    /* padding-y: +48px */
     display: flex;
     align-items: center;
 }
@@ -150,6 +154,7 @@ nav {
     margin-right: auto;
     pointer-events: none;
 }
+
 /* Navigation Logo - End */
 
 /* Navigation Menu and Menu Button - Start */
@@ -178,7 +183,7 @@ nav {
 }
 
 #navMenu a.active {
-    background-color:rgb(59, 131, 246);
+    background-color: rgb(59, 131, 246);
 }
 
 #menuButton {
@@ -194,6 +199,7 @@ nav {
 #menuIcon {
     width: 48px;
 }
+
 /* Navigation Menu and Menu Button - End */
 
 /* Theme Button - Start */
@@ -212,9 +218,10 @@ nav {
     pointer-events: none;
 }
 
-#themeButton:hover > #themeIcon {
+#themeButton:hover>#themeIcon {
     transform: scale(1.2);
 }
+
 /* Theme Button - End */
 
 /* Language Button - Start */
@@ -294,6 +301,7 @@ nav {
     cursor: default;
     pointer-events: none;
 }
+
 /* Language Button - End */
 
 /* ******************** NAVIGATION SECTION - END ******************** */
@@ -317,8 +325,10 @@ header {
     align-items: center;
     justify-items: center;
     padding: 0 24px;
+    width: 100%;
     max-width: 1248px;
 }
+
 /* left column - start */
 #header-left {
     z-index: 7;
@@ -374,6 +384,7 @@ header {
 #headerButton:active {
     background-color: #2F68C6;
 }
+
 /* left column - end */
 
 /* right column - start */
@@ -404,6 +415,7 @@ header {
     transform: translateY(40px);
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
+
 /* right column - end */
 @keyframes fadeUp {
     from {
@@ -428,6 +440,7 @@ header {
         opacity: 0;
     }
 }
+
 /* clouds - start */
 .clouds {
     position: absolute;
@@ -488,173 +501,157 @@ header {
 #c8 {
     z-index: 8;
 }
+
 /* clouds - end */
 @keyframes cloudFloat {
     0% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(20px);
     }
+
     100% {
         transform: translateY(0);
     }
 }
+
 /* ******************** HEADER SECTION - END ******************** */
 
-/* about - start */
-
+/* ******************** ABOUT SECTION - START ******************** */
 #about {
     background-color: var(--background-odd);
+    display: flex;
+    justify-content: center;
+}
+
+.about-container, .services-container {
+    padding: 0 24px;
+    width: 100%;
+    max-width: 1248px;
 }
 
 #technologies {
     display: flex;
-    max-width: 1248px;
-    padding: 0 24px;
-    margin: 32px auto 0;
-    row-gap: 32px;
+    gap: 16px;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
 }
 
-#technologies div {
-    cursor: default;
-    color: white;
-    font-size: 1.375rem;
-    line-height: 1.27;
-    width: 220px;
-    background-color: var(--background-even-tech);
+.tool {
+    cursor: pointer;
     display: flex;
     align-items: center;
+    min-width: 220px;
+    background-color: rgba(255, 255, 255, 0.75);
+    color: black;
     gap: 8px;
     border-radius: 8px;
+    box-shadow: 0 0 4px #ffffff50;
     padding: 4px 8px;
-    margin: 0 32px;
-    box-shadow: 0 0 4px #00000040;
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transition: background-color 0.4s ease, transform 0.4s ease;
 }
 
-#technologies div.show {
-    opacity: 1;
-    transform: translateY(0);
+.tool:hover {
+    background-color: rgb(255, 255, 255);
+    transform: scale(1.02);
 }
 
-#technologies div img {
+.tool img {
     pointer-events: none;
     display: inline-block;
     width: 48px;
 }
 
-/* about - end */
+.tool span {
+    display: inline-block;
+    font-size: 1.375rem;
+    line-height: 1.27;
+}
 
-/* services - start */
+/* ******************** ABOUT SECTION - end ******************** */
 
+/* ******************** SERVICES SECTION - START ******************** */
 #services {
+    display: flex;
+    justify-content: center;
     background-color: var(--background-even-tech);
 }
 
-#allServices {
+.myServices {
     display: flex;
     justify-content: center;
-    gap: 100px;
-    margin: 32px 24px 0;
     flex-wrap: wrap;
+    gap: 48px;
 }
 
-.card {
-    width: 300px;
-    height: 460px;
-    perspective: 1000px;
-    transition: transform 0.6s ease;
-}
-
-.card-inner {
-    width: 100%;
-    height: 100%;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-    position: relative;
-    text-align: center;
-    transition: transform 0.6s ease;
-}
-
-@media (hover: hover) {
-
-    .card:hover,
-    .card-inner {
-        transform: scale(1.03);
-    }
-}
-
-.card-inner.flipped {
-    transform: rotateY(180deg);
-}
-
-.card-front {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+/* Card Settings - Start */
+.service {
+    border: 4px solid black;
+    background-color: white;
+    color: black;
+    border-radius: 8px;
     padding: 24px;
-    border-radius: 16px;
-    backface-visibility: hidden;
-    background-color: #8461B9;
-    box-shadow: 0 2px 4px #00000080;
-    color: white;
+    max-width: 500px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+}
+
+.service:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.25);
+}
+
+.service > h4 {
+    color: black;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    animation: pulseBorder 3s ease-in-out infinite;
-    cursor: pointer;
+    gap: 16px;
 }
 
-.card-front img {
+.service > h4 + p {
+    color: black;
+}
+
+.service> h4 > img {
+    width: 48px;
     pointer-events: none;
-    width: 64px;
-    margin-bottom: 16px;
 }
+/* Card Settings - End */
 
-.card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    padding: 24px;
-    border-radius: 16px;
-    backface-visibility: hidden;
-    background-color: #6C42AB;
-    box-shadow: 0 2px 4px #00000080;
-    color: white;
+/* Card Tools - Start */
+.serviceTools {
     display: flex;
-    flex-direction: column;
-    transform: rotateY(180deg);
-    cursor: pointer
+    flex-wrap: wrap;
+    gap: 16px;
 }
 
-.card-back img {
+.serviceTools > div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.85);
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 4px 16px;
+    min-width: 120px;
+    gap: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.serviceTools > div:hover {
+    transform: scale(1.03);
+    background-color: black;
+}
+
+.serviceTools img {
+    width: 32px;
     pointer-events: none;
-    display: inline-block;
-    margin: 0 auto 8px;
-    width: 64px;
 }
-
-@keyframes pulseBorder {
-    0% {
-        box-shadow: 0 0 0px 0px #ffffff40;
-    }
-
-    50% {
-        box-shadow: 0 0 8px 2px #ffffffa0;
-    }
-
-    100% {
-        box-shadow: 0 0 0px 0px #ffffff40;
-    }
-}
-
-/* services - end */
+/* Card Tools - End */
+/* ******************** SERVICES SECTION - END ******************** */
 
 /* projects - start */
 
@@ -885,16 +882,27 @@ footer p a:hover {
 
 /* footer - end */
 
+/* fade-up - start */
+.fade-up {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    will-change: opacity, transform;
+}
+
+.show-fade-up {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* fade-up - end */
+
 @media (max-width: 1199.98px),
 (max-height: 639.99px) {
     #header-left {
         z-index: 10;
     }
 }
-
-/* @media (max-width: 1114.98px) {
-} 
-*/
 
 @media (max-width: 767.98px) {
     html {
@@ -941,35 +949,18 @@ footer p a:hover {
         display: none;
     }
 
-
-    #allServices {
-        gap: 40px;
-    }
-
     .card {
         width: 300px;
         height: 360px;
     }
 
-    #technologies {
-        row-gap: 16px;
+    .tool {
+        min-width: 180px;
     }
-
-    #technologies div {
-        width: 180px;
-        gap: 8px;
-        margin: 0 12px;
-    }
-
 }
 
 @media (max-width: 575.98px) {
     html {
         font-size: 12px;
     }
-
-    #technologies div {
-        width: 160px;
-    }
-
 }

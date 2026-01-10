@@ -74,15 +74,7 @@ if (langToggle && langOptions) {
     });
 }
 
-
-//******* */ Services flipcard onclick eventi
-document.querySelectorAll('.card-inner').forEach(card => {
-    card.addEventListener('click', () => {
-        card.classList.toggle('flipped');
-    });
-});
-
-// Yazı yazma animasyonu (typedText)
+// ******************** Header h1 text ********************
 const typedText = document.getElementById("typedText");
 const lang = document.documentElement.lang;
 const typedMessage = lang === "en" ? "I'm a Front End Developer" : "Front End Geliştiricisiyim";
@@ -98,32 +90,31 @@ function typeChar() {
     }
 }
 
-// Genel tip yazma fonksiyonu
-function typeText(text, element, delay = 100, callback) {
-    let i = 0;
-    element.textContent = "";
-    const interval = setInterval(() => {
-        if (i < text.length) {
-            element.textContent += text[i++];
-        } else {
-            clearInterval(interval);
-            if (callback) callback();
-        }
-    }, delay);
-}
+// ******************** Fade up effect ********************
+const fadeElements = document.querySelectorAll('.fade-up')
+const observer2 = new IntersectionObserver(
+    (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show-fade-up')
+                observer.unobserve(entry.target)
+            }
+        })
+    },
+    {
+        threshold: 0.2,          // when 20% shows
+        rootMargin: '0px 0px -50px 0px' // dont't show too early
+    }
+)
+fadeElements.forEach(el => observer2.observe(el))
 
-// Yazıyı silme fonksiyonu
-function deleteText(element, delay = 50, callback) {
-    let i = element.textContent.length;
-    const interval = setInterval(() => {
-        if (i > 0) {
-            element.textContent = element.textContent.slice(0, --i);
-        } else {
-            clearInterval(interval);
-            if (callback) callback();
-        }
-    }, delay);
-}
+
+//******* */ Services flipcard onclick eventi
+document.querySelectorAll('.card-inner').forEach(card => {
+    card.addEventListener('click', () => {
+        card.classList.toggle('flipped');
+    });
+});
 
 // Sayfa yüklendiğinde yapılacaklar
 window.addEventListener("load", () => {
@@ -140,20 +131,37 @@ window.addEventListener("load", () => {
 
     setTimeout(typeChar, 1500);
 
-    // Teknolojiler bölümü görünürlük kontrolü
-    const techObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            entry.target.classList.toggle("show", entry.isIntersecting);
-        });
-    }, { threshold: 0.3 });
-
-    document.querySelectorAll("#technologies div").forEach(item => {
-        techObserver.observe(item);
-    });
-
     sections.forEach(section => observer.observe(section));
 
     // Karakter çıkış ve yazı efektleri
+
+    // MiniCharacter text show animation
+    function typeText(text, element, delay = 100, callback) {
+        let i = 0;
+        element.textContent = "";
+        const interval = setInterval(() => {
+            if (i < text.length) {
+                element.textContent += text[i++];
+            } else {
+                clearInterval(interval);
+                if (callback) callback();
+            }
+        }, delay);
+    }
+
+    // MiniCharacter text delete animation
+    function deleteText(element, delay = 50, callback) {
+        let i = element.textContent.length;
+        const interval = setInterval(() => {
+            if (i > 0) {
+                element.textContent = element.textContent.slice(0, --i);
+            } else {
+                clearInterval(interval);
+                if (callback) callback();
+            }
+        }, delay);
+    }
+
     const messages = {
         tr: ["Portföyümü beğendin mi?", "Benimle tanışmak ister misin?"],
         en: ["Did you like my portfolio?", "Would you like to get to know me?"]
