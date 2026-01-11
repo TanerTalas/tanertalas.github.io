@@ -19,7 +19,7 @@
             header: {
                 h1: "Hello Again!",
                 h1Second: "You Can Find My Projects Below",
-                p: "You can explore my projects under the \"Completed\" and \"On Progress\" sections. Thank you for visiting!",
+                p: "You can explore my projects under the \"Done\" and \"On Progress\" sections. Thank you for visiting!",
                 button: "Continue"
             },
             projects: {
@@ -71,7 +71,7 @@
             header: {
                 h1: "Tekrar Merhaba!",
                 h1Second: "Projelerime Aşağıda Göz Atabilirsiniz",
-                p: "Projelerimi \"Tamamlanmış\" ve \"Devam Eden\" bölümlerinde inceleyebilirsiniz. Ziyaretiniz için teşekkür ederim!",
+                p: "Projelerimi \"Tamamlanmış\" ve \"Devam Ediyor\" bölümlerinde inceleyebilirsiniz. Ziyaretiniz için teşekkür ederim!",
                 button: "Devam Et"
             },
             projects: {

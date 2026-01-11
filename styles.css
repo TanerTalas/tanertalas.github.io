@@ -15,7 +15,7 @@ html {
 
 :root {
     --h3-color: rgb(255, 255, 255);
-    --body-background: #44CCEE;
+    --body-background: linear-gradient(to bottom, #44CCEE, #090040);
     --navigation-background: #00ccffd4;
     --themeIcon-rotation: rotateX(0deg);
     --themeIcon-rotation-hover: rotateX(180deg);
@@ -52,7 +52,7 @@ html {
 
 .dark {
     --h3-color: rgb(59, 131, 246);
-    --body-background: #090040;
+    --body-background: linear-gradient(to bottom, #090040, #06002D);
     --navigation-background: #06002Dd4;
     --themeIcon-rotation: rotateX(180deg);
     --themeIcon-rotation-hover: rotateX(0deg);
@@ -88,9 +88,14 @@ html {
     --background-dark: 1;
 }
 
+html, body {
+    min-height: 100%;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: var(--body-background);
+    background: var(--body-background);
+    transition: background 1s ease;
 }
 
 
@@ -108,7 +113,6 @@ body {
 }
 
 /* sections-settings - start */
-body,
 nav,
 header {
     transition: background-color 1s ease;
@@ -276,6 +280,7 @@ nav {
     justify-content: center;
     align-items: center;
     z-index: 2000;
+    padding-top: env(safe-area-inset-top);
 }
 
 .nav-container {
@@ -1072,6 +1077,7 @@ footer {
     position: relative;
     display: flex;
     justify-content: center;
+    padding-bottom: env(safe-area-inset-bottom);
 }
 
 .footer-container {
