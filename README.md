@@ -39,7 +39,7 @@ Bu repo, kişisel portföy sitemin kaynak kodlarını içerir. Tasarım ve geli�
 - Etkileşimli öğeler ve animasyonlar
 - Lenis ile Akıcı Scroll
 
-🔗 **Canlı Site**: [tanertalas.github.io](https://tanertalas.github.io/index-tr.html)
+🔗 **Canlı Site**: [tanertalas.github.io](https://tanertalas.github.io/index.html)
 
 ---
 
