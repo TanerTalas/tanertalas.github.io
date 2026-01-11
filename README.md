@@ -30,7 +30,7 @@ Bu repo, kişisel portföy sitemin kaynak kodlarını içerir. Tasarım ve geli�
 - HTML5
 - CSS3
 - JavaScript
-- Lenis ile Akıcı Scroll
+- Lenis
 
 ✨ Özellikler:
 - Duyarlı (responsive) yapı
