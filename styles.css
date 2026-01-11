@@ -17,6 +17,8 @@ html {
     --h3-color: rgb(255, 255, 255);
     --body-background: #44CCEE;
     --navigation-background: #00ccffd4;
+    --themeIcon-rotation: rotateX(0deg); 
+    --themeIcon-rotation-hover: rotateX(180deg); 
     --language-background: #11CBFF;
     --language-background-hover: #00aaff;
     --navigation-boxShadow: rgba(255, 255, 255, 0.3);
@@ -52,6 +54,8 @@ html {
     --h3-color: rgb(59, 131, 246);
     --body-background: #090040;
     --navigation-background: #06002Dd4;
+    --themeIcon-rotation: rotateX(180deg); 
+    --themeIcon-rotation-hover: rotateX(0deg); 
     --language-background: #070030;
     --language-background-hover: #13008c;
     --navigation-boxShadow: rgba(0, 0, 0, 0.3);
@@ -273,22 +277,47 @@ nav {
 
 /* Theme Button - Start */
 #themeButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background: none;
     border: none;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 600px;
 }
 
-#themeIcon {
+.themeIcon-wrapper {
+    position: relative;
     width: 48px;
-    transition: transform 0.2s;
+    height: 48px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+}
+
+.sunUp, .sunDown {
+        position: absolute;
+    top: 0;
+    left: 0;
+    width: 48px;
+    height: 48px;
+    backface-visibility: hidden;
     pointer-events: none;
 }
 
-#themeButton:hover>#themeIcon {
-    transform: scale(1.2);
+.sunUp {
+    transform: rotateX(0deg);
+}
+
+.sunDown {
+    transform: rotateX(180deg);
+}
+
+#themeButton:hover .themeIcon-wrapper {
+    transform: var(--themeIcon-rotation-hover);
+}
+
+.themeIcon-wrapper {
+    transform: var(--themeIcon-rotation);
 }
 
 /* Theme Button - End */

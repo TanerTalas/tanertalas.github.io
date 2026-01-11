@@ -47,7 +47,12 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
 
-            <button id="themeButton"><img src="./images/icons/sunup.svg" alt="light mode" id="themeIcon"></button>
+            <button id="themeButton" aria-label="Toggle light/dark mode">
+                <span class="themeIcon-wrapper">
+                    <img src="./images/icons/sunup.svg" alt="light mode" class="sunUp">
+                    <img src="./images/icons/sundown.svg" alt="dark mode" class="sunDown">
+                </span>
+            </button>
 
             <button id="menuButton"><img src="./images/icons/menuicon.svg" alt="menu" id="menuIcon"></button>
 

@@ -26,24 +26,23 @@ const observer = new IntersectionObserver(entries => {
 });
 // ******************** Theme Button ********************
 const toggleBtn = document.getElementById("themeButton");
-const modeIcon = document.getElementById("themeIcon");
-const htmlEl = document.documentElement;
 
-if (toggleBtn && modeIcon) {
-    toggleBtn.addEventListener("click", () => {
-        const isDark = htmlEl.classList.toggle("dark");
-        modeIcon.src = isDark ? "./images/icons/sundown.svg" : "./images/icons/sunup.svg";
-        modeIcon.alt = isDark ? "dark mode" : "light mode";
+toggleBtn?.addEventListener("click", () => {
+    document.documentElement.classList.toggle("dark");
 
-        // Clouds color
-        const cloudCount = 8;
-        const themeFolder = isDark ? "dark" : "light";
-        for (let i = 1; i <= cloudCount; i++) {
-            const cloud = document.getElementById(`c${i}`);
-            if (cloud) cloud.src = `./images/clouds/${themeFolder}/${9 - i}.svg`;
+    const isDark = document.documentElement.classList.contains("dark");
+
+    // Clouds color
+    const cloudCount = 8;
+    const themeFolder = isDark ? "dark" : "light";
+
+    for (let i = 1; i <= cloudCount; i++) {
+        const cloud = document.getElementById(`c${i}`);
+        if (cloud) {
+            cloud.src = `./images/clouds/${themeFolder}/${9 - i}.svg`;
         }
-    });
-}
+    }
+});
 // ******************** Menu Button and Language Button ********************
 const menuBtn = document.getElementById("menuButton");
 const navbarMenu = document.getElementById("navMenu");
