@@ -141,6 +141,8 @@ const observer2 = new IntersectionObserver(
 fadeElements.forEach(el => observer2.observe(el))
 
 window.addEventListener("load", () => {
+    document.body.classList.remove("no-scroll");
+    document.body.classList.add("loaded");
     // ******************** Header ********************
     // h1 text
     const initialLang = document.documentElement.lang || "en";
