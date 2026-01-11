@@ -17,6 +17,8 @@ html {
     --h3-color: rgb(255, 255, 255);
     --body-background: #44CCEE;
     --navigation-background: #00ccffd4;
+    --language-background: #11CBFF;
+    --language-background-hover: #00aaff;
     --navigation-boxShadow: rgba(255, 255, 255, 0.3);
     --header-background: #44CCEE;
     --about-background: linear-gradient(to bottom,
@@ -50,6 +52,8 @@ html {
     --h3-color: rgb(59, 131, 246);
     --body-background: #090040;
     --navigation-background: #06002Dd4;
+    --language-background: #070030;
+    --language-background-hover: #13008c;
     --navigation-boxShadow: rgba(0, 0, 0, 0.3);
     --header-background: #000000;
     --about-background: linear-gradient(to bottom,
@@ -305,7 +309,7 @@ nav {
 
 #languageToggle {
     position: relative;
-    background-color: var(--navigation-background);
+    background-color: var(--language-background);
     height: 50px;
     min-width: 88px;
     text-align: center;
@@ -322,7 +326,7 @@ nav {
 }
 
 #languageToggle:hover {
-    background-color: #11007e;
+    background-color: var(--language-background-hover);
 }
 
 #languageToggle.active {
