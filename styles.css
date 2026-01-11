@@ -853,8 +853,8 @@ header {
 }
 
 .projectShowcase {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 48px;
     margin-bottom: 48px;
 }
@@ -863,14 +863,13 @@ header {
 
 /* Project - Start */
 .project {
-    display: flex;
+    display: grid;
     flex-direction: column;
     background-color: black;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.25);
-    width: auto;
-    max-width: 500px;
+    width: 100%;
     min-height: 520px;
     padding-bottom: 24px;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
@@ -931,12 +930,12 @@ header {
 .projectWebsiteLink-wrapper {
     display: flex;
     justify-content: center;
+    margin-top: auto;
 }
 
 .projectWebsiteLink {
     display: inline-block;
     text-decoration: none;
-    border: 1px solid white;
     border-radius: 8px;
     padding: 8px 16px;
     background-color: white;
@@ -1309,7 +1308,7 @@ footer {
 
     /* projects - start */
     .projectShowcase {
-        flex-wrap: wrap;
+        grid-template-columns: 1fr;
     }
 
     .project {

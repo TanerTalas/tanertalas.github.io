@@ -1,12 +1,13 @@
 // ******************** Reset scrolling before page load ********************
-if ('scrollRestoration' in history) {
-    history.scrollRestoration = 'manual';
-}
+window.addEventListener("DOMContentLoaded", () => {
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
 
-if (window.location.hash) {
-    history.replaceState(null, null, " ");
-    window.scrollTo(0, 0);
-}
+    if (!window.location.hash) {
+        window.scrollTo(0, 0);
+    }
+});
 // ******************** Menu Section Observer ********************
 const sections = document.querySelectorAll("section, header");
 const navLinks = document.querySelectorAll("#navMenu a");
@@ -43,6 +44,12 @@ toggleBtn?.addEventListener("click", () => {
         if (cloud) {
             cloud.src = `./images/clouds/${themeFolder}/${9 - i}.svg`;
         }
+    }
+
+    // Theme-color meta tag update
+    const themeMeta = document.querySelector('meta[name="theme-color"]');
+    if (themeMeta) {
+        themeMeta.setAttribute('content', isDark ? '#090040' : '#44CCEE');
     }
 });
 // ******************** Menu Button and Language Button ********************

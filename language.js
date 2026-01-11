@@ -3,7 +3,7 @@
         EN: {
             meta: {
                 title: "Taner Talas | Portfolio",
-                description: "This is the personal portfolio website of Taner Talas, showcasing user interface-focused projects and front end development work."
+                description: "This is the homepage of Taner Talas’ portfolio website, showcasing his user-interface-focused projects and front-end development work. The page includes information about Taner Talas, the programming languages and skills he has learned and uses, his services, projects with links, and contact information."
             },
             nav: {
                 menu: {
@@ -44,6 +44,12 @@
                 h2: "My Projects",
                 h3: "A Few of My Projects",
                 projects: {
+                    projectPage: {
+                        fh3: "Done",
+                        fp: "Although these projects are completed, I continue to improve them with the new knowledge I gain.",
+                        sh3: "On Progress",
+                        sp: "These projects might still be in progress, or I may have placed them under this section due to newly discovered issues."
+                    },
                     project1: {
                         h4: "Restaurant Promotion",
                         p: "This project showcases a modern café website concept inspired by contemporary French design."
@@ -53,9 +59,10 @@
                         p: "Front end project featuring CSS recreations of Mondrian paintings, focusing on layout, responsive design, and artistic interpretation."
                     },
                     codeAndInfo: "Code & More Info >",
-                    liveWebsite: "Live Website"
+                    liveWebsite: "Live Website",
                 },
                 seeAllProjects: "See All Projects"
+
             },
             contact: {
                 h2: "Contact Me",
@@ -74,7 +81,7 @@
         TR: {
             meta: {
                 title: "Taner Talas | Portföy",
-                description: "Bu, Taner Talas'ın kullanıcı arayüzü odaklı projelerini ve ön uç geliştirme çalışmalarını sergilediği kişisel portföy web sitesidir."
+                description: "Bu sayfa, Taner Talas'ın kullanıcı arayüzü odaklı projelerini ve ön uç geliştirme çalışmalarını sergileyen portföy web sitesinin ana sayfasıdır. Sayfada Taner Talas hakkında bilgiler, öğrendiği ve kullandığı programlama dilleri ve becerileri, sunduğu hizmetleri, projeleri ve projelere giden bağlantılar ile iletişim bilgileri yer almaktadır."
             },
             nav: {
                 menu: {
@@ -115,6 +122,12 @@
                 h2: "Projelerim",
                 h3: "Projelerimden Birkaçı",
                 projects: {
+                    projectPage: {
+                        fh3: "Tamamlanmış",
+                        fp: "Bu projeler tamamlanmış olsa da yeni öğrendiğim bilgilerle bu projeleri geliştirmeye devam ediyorum.",
+                        sh3: "Devam Ediyor",
+                        sp: "Bu projeler devam ediyor olabilir veya yeni fark edilmiş hatalardan dolayı bu başlık altına almış olabilirim."
+                    },
                     project1: {
                         h4: "Restoran Promosyonu",
                         p: "Bu proje, çağdaş Fransız tasarımından ilham alan modern bir kafe web sitesi konseptini sergiliyor."

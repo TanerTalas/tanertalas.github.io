@@ -1,0 +1,72 @@
+:root {
+    --projects-background-light: linear-gradient(to bottom,
+            #44CCEE 0%,
+            #1aabcf 50%,
+            #1aabcf 100%);
+    --footer-background-light: linear-gradient(to bottom,
+            #1aabcf 0%,
+            #090040 10%,
+            #090040 100%);
+}
+
+.dark {
+    --projects-background-dark: linear-gradient(to bottom,
+            #090040 0%,
+            #0f0072 50%,
+            #0f0072 100%);
+    --footer-background-dark: linear-gradient(to bottom,
+            #0f0072 0%,
+            #06002D 10%,
+            #06002D 100%);
+}
+
+h3 + p {
+    margin-bottom: 32px;
+}
+
+/* ******************** NAVIGATION SECTION - START ******************** */ 
+#navProjectsMenu {
+    display: flex;
+    gap: 16px;
+    list-style: none;
+    margin-right: 32px;
+}
+
+#navProjectsMenu a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 500;
+    letter-spacing: 0.15px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+#navProjectsMenu a:hover {
+    background-color: rgba(59, 131, 246, 0.15);
+}
+
+#navProjectsMenu a.active {
+    background-color: rgb(59, 131, 246);
+}
+/* ******************** NAVIGATION SECTION - END ******************** */ 
+
+/* ******************** HEADER SECTION - START ******************** */ 
+#header-container {
+    grid-template-columns: 1fr;
+    justify-items: start;
+}
+
+#h1SecondLine {
+    color: #3D83F8;
+    font-size: 2.88rem;
+    line-height: 0.912;
+}
+/* ******************** HEADER SECTION - END ******************** */ 
+
+/* ******************** PROJECTS SECTION - START ******************** */
+
+/* ******************** NAVIGATION SECTION - END ******************** */ 
