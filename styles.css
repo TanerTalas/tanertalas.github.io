@@ -15,11 +15,11 @@ html {
 
 :root {
     --h3-color: rgb(255, 255, 255);
-    --body-background: linear-gradient(to bottom, #44CCEE, #090040);
-    --navigation-background: #00ccffd4;
+    --body-background: white;
+    --navigation-background: rgba(255, 255, 255, 0.5);
     --themeIcon-rotation: rotateX(0deg);
     --themeIcon-rotation-hover: rotateX(180deg);
-    --language-background: #11CBFF;
+    --language-background: rgba(255, 255, 255, 0.5);
     --language-background-hover: #00aaff;
     --header-background: #44CCEE;
     --about-background-light: linear-gradient(to bottom,
@@ -40,8 +40,8 @@ html {
             #009dff 100%);
     --footer-background-light: linear-gradient(to bottom,
             #009dff 0%,
-            #090040 10%,
-            #090040 100%);
+            white 10%,
+            white 100%);
     --projects-button-color: black;
     --projectsButton-border-color: black;
     --svg-color: invert(1);
@@ -52,11 +52,11 @@ html {
 
 .dark {
     --h3-color: rgb(59, 131, 246);
-    --body-background: linear-gradient(to bottom, #090040, #06002D);
-    --navigation-background: #06002Dd4;
+    --body-background: black;
+    --navigation-background: rgba(0, 0, 0, 0.5);
     --themeIcon-rotation: rotateX(180deg);
     --themeIcon-rotation-hover: rotateX(0deg);
-    --language-background: #070030;
+    --language-background: rgba(0, 0, 0, 0.5);
     --language-background-hover: #13008c;
     --header-background: #000000;
     --about-background-dark: linear-gradient(to bottom,
@@ -77,8 +77,8 @@ html {
             black 100%);
     --footer-background-dark: linear-gradient(to bottom,
             black 0%,
-            #06002D 10%,
-            #06002D 100%);
+            black 10%,
+            black 100%);
 
     --projects-button-color: white;
     --projectsButton-border-color: white;
@@ -280,7 +280,6 @@ nav {
     justify-content: center;
     align-items: center;
     z-index: 2000;
-    padding-top: env(safe-area-inset-top);
 }
 
 .nav-container {
@@ -299,6 +298,8 @@ nav {
     width: 48px;
     margin-right: auto;
     pointer-events: none;
+    filter: var(--svg-color);
+    transition: filter 1s ease;
 }
 
 /* Navigation Logo - End */
@@ -313,7 +314,7 @@ nav {
 
 #navMenu a {
     display: inline-block;
-    color: white;
+    color: black;
     text-decoration: none;
     font-size: 1rem;
     line-height: 1.5;
@@ -321,7 +322,11 @@ nav {
     letter-spacing: 0.15px;
     padding: 8px 12px;
     border-radius: 4px;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.dark #navMenu a, .dark #languageToggle {
+    color: white;
 }
 
 #navMenu a:hover {
@@ -329,6 +334,7 @@ nav {
 }
 
 #navMenu a.active {
+    color: white;
     background-color: rgb(59, 131, 246);
 }
 
@@ -340,6 +346,7 @@ nav {
     border: none;
     cursor: pointer;
     margin-left: 24px;
+    filter: var(--svg-color);
 }
 
 #menuIcon {
@@ -416,27 +423,26 @@ nav {
     height: 50px;
     min-width: 88px;
     text-align: center;
-    color: inherit;
+    color: black;
     padding: 12px 8px;
-    border: 2px solid rgba(255, 255, 255, 0.5);
+    border: none;
     cursor: pointer;
     font-size: 1rem;
     line-height: 1.5;
     font-weight: 500;
-    transition: background-color 1s ease, transform 0.2s, border 1s;
+    transition: background-color .3s ease, color .3s ease;
     overflow: hidden;
     z-index: 20;
 }
 
-.dark #languageToggle {
-    border: 2px solid #0500216f;
-}
 
 #languageToggle:hover {
+    color: white;
     background-color: var(--language-background-hover);
 }
 
 #languageToggle.active {
+    color: white;
     background-color: rgb(59, 131, 246);
 }
 
@@ -450,12 +456,14 @@ nav {
     z-index: 999;
     left: 100%;
     z-index: 20;
-    transition: left 0.4s ease;
+    opacity: 0;
+    transition: left 0.4s ease, opacity 0.4s ease;
 }
 
 #languageOptions.show {
     display: flex;
     left: 0;
+    opacity: 1;
 }
 
 #languageOptions button {
@@ -1077,7 +1085,6 @@ footer {
     position: relative;
     display: flex;
     justify-content: center;
-    padding-bottom: env(safe-area-inset-bottom);
 }
 
 .footer-container {
@@ -1086,6 +1093,11 @@ footer {
     padding: 48px 24px;
     display: flex;
     align-items: center;
+    color: black;
+    transition: color 1s ease;
+}
+
+.dark .footer-container {
     color: white;
 }
 
@@ -1097,10 +1109,6 @@ footer {
 
 .footer-container div>a {
     transition: transform 0.3s ease;
-}
-
-.footer-container div>a>img {
-    filter: brightness(0) invert(1);
 }
 
 .footer-container div>a:hover {
@@ -1288,7 +1296,7 @@ footer {
         transition: right 0.5s ease-in-out;
         z-index: 20;
         border-bottom-left-radius: 8px;
-        transition: background-color 1s ease;
+        transition: right 1s ease, background-color 1s ease;
     }
 
     #navMenu.menu-open {

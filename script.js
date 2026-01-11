@@ -45,12 +45,6 @@ toggleBtn?.addEventListener("click", () => {
             cloud.src = `./images/clouds/${themeFolder}/${9 - i}.svg`;
         }
     }
-
-    // Theme-color meta tag update
-    const themeMeta = document.querySelector('meta[name="theme-color"]');
-    if (themeMeta) {
-        themeMeta.setAttribute('content', isDark ? '#090040' : '#44CCEE');
-    }
 });
 // ******************** Menu Button and Language Button ********************
 const menuBtn = document.getElementById("menuButton");

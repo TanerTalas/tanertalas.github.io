@@ -5,8 +5,8 @@
             #1aabcf 100%);
     --footer-background-light: linear-gradient(to bottom,
             #1aabcf 0%,
-            #090040 10%,
-            #090040 100%);
+            white 10%,
+            white 100%);
 }
 
 .dark {
@@ -16,8 +16,8 @@
             #0f0072 100%);
     --footer-background-dark: linear-gradient(to bottom,
             #0f0072 0%,
-            #06002D 10%,
-            #06002D 100%);
+            black 10%,
+            black 100%);
 }
 
 h3 + p {
@@ -34,7 +34,7 @@ h3 + p {
 
 #navProjectsMenu a {
     display: inline-block;
-    color: white;
+    color: black;
     text-decoration: none;
     font-size: 1rem;
     line-height: 1.5;
@@ -42,7 +42,11 @@ h3 + p {
     letter-spacing: 0.15px;
     padding: 8px 12px;
     border-radius: 4px;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s, color .2s ease;
+}
+
+.dark #navProjectsMenu a {
+    color: white;
 }
 
 #navProjectsMenu a:hover {
