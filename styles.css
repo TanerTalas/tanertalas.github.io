@@ -380,19 +380,20 @@ nav {
     left: 0;
 }
 
-#languageOptions a {
+#languageOptions button {
     color: white;
-    padding: 12px 24px;
+    padding: 8px 16px;
     font-size: 1rem;
     line-height: 1.5;
     font-weight: 500;
     cursor: pointer;
+    border: none;
     transition: background-color 0.3s;
     text-decoration: none;
 }
 
 .nonActiveLanguage {
-    background-color: rgb(255, 50, 50);
+    background-color: rgba(255, 50, 50, 0.5);
 }
 
 .nonActiveLanguage:hover {
@@ -445,7 +446,7 @@ header {
 
 #typedText {
     color: #3D83F8;
-    font-size: 2.8125rem;
+    font-size: 2.88rem;
     line-height: 0.912;
 }
 
@@ -846,6 +847,10 @@ header {
     opacity: 0.7;
 }
 
+.projectGithubLink:active {
+    opacity: 0.7;
+}
+
 .projectGithubLink>img {
     width: 24px;
 }
@@ -870,6 +875,10 @@ header {
 
 .projectWebsiteLink:hover {
     transform: scale(1.02);
+    opacity: 0.8;
+}
+
+.projectWebsiteLink:active {
     opacity: 0.8;
 }
 
@@ -1195,7 +1204,7 @@ footer {
         right: -100%;
         margin-right: 0;
         width: 160px;
-        background-color: var(--background-nav-footer);
+        background-color: var(--navigation-background);
         flex-direction: column;
         gap: 16px;
         padding: 24px 24px;

@@ -24,6 +24,8 @@ const observer = new IntersectionObserver(entries => {
     rootMargin: "-50% 0px -49% 0px",
     threshold: 0
 });
+
+sections.forEach(section => observer.observe(section));
 // ******************** Theme Button ********************
 const toggleBtn = document.getElementById("themeButton");
 
@@ -74,20 +76,50 @@ if (langToggle && langOptions) {
 }
 
 // ******************** Header h1 text ********************
-const typedText = document.getElementById("typedText");
-const lang = document.documentElement.lang;
-const typedMessage = lang === "en" ? "I'm a Front End Developer" : "Front End Geliştiricisiyim";
-let index = 0;
+const TYPED_MESSAGES = {
+    en: "I'm a Front End Developer",
+    tr: "Front End Geliştiricisiyim"
+};
 
-function typeChar() {
+const typedText = document.getElementById("typedText");
+
+let index = 0;
+let typingTimeout = null;
+let initialDelayTimeout = null;
+
+function startTyping(lang, delay = 0) {
     if (!typedText) return;
-    if (index === 0) typedText.textContent = "";
-    if (index < typedMessage.length) {
-        typedText.textContent += typedMessage.charAt(index);
-        index++;
-        setTimeout(typeChar, 100);
+
+    lang = lang.toLowerCase();
+    const message = TYPED_MESSAGES[lang];
+    if (!message) return;
+
+    clearTimeout(typingTimeout);
+    clearTimeout(initialDelayTimeout);
+
+    index = 0;
+    typedText.textContent = "";
+
+    const begin = () => {
+        function typeChar() {
+            if (index < message.length) {
+                typedText.textContent += message.charAt(index);
+                index++;
+                typingTimeout = setTimeout(typeChar, 100);
+            }
+        }
+        typeChar();
+    };
+
+    if (delay > 0) {
+        initialDelayTimeout = setTimeout(begin, delay);
+    } else {
+        begin();
     }
 }
+
+// global 
+window.startTyping = startTyping;
 
 // ******************** Fade up effect ********************
 const fadeElements = document.querySelectorAll('.fade-up')
@@ -109,6 +141,9 @@ fadeElements.forEach(el => observer2.observe(el))
 
 window.addEventListener("load", () => {
     // ******************** Header ********************
+    // h1 text
+    const initialLang = document.documentElement.lang || "en";
+    startTyping(initialLang, 2000);
     // Cloud animation
     document.querySelectorAll(".clouds").forEach((cloud, index) => {
         setTimeout(() => cloud.classList.add("animate"), index * 100);
@@ -119,10 +154,6 @@ window.addEventListener("load", () => {
         document.getElementById("header-left")?.classList.add("hero-visible");
         document.getElementById("header-right")?.classList.add("hero-visible");
     }, 300);
-
-    setTimeout(typeChar, 1500);
-
-    sections.forEach(section => observer.observe(section));
 
     // ******************** Mini Me ********************
     // Mini Me text animation
@@ -152,11 +183,10 @@ window.addEventListener("load", () => {
         }, delay);
     }
 
-    const messages = {
-        tr: ["Portföyümü beğendin mi?", "Benimle tanışmak ister misin?"],
-        en: ["Did you like my portfolio?", "Would you like to get to know me?"]
-    };
-    const [firstText, secondText] = messages[lang] || messages.tr;
+    // Only English messages
+    const messages = ["Did you like my portfolio?", "Would you like to get to know me?"];
+    const [firstText, secondText] = messages;
+
     const bubbleTextEl = document.getElementById("bubbleText");
 
     setTimeout(() => {
@@ -187,4 +217,5 @@ window.addEventListener("load", () => {
         document.getElementById("characterContainer")?.classList.remove("show");
         document.body.classList.remove("show-hands");
     }, 23700);
+
 });
