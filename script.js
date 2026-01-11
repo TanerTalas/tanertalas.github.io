@@ -108,14 +108,14 @@ const observer2 = new IntersectionObserver(
 )
 fadeElements.forEach(el => observer2.observe(el))
 
-// Sayfa yüklendiğinde yapılacaklar
 window.addEventListener("load", () => {
-    // Bulut animasyonu
+    // ******************** Header ********************
+    // Cloud animation
     document.querySelectorAll(".clouds").forEach((cloud, index) => {
         setTimeout(() => cloud.classList.add("animate"), index * 100);
     });
 
-    // Hero animasyonu ve yazı
+    // Header hero animation and its text
     setTimeout(() => {
         document.getElementById("header-left")?.classList.add("hero-visible");
         document.getElementById("header-right")?.classList.add("hero-visible");
@@ -125,9 +125,8 @@ window.addEventListener("load", () => {
 
     sections.forEach(section => observer.observe(section));
 
-    // Karakter çıkış ve yazı efektleri
-
-    // MiniCharacter text show animation
+    // ******************** Mini Me ********************
+    // Mini Me text animation
     function typeText(text, element, delay = 100, callback) {
         let i = 0;
         element.textContent = "";
@@ -141,7 +140,7 @@ window.addEventListener("load", () => {
         }, delay);
     }
 
-    // MiniCharacter text delete animation
+    // Mini Me text delete animation
     function deleteText(element, delay = 50, callback) {
         let i = element.textContent.length;
         const interval = setInterval(() => {

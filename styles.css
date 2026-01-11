@@ -533,7 +533,9 @@ header {
 }
 
 .about-container,
-.services-container, .contact-container, .projects-container {
+.services-container,
+.contact-container,
+.projects-container {
     padding: 0 24px;
     width: 100%;
     max-width: 1248px;
@@ -670,12 +672,14 @@ header {
     display: flex;
     justify-content: center;
 }
+
 .projectShowcase {
     display: flex;
     justify-content: center;
     gap: 48px;
     margin-bottom: 48px;
 }
+
 /* Project Settings - End */
 
 /* Project - Start */
@@ -786,7 +790,7 @@ header {
     opacity: 0.8;
 }
 
-.projectsButton > :first-child {
+.projectsButton> :first-child {
     border-bottom: 1px solid white;
 }
 
@@ -796,7 +800,7 @@ header {
     height: 24px;
 }
 
-.projectsButton > .chevrons img {
+.projectsButton>.chevrons img {
     position: absolute;
     width: 24px;
     height: 24px;
@@ -869,13 +873,13 @@ header {
     margin-top: 24px;
     width: 500px;
     max-width: 100%;
-    height: 316px;
+    height: 100%;
     border-radius: 12px;
 }
+
 /* ******************** CONTACT SECTION - END ******************** */
 
-/* askQuestion - start */
-
+/* ******************** MINI ME - START ******************** */
 #characterContainer {
     position: fixed;
     bottom: 8px;
@@ -931,12 +935,10 @@ header {
 
 #leftHand {
     left: calc(50% - 42px);
-    /* 50% (container ortası) - 50px genişlik/2 - margin */
 }
 
 #rightHand {
     left: calc(50% + 18px);
-    /* 50% + sağ margin */
 }
 
 .show-hands #leftHand,
@@ -1002,30 +1004,43 @@ header {
     vertical-align: bottom;
 }
 
-/* askQuestion - end */
+/* ******************** MINI ME - END ******************** */
 
-/* footer - start */
+/* ******************** FOOTER SECTION - START ******************** */
 footer {
     background-color: var(--background-nav-footer);
-    color: white;
-    padding: 24px 24px;
     display: flex;
-    flex-direction: column;
-    text-align: center;
-    font-size: 1rem;
-    line-height: 1.5;
-    row-gap: 16px;
+    justify-content: center;
 }
 
-footer p a {
+.footer-container {
+    width: 100%;
+    max-width: 1248px;
+    padding: 48px 24px;
+    display: flex;
+    align-items: center;
     color: white;
 }
 
-footer p a:hover {
-    color: #AB39F7;
+.footer-container>div {
+    display: flex;
+    gap: 16px;
+    margin-left: auto;
 }
 
-/* footer - end */
+.footer-container div>a {
+    transition: transform 0.3s ease;
+}
+
+.footer-container div>a>img {
+    filter: brightness(0) invert(1);
+}
+
+.footer-container div>a:hover {
+    transform: scale(1.1);
+}
+
+/* ******************** FOOTER SECTION - END ******************** */
 
 /* fade-up - start */
 .fade-up {
@@ -1054,6 +1069,7 @@ footer p a:hover {
         font-size: 14px;
     }
 
+    /* header - start */
     #header-container {
         grid-template-columns: 1fr;
     }
@@ -1062,6 +1078,9 @@ footer p a:hover {
         display: none;
     }
 
+    /* header - end */
+
+    /* nav - start */
     #navMenu {
         position: fixed;
         top: 72px;
@@ -1090,14 +1109,16 @@ footer p a:hover {
         display: flex;
     }
 
-    #map {
-        display: none;
-    }
+    /* nav - end */
 
+    /* about - start */
     .tool {
         min-width: 180px;
     }
 
+    /* about - start */
+
+    /* projects - start */
     .projectShowcase {
         flex-wrap: wrap;
     }
@@ -1105,6 +1126,15 @@ footer p a:hover {
     .project {
         min-height: auto;
     }
+
+    /* projects - end */
+
+    /* contact - start */
+    #map {
+        display: none;
+    }
+
+    /* contact - end */
 }
 
 @media (max-width: 575.98px) {
