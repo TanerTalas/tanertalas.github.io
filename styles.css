@@ -21,7 +21,6 @@ html {
     --themeIcon-rotation-hover: rotateX(180deg);
     --language-background: #11CBFF;
     --language-background-hover: #00aaff;
-    --navigation-boxShadow: rgba(255, 255, 255, 0.3);
     --header-background: #44CCEE;
     --about-background-light: linear-gradient(to bottom,
             white 0%,
@@ -59,7 +58,6 @@ html {
     --themeIcon-rotation-hover: rotateX(0deg);
     --language-background: #070030;
     --language-background-hover: #13008c;
-    --navigation-boxShadow: rgba(0, 0, 0, 0.3);
     --header-background: #000000;
     --about-background-dark: linear-gradient(to bottom,
             #090041 0%,
@@ -274,7 +272,6 @@ nav {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     color: white;
-    box-shadow: 0px 1px 4px 1px var(--navigation-boxShadow);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1286,7 +1283,7 @@ footer {
         transition: right 0.5s ease-in-out;
         z-index: 20;
         border-bottom-left-radius: 8px;
-
+        transition: background-color 1s ease;
     }
 
     #navMenu.menu-open {
