@@ -2,18 +2,20 @@
 
 ## 🇬🇧 English
 
-This is the source code of my personal portfolio website — designed, coded, and maintained by myself.
+This is the source code of my personal portfolio website. Designed, coded, and maintained by myself.
 
 🛠️ Built with:
 - HTML5
 - CSS3
 - JavaScript
+- Lenis
 
 ✨ Features:
 - Responsive Layout
 - Light/Dark Mode Toggle
-- Language Switcher (TR / EN)
+- Language Switcher with JavaScript
 - Interactive Elements and Animations
+- Smooth Scroll with Lenis
 
 🔗 **Live Demo**: [tanertalas.github.io](https://tanertalas.github.io)
 
@@ -28,12 +30,14 @@ Bu repo, kişisel portföy sitemin kaynak kodlarını içerir. Tasarım ve geli�
 - HTML5
 - CSS3
 - JavaScript
+- Lenis ile Akıcı Scroll
 
 ✨ Özellikler:
 - Duyarlı (responsive) yapı
 - Açık/Koyu Tema Desteği
-- TR / EN Dil Seçici
+- JavaScript ile Dil Desteği
 - Etkileşimli öğeler ve animasyonlar
+- Lenis ile Akıcı Scroll
 
 🔗 **Canlı Site**: [tanertalas.github.io](https://tanertalas.github.io/index-tr.html)
 
