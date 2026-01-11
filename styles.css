@@ -14,17 +14,69 @@ html {
 }
 
 :root {
-    --background-header: #44CCEE;
-    --background-odd: #3A3366;
-    --background-even-tech: #5A547F;
-    --background-nav-footer: #090040;
+    --h3-color: rgb(255, 255, 255);
+    --body-background: #44CCEE;
+    --navigation-background: #00ccffd4;
+    --navigation-boxShadow: rgba(255, 255, 255, 0.3);
+    --header-background: #44CCEE;
+    --about-background: linear-gradient(to bottom,
+            white 0%,
+            #009dff 50%,
+            #009dff 100%);
+    --services-background: linear-gradient(to bottom,
+            #009dff 0%,
+            #0068a9 50%,
+            #0068a9 100%);
+    --projects-background: linear-gradient(to bottom,
+            #0068a9 0%,
+            #ffffff 50%,
+            #ffffff 100%);
+    --contact-background: linear-gradient(to bottom,
+            #ffffff 0%,
+            #009dff 50%,
+            #009dff 100%);
+    --footer-background: linear-gradient(to bottom,
+            #009dff 0%,
+            #090040 10%,
+            #090040 100%);
+
+    --projects-button-color: black;
+    --projectsButton-border-color: black;
+    --svg-color: invert(1);
+    --projects-h3-color: white;
 }
 
 .dark {
-    --background-header: #000000;
-    --background-odd: #090040;
-    --background-even-tech: #3A3366;
-    --background-nav-footer: #06002D;
+    --h3-color: rgb(59, 131, 246);
+    --body-background: #090040;
+    --navigation-background: #06002Dd4;
+    --navigation-boxShadow: rgba(0, 0, 0, 0.3);
+    --header-background: #000000;
+    --about-background: linear-gradient(to bottom,
+            #090041 0%,
+            #0c005c 50%,
+            #0c005c 100%);
+    --services-background: linear-gradient(to bottom,
+            #0c005c 0%,
+            #06002e 50%,
+            #06002e 100%);
+    --projects-background: linear-gradient(to bottom,
+            #06002e 0%,
+            #0f0072 50%,
+            #0f0072 100%);
+    --contact-background: linear-gradient(to bottom,
+            #0f0072 0%,
+            black 50%,
+            black 100%);
+    --footer-background: linear-gradient(to bottom,
+            black 0%,
+            #06002D 10%,
+            #06002D 100%);
+
+    --projects-button-color: white;
+    --projectsButton-border-color: white;
+    --svg-color: none;
+    --projects-h3-color: rgb(59, 131, 246);
 }
 
 header,
@@ -36,6 +88,7 @@ section {
 
 body {
     font-family: 'Roboto', sans-serif;
+    background-color: var(--body-background);
 }
 
 
@@ -81,15 +134,16 @@ h2 {
     font-weight: 800;
     text-align: center;
     margin-bottom: 16px;
+    text-shadow: 0px 0px 4px #0000006d;
 }
 
 h3 {
-    color: rgb(59, 131, 246);
+    color: var(--h3-color);
     font-size: 2rem;
     line-height: 1.25;
     font-weight: 600 !important;
     margin-bottom: 16px;
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.10);
+    text-shadow: 0px 0px 4px #0000006d;
 }
 
 h3+p {
@@ -98,6 +152,7 @@ h3+p {
     line-height: 1.27;
     text-align: justify;
     margin-bottom: 8px;
+    text-shadow: 0px 0px 4px #0000005c;
 }
 
 h4 {
@@ -107,6 +162,7 @@ h4 {
     font-style: normal;
     color: white;
     margin-bottom: 8px;
+    text-shadow: 0px 0px 4px #0000006d;
 }
 
 h4+p {
@@ -124,6 +180,7 @@ h5 {
     font-style: normal;
     color: black;
     margin-bottom: 8px;
+    text-shadow: 0px 0px 4px #0000006d;
 }
 
 /* sections-settings - end */
@@ -134,13 +191,15 @@ nav {
     top: 0;
     width: 100%;
     height: 72px;
-    background-color: var(--background-nav-footer);
+    background-color: var(--navigation-background);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     color: white;
+    box-shadow: 0px 1px 4px 1px var(--navigation-boxShadow);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 2000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.253);
 }
 
 .nav-container {
@@ -235,33 +294,35 @@ nav {
     position: absolute;
     top: 80px;
     right: 24px;
-    background-color: var(--background-nav-footer);
     color: white;
-    border-radius: 4px;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 16px;
     z-index: 19;
     overflow: hidden;
 }
 
 
 #languageToggle {
+    position: relative;
+    background-color: var(--navigation-background);
+    height: 50px;
     min-width: 88px;
     text-align: center;
-    background: none;
     color: inherit;
     padding: 12px 8px;
-    border: none;
+    border: 2px solid rgba(255, 255, 255, 0.5);
     cursor: pointer;
     font-size: 1rem;
     line-height: 1.5;
     font-weight: 500;
     transition: background-color 0.3s, transform 0.2s;
+    overflow: hidden;
+    z-index: 20;
 }
 
 #languageToggle:hover {
-    background-color: rgba(59, 131, 246, 0.15);
+    background-color: #11007e;
 }
 
 #languageToggle.active {
@@ -269,23 +330,26 @@ nav {
 }
 
 #languageOptions {
-    display: none;
+    position: relative;
+    display: flex;
     align-items: center;
     justify-content: center;
-    gap: 16px;
+    gap: 8px;
     border-radius: 8px;
     z-index: 999;
-    padding: 0 16px;
+    left: 100%;
+    z-index: 20;
+    transition: left 0.4s ease;
 }
 
 #languageOptions.show {
     display: flex;
+    left: 0;
 }
 
 #languageOptions a {
     color: white;
-    padding: 4px 8px;
-    border-radius: 4px;
+    padding: 12px 24px;
     font-size: 1rem;
     line-height: 1.5;
     font-weight: 500;
@@ -295,16 +359,15 @@ nav {
 }
 
 .nonActiveLanguage {
-    background-color: rgba(255, 72, 0, 0.2);
+    background-color: rgb(255, 50, 50);
 }
 
 .nonActiveLanguage:hover {
-    background-color: rgba(255, 72, 0, 0.12);
+    background-color: rgb(255, 90, 90);
 }
 
 .activeLanguage {
     background-color: rgb(0, 98, 255);
-    cursor: default;
     pointer-events: none;
 }
 
@@ -318,7 +381,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--background-header);
+    background-color: var(--header-background);
     min-height: calc(100vh - 72px);
     margin-top: 72px;
     overflow: hidden;
@@ -527,7 +590,7 @@ header {
 
 /* ******************** ABOUT SECTION - START ******************** */
 #about {
-    background-color: var(--background-odd);
+    background: var(--about-background);
     display: flex;
     justify-content: center;
 }
@@ -585,7 +648,7 @@ header {
 #services {
     display: flex;
     justify-content: center;
-    background-color: var(--background-even-tech);
+    background: var(--services-background);
 }
 
 .myServices {
@@ -618,6 +681,7 @@ header {
     display: flex;
     align-items: center;
     gap: 16px;
+    text-shadow: none;
 }
 
 .service>h4+p {
@@ -627,6 +691,10 @@ header {
 .service>h4>img {
     width: 48px;
     pointer-events: none;
+}
+
+.service>h5 {
+    text-shadow: none;
 }
 
 /* Card Settings - End */
@@ -668,9 +736,13 @@ header {
 /* ******************** PROJECTS SECTION - START ******************** */
 /* Project Settings - Start */
 #projects {
-    background-color: var(--background-odd);
+    background: var(--projects-background);
     display: flex;
     justify-content: center;
+}
+
+.projects-container>h3 {
+    color: var(--projects-h3-color);
 }
 
 .projectShowcase {
@@ -774,11 +846,11 @@ header {
 }
 
 .projectsButton {
+    color: var(--projects-button-color);
     cursor: pointer;
     display: inline-flex;
     align-items: center;
     text-decoration: none;
-    color: white;
     font-size: 1.4rem;
     line-height: 1.5;
     letter-spacing: 0.15px;
@@ -791,7 +863,7 @@ header {
 }
 
 .projectsButton> :first-child {
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid var(--projectsButton-border-color);
 }
 
 .chevrons {
@@ -802,6 +874,7 @@ header {
 
 .projectsButton>.chevrons img {
     position: absolute;
+    filter: var(--svg-color);
     width: 24px;
     height: 24px;
     top: 50%;
@@ -826,7 +899,8 @@ header {
 
 /* ******************** CONTACT SECTION - START ******************** */
 #contact {
-    background-color: var(--background-even-tech);
+    background: var(--contact-background);
+    /* background-color: var(--contact-background); */
     display: flex;
     justify-content: center;
 }
@@ -850,6 +924,7 @@ header {
 
 #info a {
     color: white;
+    text-shadow: 0px 0px 4px #0000006d;
     margin-top: 8px;
     display: flex;
     width: max-content;
@@ -873,11 +948,47 @@ header {
     margin-top: 24px;
     width: 500px;
     max-width: 100%;
-    height: 100%;
+    height: 313px;
     border-radius: 12px;
 }
 
 /* ******************** CONTACT SECTION - END ******************** */
+
+/* ******************** FOOTER SECTION - START ******************** */
+footer {
+    background: var(--footer-background);
+    display: flex;
+    justify-content: center;
+}
+
+.footer-container {
+    width: 100%;
+    max-width: 1248px;
+    padding: 48px 24px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.footer-container>div {
+    display: flex;
+    gap: 16px;
+    margin-left: auto;
+}
+
+.footer-container div>a {
+    transition: transform 0.3s ease;
+}
+
+.footer-container div>a>img {
+    filter: brightness(0) invert(1);
+}
+
+.footer-container div>a:hover {
+    transform: scale(1.1);
+}
+
+/* ******************** FOOTER SECTION - END ******************** */
 
 /* ******************** MINI ME - START ******************** */
 #characterContainer {
@@ -1005,42 +1116,6 @@ header {
 }
 
 /* ******************** MINI ME - END ******************** */
-
-/* ******************** FOOTER SECTION - START ******************** */
-footer {
-    background-color: var(--background-nav-footer);
-    display: flex;
-    justify-content: center;
-}
-
-.footer-container {
-    width: 100%;
-    max-width: 1248px;
-    padding: 48px 24px;
-    display: flex;
-    align-items: center;
-    color: white;
-}
-
-.footer-container>div {
-    display: flex;
-    gap: 16px;
-    margin-left: auto;
-}
-
-.footer-container div>a {
-    transition: transform 0.3s ease;
-}
-
-.footer-container div>a>img {
-    filter: brightness(0) invert(1);
-}
-
-.footer-container div>a:hover {
-    transform: scale(1.1);
-}
-
-/* ******************** FOOTER SECTION - END ******************** */
 
 /* fade-up - start */
 .fade-up {
