@@ -35,11 +35,19 @@
       service: {
         h2: "My Services",
         h3: "Services I Can Provide",
-        fh4: "Front End Development",
-        fp: "I focus on creating projects that are intuitive for users, with clear UI and a smooth UX experience. I also place great importance on writing code that is organized, clean, and easy to understand.",
+        service1: {
+          h4: "Front End Development",
+          p: "I focus on creating projects that are intuitive for users, with clear UI and a smooth UX experience. I also place great importance on writing code that is organized, clean, and easy to understand.",
+        },
+        service2: {
+          h4: "Design Rules",
+          p: "I don’t just write code; I aim to enhance the user experience by following design principles. I create or research SVGs and incorporate them into my websites using the programming languages and technologies I’ve learned, all to improve the user experience.",
+        },
+        service3: {
+          h4: "UI / UX Design",
+          p: "I design interfaces that prioritize user experience, combining usability, accessibility, and visual clarity to make every interaction intuitive and enjoyable.",
+        },
         h5: "I Use",
-        sh4: "Design Rules",
-        sp: "I don’t just write code; I aim to enhance the user experience by following design principles. I create or research SVGs and incorporate them into my websites using the programming languages and technologies I’ve learned, all to improve the user experience.",
       },
       projects: {
         h2: "My Projects",
@@ -113,11 +121,19 @@
       service: {
         h2: "Hizmetlerim",
         h3: "Sağlayabileceğim Hizmetler",
-        fh4: "Front End Geliştirme",
-        fp: "Üzerinde çalıştığım projelerin kullanıcıya hitap etmesine, kullanıcıların projeyi kolay anlamasına (UI) ve kullanıcı deneyimine (UX) önem veririm. Projede kullanılan kodların düzenli, temiz ve anlaşılabilir olmasına da büyük önem veririm.",
+        service1: {
+          h4: "Front End Geliştirme",
+          p: "Üzerinde çalıştığım projelerin kullanıcıya hitap etmesine, kullanıcıların projeyi kolay anlamasına (UI) ve kullanıcı deneyimine (UX) önem veririm. Projede kullanılan kodların düzenli, temiz ve anlaşılabilir olmasına da büyük önem veririm.",
+        },
+        service2: {
+          h4: "Dizayn Kuralları",
+          p: "Sadece kod yazmakla kalmam; tasarım kurallarına dikkat ederek kullanıcının deneyimini artırmayı hedeflerim. SVG’ler üretir veya araştırır, öğrendiğim programlama dilleri ve teknolojiler ile web sitelerimde kullanarak kullanıcı deneyimini geliştirmeye çalışırım.",
+        },
+        service3: {
+          h4: "UI / UX Tasarımı",
+          p: "Kullanıcı deneyimini önceliklendiren arayüzler tasarlıyorum; kullanılabilirlik, erişilebilirlik ve görsel netliği birleştirerek her etkileşimi sezgisel ve keyifli hâle getiriyorum."
+        },
         h5: "Kullandıklarım",
-        sh4: "Dizayn Kuralları",
-        sp: "Sadece kod yazmakla kalmam; tasarım kurallarına dikkat ederek kullanıcının deneyimini artırmayı hedeflerim. SVG’ler üretir veya araştırır, öğrendiğim programlama dilleri ve teknolojiler ile web sitelerimde kullanarak kullanıcı deneyimini geliştirmeye çalışırım.",
       },
       projects: {
         h2: "Projelerim",
