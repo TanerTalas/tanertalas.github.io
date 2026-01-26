@@ -1,384 +1,592 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Taner Talas | Portfolio</title>
-    <meta name="author" content="Taner Talas">
-    <meta name="description"
-        content="This is the homepage of Taner Talas’ portfolio website, showcasing his user-interface-focused projects and front-end development work. The page includes information about Taner Talas, the programming languages and skills he has learned and uses, his services, projects with links, and contact information.">
-
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta property="og:title" content="Taner Talas | Front End Portfolio">
-    <meta property="og:description"
-        content="Explore my personal projects focused on interactive web interfaces and user experience.">
-    <meta property="og:image" content="https://tanertalas.github.io/images/banner.png">
-    <meta property="og:url" content="https://tanertalas.github.io">
-    <meta property="og:type" content="website">
-    <meta name="robots" content="index, follow">
-
-    <link rel="canonical" href="https://tanertalas.github.io">
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Author and Description -->
+    <meta name="author" content="Taner Talas" />
+    <meta
+      name="description"
+      content="This is the homepage of Taner Talas’ portfolio website, showcasing his user-interface-focused projects and front-end development work. The page includes information about Taner Talas, the programming languages and skills he has learned and uses, his services, projects with links, and contact information."
+    />
+    <!-- Share -->
+    <meta property="og:title" content="Taner Talas | Front End Portfolio" />
+    <meta
+      property="og:description"
+      content="Explore my personal projects focused on interactive web interfaces and user experience."
+    />
+    <meta
+      property="og:image"
+      content="https://tanertalas.github.io/images/banner.png"
+    />
+    <meta property="og:url" content="https://tanertalas.github.io" />
+    <meta property="og:type" content="website" />
+    <!-- Robots and mobil-web -->
+    <meta name="robots" content="index, follow" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <!-- Canonical -->
+    <link rel="canonical" href="https://tanertalas.github.io" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
-    <link rel="icon" href="./images/icons/logo.svg">
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Icon -->
+    <link rel="icon" href="./images/icons/logo.svg" />
+    <!-- Files -->
+    <link rel="stylesheet" href="./styles.css" />
     <script src="./script.js" defer></script>
     <script src="./language.js" defer></script>
     <script type="module" defer>
-        import Lenis from 'https://cdn.jsdelivr.net/npm/lenis@1.3.16/+esm'
+      import Lenis from "https://cdn.jsdelivr.net/npm/lenis@1.3.16/+esm";
 
-        const isDesktop = window.matchMedia('(min-width: 768px)').matches
-        let lenis
+      const isDesktop = window.matchMedia("(min-width: 768px)").matches;
+      let lenis;
 
-        if (isDesktop) {
-            lenis = new Lenis({
-                duration: 1,
-                easing: (t) => 1 - Math.pow(1 - t, 4),
-                smoothWheel: true,
-                smoothTouch: false,
-                wheelMultiplier: 0.8,
-            })
+      if (isDesktop) {
+        lenis = new Lenis({
+          duration: 1,
+          easing: (t) => 1 - Math.pow(1 - t, 4),
+          smoothWheel: true,
+          smoothTouch: false,
+          wheelMultiplier: 0.8,
+        });
 
-            function raf(time) {
-                lenis.raf(time)
-                requestAnimationFrame(raf)
-            }
-
-            requestAnimationFrame(raf)
-
-            document.addEventListener('click', (e) => {
-                const link = e.target.closest('a')
-                if (!link) return
-
-                lenis.stop()
-                requestAnimationFrame(() => lenis.start())
-            })
+        function raf(time) {
+          lenis.raf(time);
+          requestAnimationFrame(raf);
         }
+
+        requestAnimationFrame(raf);
+
+        document.addEventListener("click", (e) => {
+          const link = e.target.closest("a");
+          if (!link) return;
+
+          lenis.stop();
+          requestAnimationFrame(() => lenis.start());
+        });
+      }
     </script>
-</head>
+  </head>
 
-<body class="no-scroll">
-
+  <body class="no-scroll">
     <!-- nav - start -->
     <nav>
-        <div class="nav-container">
-            <img src="./images/icons/logo.svg" alt="Logo" id="navLogo">
+      <div class="nav-container">
+        <img src="./images/icons/logo.svg" alt="Logo" id="navLogo" />
 
-            <ul id="navMenu">
-                <li><a href="#header" data-i18n="nav.menu.home">Home</a></li>
-                <li><a href="#about" data-i18n="nav.menu.about">About</a></li>
-                <li><a href="#services" data-i18n="nav.menu.services">Services</a></li>
-                <li><a href="#projects" data-i18n="nav.menu.projects">Projects</a></li>
-                <li><a href="#contact" data-i18n="nav.menu.contact">Contact</a></li>
-            </ul>
+        <ul id="navMenu">
+          <li><a href="#header" data-i18n="nav.menu.home">Home</a></li>
+          <li><a href="#about" data-i18n="nav.menu.about">About</a></li>
+          <li>
+            <a href="#services" data-i18n="nav.menu.services">Services</a>
+          </li>
+          <li>
+            <a href="#projects" data-i18n="nav.menu.projects">Projects</a>
+          </li>
+          <li><a href="#contact" data-i18n="nav.menu.contact">Contact</a></li>
+        </ul>
 
-            <button id="themeButton" aria-label="Toggle light/dark mode">
-                <span class="themeIcon-wrapper">
-                    <img src="./images/icons/sunup.svg" alt="light mode" class="sunUp">
-                    <img src="./images/icons/sundown.svg" alt="dark mode" class="sunDown">
-                </span>
+        <button id="themeButton" aria-label="Toggle light/dark mode">
+          <span class="themeIcon-wrapper">
+            <img
+              src="./images/icons/sunup.svg"
+              alt="light mode"
+              class="sunUp"
+            />
+            <img
+              src="./images/icons/sundown.svg"
+              alt="dark mode"
+              class="sunDown"
+            />
+          </span>
+        </button>
+
+        <button id="menuButton">
+          <img src="./images/icons/menuicon.svg" alt="menu" id="menuIcon" />
+        </button>
+
+        <div id="languageSwitcher">
+          <div id="languageOptions">
+            <button
+              class="lang-btn nonActiveLanguage"
+              data-lang="TR"
+              data-i18n="nav.menu.languageButton.turkish"
+            >
+              Turkish
             </button>
-
-            <button id="menuButton"><img src="./images/icons/menuicon.svg" alt="menu" id="menuIcon"></button>
-
-            <div id="languageSwitcher">
-                <div id="languageOptions">
-                    <button class="lang-btn nonActiveLanguage" data-lang="TR"
-                        data-i18n="nav.menu.languageButton.turkish">Turkish</button>
-                    <button class="lang-btn activeLanguage" data-lang="EN"
-                        data-i18n="nav.menu.languageButton.english">English</button>
-                </div>
-                <button id="languageToggle" data-i18n="nav.menu.languageButton.language">Language</button>
-            </div>
+            <button
+              class="lang-btn activeLanguage"
+              data-lang="EN"
+              data-i18n="nav.menu.languageButton.english"
+            >
+              English
+            </button>
+          </div>
+          <button
+            id="languageToggle"
+            data-i18n="nav.menu.languageButton.language"
+          >
+            Language
+          </button>
         </div>
+      </div>
     </nav>
 
     <!-- nav - end -->
 
     <!-- header - start -->
     <header id="header">
-        <div id="header-container">
-            <div id="header-left">
-                <h1 class="montserratFont"><span data-i18n="header.h1"> Hello, I'm Taner </span><br>
-                    <span id="typedText"></span><span id="cursor">|</span>
-                </h1>
-                <p data-i18n="header.p">I'm constantly learning new things to improve myself. I designed and coded this
-                    website entirely by
-                    myself!
-                </p>
-                <div id="headerLinks">
-                    <a href="https://github.com/TanerTalas" target="_blank" rel="noopener noreferrer"><img
-                            src="./images/icons/githubhero.svg" alt="Github Icon"></a>
-                    <a href="https://www.linkedin.com/in/taner-talas-a43a2236a/" target="_blank"
-                        rel="noopener noreferrer"><img src="./images/icons/linkedinhero.svg" alt="Linkedin Icon"></a>
-                </div>
-                <a href="#about" id="headerButton" data-i18n="header.button">Continue</a>
-            </div>
-            <div id="header-right">
-                <img src="./images/avatar.svg" alt="">
-            </div>
+      <div id="header-container">
+        <div id="header-left">
+          <h1 class="montserratFont">
+            <span data-i18n="header.h1"> Hello, I'm Taner </span><br />
+            <span id="typedText"></span><span id="cursor">|</span>
+          </h1>
+          <p data-i18n="header.p">
+            I'm constantly learning new things to improve myself. I designed and
+            coded this website entirely by myself!
+          </p>
+          <div id="headerLinks">
+            <a
+              href="https://github.com/TanerTalas"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><img src="./images/icons/githubhero.svg" alt="Github Icon"
+            /></a>
+            <a
+              href="https://www.linkedin.com/in/taner-talas-a43a2236a/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><img src="./images/icons/linkedinhero.svg" alt="Linkedin Icon"
+            /></a>
+          </div>
+          <a href="#about" id="headerButton" data-i18n="header.button"
+            >Continue</a
+          >
         </div>
-        <img src="./images/clouds/light/8.svg" id="c1" class="clouds" alt="">
-        <img src="./images/clouds/light/7.svg" id="c2" class="clouds" alt="">
-        <img src="./images/clouds/light/6.svg" id="c3" class="clouds" alt="">
-        <img src="./images/clouds/light/5.svg" id="c4" class="clouds" alt="">
-        <img src="./images/clouds/light/4.svg" id="c5" class="clouds" alt="">
-        <img src="./images/clouds/light/3.svg" id="c6" class="clouds" alt="">
-        <img src="./images/clouds/light/2.svg" id="c7" class="clouds" alt="">
-        <img src="./images/clouds/light/1.svg" id="c8" class="clouds" alt="">
+        <div id="header-right">
+          <img src="./images/avatar.svg" alt="" />
+        </div>
+      </div>
+      <img src="./images/clouds/light/8.svg" id="c1" class="clouds" alt="" />
+      <img src="./images/clouds/light/7.svg" id="c2" class="clouds" alt="" />
+      <img src="./images/clouds/light/6.svg" id="c3" class="clouds" alt="" />
+      <img src="./images/clouds/light/5.svg" id="c4" class="clouds" alt="" />
+      <img src="./images/clouds/light/4.svg" id="c5" class="clouds" alt="" />
+      <img src="./images/clouds/light/3.svg" id="c6" class="clouds" alt="" />
+      <img src="./images/clouds/light/2.svg" id="c7" class="clouds" alt="" />
+      <img src="./images/clouds/light/1.svg" id="c8" class="clouds" alt="" />
     </header>
     <!-- header - end -->
 
     <!-- about - start -->
     <section id="about">
-        <div class="about-container">
-            <h2 class="fade-up montserratFont" data-i18n="about.h2">About Me</h2>
-            <h3 class="fade-up montserratFont" data-i18n="about.fh3">Me in Short</h3>
-            <p class="fade-up" data-i18n="about.fp">I’m a second-year (final-year) Computer Programming student at
-                Istanbul Gedik University. I have a strong interest in front-end development and prefer to learn things
-                in depth rather than just on the surface. At the moment, I’m focused on becoming highly skilled in
-                front-end development, with the long-term goal of working in full-stack development and artificial
-                intelligence.
-            </p>
-            <h3 style="margin-top: 32px;" class="fade-up montserratFont" data-i18n="about.sh3">My Working Style and
-                Skills</h3>
-            <p class="fade-up" data-i18n="about.sp">Although I may not seem to be using many resources right now, I
-                develop well-crafted
-                projects by paying attention to design principles and writing clean, careful, and organized code. I make
-                sure to fully understand any programming language or tool I’m learning before moving on to other topics.
-            </p>
-            <div id="technologies" style="margin-top: 16px;">
-                <div class="fade-up">
-                    <div class="tool">
-                        <img src="./images/toolicons/htmlicon.svg" alt=""><span>HTML</span>
-                    </div>
-                </div>
-                <div class="fade-up">
-                    <div class="tool">
-                        <img src="./images/toolicons/cssicon.svg" alt=""><span>CSS</span>
-                    </div>
-                </div>
-                <div class="fade-up">
-                    <div class="tool">
-                        <img src="./images/toolicons/javascripticon.svg" alt=""><span>JavaScript</span>
-                    </div>
-                </div>
-                <div class="fade-up">
-                    <div class="tool">
-                        <img src="./images/toolicons/figmaicon.svg" alt=""><span>Figma</span>
-                    </div>
-                </div>
-                <div class="fade-up">
-                    <div class="tool">
-                        <img src="./images/toolicons/giticon.svg" alt=""><span>Git</span>
-                    </div>
-                </div>
-                <div class="fade-up">
-                    <div class="tool">
-                        <img src="./images/toolicons/mysqlicon.svg" alt=""><span>MySQL</span>
-                    </div>
-                </div>
-                <div class="fade-up">
-                    <div class="tool">
-                        <img src="./images/toolicons/javaicon.svg" alt=""><span>Java</span>
-                    </div>
-                </div>
-                <div class="fade-up">
-                    <div class="tool">
-                        <img src="./images/toolicons/pythonicon.svg" alt=""><span>Python</span>
-                    </div>
-                </div>
-                <div class="fade-up">
-                    <div class="tool">
-                        <img src="./images/toolicons/bootstrap.svg" alt=""><span>Bootstrap</span>
-                    </div>
-                </div>
+      <div class="about-container">
+        <h2 class="fade-up montserratFont" data-i18n="about.h2">About Me</h2>
+        <h3 class="fade-up montserratFont" data-i18n="about.fh3">
+          Me in Short
+        </h3>
+        <p class="fade-up" data-i18n="about.fp">
+          I’m a second-year (final-year) Computer Programming student at
+          Istanbul Gedik University. I have a strong interest in front-end
+          development and prefer to learn things in depth rather than just on
+          the surface. At the moment, I’m focused on becoming highly skilled in
+          front-end development, with the long-term goal of working in
+          full-stack development and artificial intelligence.
+        </p>
+        <h3
+          style="margin-top: 32px"
+          class="fade-up montserratFont"
+          data-i18n="about.sh3"
+        >
+          My Working Style and Skills
+        </h3>
+        <p class="fade-up" data-i18n="about.sp">
+          Although I may not seem to be using many resources right now, I
+          develop well-crafted projects by paying attention to design principles
+          and writing clean, careful, and organized code. I make sure to fully
+          understand any programming language or tool I’m learning before moving
+          on to other topics.
+        </p>
+        <div id="technologies" style="margin-top: 16px">
+          <div class="fade-up">
+            <div class="tool">
+              <img src="./images/toolicons/htmlicon.svg" alt="" /><span
+                >HTML</span
+              >
             </div>
+          </div>
+          <div class="fade-up">
+            <div class="tool">
+              <img src="./images/toolicons/cssicon.svg" alt="" /><span
+                >CSS</span
+              >
+            </div>
+          </div>
+          <div class="fade-up">
+            <div class="tool">
+              <img src="./images/toolicons/javascripticon.svg" alt="" /><span
+                >JavaScript</span
+              >
+            </div>
+          </div>
+          <div class="fade-up">
+            <div class="tool">
+              <img src="./images/toolicons/figmaicon.svg" alt="" /><span
+                >Figma</span
+              >
+            </div>
+          </div>
+          <div class="fade-up">
+            <div class="tool">
+              <img src="./images/toolicons/giticon.svg" alt="" /><span
+                >Git</span
+              >
+            </div>
+          </div>
+          <div class="fade-up">
+            <div class="tool">
+              <img src="./images/toolicons/mysqlicon.svg" alt="" /><span
+                >MySQL</span
+              >
+            </div>
+          </div>
+          <div class="fade-up">
+            <div class="tool">
+              <img src="./images/toolicons/javaicon.svg" alt="" /><span
+                >Java</span
+              >
+            </div>
+          </div>
+          <div class="fade-up">
+            <div class="tool">
+              <img src="./images/toolicons/pythonicon.svg" alt="" /><span
+                >Python</span
+              >
+            </div>
+          </div>
+          <div class="fade-up">
+            <div class="tool">
+              <img src="./images/toolicons/bootstrap.svg" alt="" /><span
+                >Bootstrap</span
+              >
+            </div>
+          </div>
         </div>
+      </div>
     </section>
     <!-- about - end -->
 
     <!-- services - start -->
     <section id="services">
-        <div class="services-container">
-            <h2 class="fade-up montserratFont" data-i18n="service.h2">My Services</h2>
-            <h3 class="fade-up montserratFont" data-i18n="service.h3">Services I Can Provide</h3>
-            <div class="myServices">
-                <div class="fade-up">
-                    <div class="service">
-                        <h4><img src="./images/frontendicon.svg" alt="Front-End Icon"><span
-                                data-i18n="service.fh4">Front End
-                                Development</span></h4>
-                        <p data-i18n="service.fp">I build fast, responsive, and user-friendly websites using modern web
-                            technologies — focusing on both design and functionality.</p>
-                        <h5 data-i18n="service.h5">I Use</h5>
-                        <div class="serviceTools">
-                            <div><img src="./images/toolicons/htmlicon.svg" alt=""><span>HTML</span></div>
-                            <div><img src="./images/toolicons/cssicon.svg" alt=""><span>CSS</span></div>
-                            <div><img src="./images/toolicons/javascripticon.svg" alt=""><span>JavaScript</span></div>
-                            <div><img src="./images/toolicons/bootstrap.svg" alt=""><span>Bootstrap</span></div>
-                            <div><img src="./images/toolicons/giticon.svg" alt=""><span>Git</span></div>
-                        </div>
-                    </div>
+      <div class="services-container">
+        <h2 class="fade-up montserratFont" data-i18n="service.h2">
+          My Services
+        </h2>
+        <h3 class="fade-up montserratFont" data-i18n="service.h3">
+          Services I Can Provide
+        </h3>
+        <div class="myServices">
+          <div class="fade-up">
+            <div class="service">
+              <h4>
+                <img
+                  src="./images/frontendicon.svg"
+                  alt="Front-End Icon"
+                /><span data-i18n="service.fh4">Front End Development</span>
+              </h4>
+              <p data-i18n="service.fp">
+                I build fast, responsive, and user-friendly websites using
+                modern web technologies — focusing on both design and
+                functionality.
+              </p>
+              <h5 data-i18n="service.h5">I Use</h5>
+              <div class="serviceTools">
+                <div>
+                  <img src="./images/toolicons/htmlicon.svg" alt="" /><span
+                    >HTML</span
+                  >
                 </div>
-
-                <div class="fade-up">
-                    <div class="service">
-                        <h4><img src="./images/designicon.svg" alt="Design Icon"><span data-i18n="service.sh4">Design
-                                Rules</span></h4>
-                        <p data-i18n="service.sp">I create designs that enhance user experience by establishing a clean
-                            and
-                            intuitive visual language.</p>
-                        <h5 data-i18n="service.h5">I Use</h5>
-                        <div class="serviceTools">
-                            <div><img src="./images/toolicons/figmaicon.svg" alt=""><span>Figma</span></div>
-                        </div>
-                    </div>
+                <div>
+                  <img src="./images/toolicons/cssicon.svg" alt="" /><span
+                    >CSS</span
+                  >
                 </div>
+                <div>
+                  <img
+                    src="./images/toolicons/javascripticon.svg"
+                    alt=""
+                  /><span>JavaScript</span>
+                </div>
+                <div>
+                  <img src="./images/toolicons/bootstrap.svg" alt="" /><span
+                    >Bootstrap</span
+                  >
+                </div>
+                <div>
+                  <img src="./images/toolicons/giticon.svg" alt="" /><span
+                    >Git</span
+                  >
+                </div>
+              </div>
             </div>
+          </div>
+
+          <div class="fade-up">
+            <div class="service">
+              <h4>
+                <img src="./images/designicon.svg" alt="Design Icon" /><span
+                  data-i18n="service.sh4"
+                  >Design Rules</span
+                >
+              </h4>
+              <p data-i18n="service.sp">
+                I create designs that enhance user experience by establishing a
+                clean and intuitive visual language.
+              </p>
+              <h5 data-i18n="service.h5">I Use</h5>
+              <div class="serviceTools">
+                <div>
+                  <img src="./images/toolicons/figmaicon.svg" alt="" /><span
+                    >Figma</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
     <!-- services - end -->
 
     <!-- projects - start -->
     <section id="projects">
-        <div class="projects-container">
-            <h2 class="montserratFont fade-up" data-i18n="projects.h2">My Projects</h2>
-            <h3 class="montserratFont fade-up" data-i18n="projects.h3">A Few of My Projects</h3>
-            <div class="projectShowcase">
-                <div class="fade-up">
-                    <div class="project">
-                        <img src="./images/projects/restaurant-promotion.svg" alt="">
-                        <h4 data-i18n="projects.projects.project1.h4">Restaurant Promotion</h4>
-                        <p data-i18n="projects.projects.project1.p">This project showcases a modern café website concept
-                            inspired by contemporary French
-                            design. </p>
-                        <a href="https://github.com/TanerTalas/restaurant-promotion" class="projectGithubLink"
-                            target="_blank" rel="noopener noreferrer">
-                            <img src="./images/icons/githubcontact.svg" alt="Github Icon"><span class="codeFont"
-                                data-i18n="projects.projects.codeAndInfo">Code &amp; More Info &gt;</span>
-                        </a>
-                        <div class="projectWebsiteLink-wrapper">
-                            <a href="https://tanertalas.github.io/restaurant-promotion/"
-                                class="projectWebsiteLink codeFont" target="_blank" rel="noopener noreferrer"
-                                data-i18n="projects.projects.liveWebsite">Live Website</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="fade-up">
-                    <div class="project">
-                        <img src="./images/projects/mondrian-css.svg" alt="">
-                        <h4 data-i18n="projects.projects.project2.h4">Mondrian CSS</h4>
-                        <p data-i18n="projects.projects.project2.p">Front end project featuring CSS recreations of
-                            Mondrian paintings, focusing on layout,
-                            responsive design, and artistic interpretation.</p>
-                        <a href="https://github.com/TanerTalas/mondrian-css" class="projectGithubLink" target="_blank" rel="noopener noreferrer">
-                            <img src="./images/icons/githubcontact.svg" alt="Github Icon"><span class="codeFont"
-                                data-i18n="projects.projects.codeAndInfo">Code &amp; More Info &gt;</span>
-                        </a>
-                        <div class="projectWebsiteLink-wrapper">
-                            <a href="https://tanertalas.github.io/mondrian-css/" class="projectWebsiteLink codeFont"
-                                target="_blank" rel="noopener noreferrer" data-i18n="projects.projects.liveWebsite">Live Website</a>
-                        </div>
-                    </div>
-                </div>
+      <div class="projects-container">
+        <h2 class="montserratFont fade-up" data-i18n="projects.h2">
+          My Projects
+        </h2>
+        <h3 class="montserratFont fade-up" data-i18n="projects.h3">
+          A Few of My Projects
+        </h3>
+        <div class="projectShowcase">
+          <!-- Project 1 -->
+          <div class="fade-up">
+            <div class="project">
+              <img src="./images/projects/TinCat.png" alt="" />
+              <h4 data-i18n="projects.projects.project1.h4">TinCat</h4>
+              <p data-i18n="projects.projects.project1.p">
+                TinCat is a fictional landing page inspired by modern dating
+                apps, reimagined for cat lovers. This project was built as a
+                frontend-focused portfolio project to practice layout,
+                animations, performance optimization, and UI/UX details.
+              </p>
+              <a
+                href="https://github.com/TanerTalas/TinCat"
+                class="projectGithubLink"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="./images/icons/githubcontact.svg"
+                  alt="Github Icon"
+                /><span
+                  class="codeFont"
+                  data-i18n="projects.projects.codeAndInfo"
+                  >Code &amp; More Info &gt;</span
+                >
+              </a>
+              <div class="projectWebsiteLink-wrapper">
+                <a
+                  href="https://tanertalas.github.io/TinCat/"
+                  class="projectWebsiteLink codeFont"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-i18n="projects.projects.liveWebsite"
+                  >Live Website</a
+                >
+              </div>
             </div>
-            <div class="projectsButton-wrapper fade-up">
-                <a href="./projects.html" class="projectsButton" rel="noopener noreferrer">
-                    <span data-i18n="projects.seeAllProjects">See All Projects</span>
-                    <span class="chevrons">
-                        <img src="./images/icons/chevron-right.svg" alt=""><img src="./images/icons/chevron-right.svg"
-                            alt=""><img src="./images/icons/chevron-right.svg" alt="">
-                    </span>
-                </a>
+          </div>
+          <!-- Project 2 -->
+          <div class="fade-up">
+            <div class="project">
+              <img src="./images/projects/restaurant-promotion.svg" alt="" />
+              <h4 data-i18n="projects.projects.project2.h4">Paris Beaubourg</h4>
+              <p data-i18n="projects.projects.project2.p">
+                This project showcases a modern café website concept inspired by
+                contemporary French design.
+              </p>
+              <a
+                href="https://github.com/TanerTalas/restaurant-promotion"
+                class="projectGithubLink"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="./images/icons/githubcontact.svg"
+                  alt="Github Icon"
+                /><span
+                  class="codeFont"
+                  data-i18n="projects.projects.codeAndInfo"
+                  >Code &amp; More Info &gt;</span
+                >
+              </a>
+              <div class="projectWebsiteLink-wrapper">
+                <a
+                  href="https://tanertalas.github.io/Paris-Beaubourg/"
+                  class="projectWebsiteLink codeFont"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-i18n="projects.projects.liveWebsite"
+                  >Live Website</a
+                >
+              </div>
             </div>
+          </div>
         </div>
+        <div class="projectsButton-wrapper fade-up">
+          <a
+            href="./projects.html"
+            class="projectsButton"
+            rel="noopener noreferrer"
+          >
+            <span data-i18n="projects.seeAllProjects">See All Projects</span>
+            <span class="chevrons">
+              <img src="./images/icons/chevron-right.svg" alt="" /><img
+                src="./images/icons/chevron-right.svg"
+                alt=""
+              /><img src="./images/icons/chevron-right.svg" alt="" />
+            </span>
+          </a>
+        </div>
+      </div>
     </section>
     <!-- projects - end -->
 
     <!-- contact - start -->
     <section id="contact">
-        <div class="contact-container">
-            <h2 class="montserratFont fade-up" data-i18n="contact.h2">Contact Me</h2>
-            <h3 class="montserratFont fade-up" data-i18n="contact.h3">Get in Touch</h3>
-            <p class="fade-up" data-i18n="contact.p">Whether you’d like to learn more about me and my work — or just
-                want to say hi — feel
-                free to reach out!
-            </p>
-            <address id="contactInfo" style="margin-top: 32px;">
-                <div id="info">
-                    <h4 class="fade-up" data-i18n="contact.email">Email</h4>
-                    <div class="contactLinkWrapper fade-up">
-                        <a href="mailto:r7byx0@gmail.com" class="codeFont"><img src="./images/icons/mailcontact.svg"
-                                alt="">
-                            r7byx0@gmail.com</a>
-                    </div>
-                    <h4 class="fade-up" data-i18n="contact.adress">Address</h4>
-                    <div class="contactLinkWrapper fade-up">
-                        <a href="https://maps.app.goo.gl/NrBXaAHdg6ChLBYk9" target="_blank" rel="noopener noreferrer"
-                            class="codeFont"><img src="./images/icons/mappincontact.svg" alt=""><span
-                                data-i18n="contact.adressp">Turkey,
-                                Istanbul, Tuzla</span></a>
-                    </div>
-                    <h4 class="fade-up" data-i18n="contact.links">Links</h4>
-                    <div class="contactLinkWrapper fade-up">
-                        <a href="https://github.com/TanerTalas" target="_blank" rel="noopener noreferrer"><img
-                                src="./images/icons/githubcontact.svg" alt="" class="codeFont">Github / Taner Talas</a>
-                        <a href="https://www.linkedin.com/in/taner-talas-a43a2236a/" target="_blank"
-                            rel="noopener noreferrer" class="codeFont"><img src="./images/icons/linkedincontact.svg"
-                                alt="">LinkedIn /
-                            Taner Talas</a>
-                    </div>
-                </div>
-                <div id="map" class="fade-up">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d136382.03454415782!2d29.330213441063467!3d40.945432239382264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cad9a716174373%3A0x1df73419f1930424!2zVHV6bGEvxLBzdGFuYnVs!5e0!3m2!1sen!2str!4v1768079946960!5m2!1sen!2str"
-                        width="100%" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </address>
-        </div>
+      <div class="contact-container">
+        <h2 class="montserratFont fade-up" data-i18n="contact.h2">
+          Contact Me
+        </h2>
+        <h3 class="montserratFont fade-up" data-i18n="contact.h3">
+          Get in Touch
+        </h3>
+        <p class="fade-up" data-i18n="contact.p">
+          Whether you’d like to learn more about me and my work — or just want
+          to say hi — feel free to reach out!
+        </p>
+        <address id="contactInfo" style="margin-top: 32px">
+          <div id="info">
+            <h4 class="fade-up" data-i18n="contact.email">Email</h4>
+            <div class="contactLinkWrapper fade-up">
+              <a href="mailto:r7byx0@gmail.com" class="codeFont"
+                ><img src="./images/icons/mailcontact.svg" alt="" />
+                r7byx0@gmail.com</a
+              >
+            </div>
+            <h4 class="fade-up" data-i18n="contact.adress">Address</h4>
+            <div class="contactLinkWrapper fade-up">
+              <a
+                href="https://maps.app.goo.gl/NrBXaAHdg6ChLBYk9"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="codeFont"
+                ><img src="./images/icons/mappincontact.svg" alt="" /><span
+                  data-i18n="contact.adressp"
+                  >Turkey, Istanbul, Tuzla</span
+                ></a
+              >
+            </div>
+            <h4 class="fade-up" data-i18n="contact.links">Links</h4>
+            <div class="contactLinkWrapper fade-up">
+              <a
+                href="https://github.com/TanerTalas"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img
+                  src="./images/icons/githubcontact.svg"
+                  alt=""
+                  class="codeFont"
+                />Github / Taner Talas</a
+              >
+              <a
+                href="https://www.linkedin.com/in/taner-talas-a43a2236a/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="codeFont"
+                ><img src="./images/icons/linkedincontact.svg" alt="" />LinkedIn
+                / Taner Talas</a
+              >
+            </div>
+          </div>
+          <div id="map" class="fade-up">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d136382.03454415782!2d29.330213441063467!3d40.945432239382264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cad9a716174373%3A0x1df73419f1930424!2zVHV6bGEvxLBzdGFuYnVs!5e0!3m2!1sen!2str!4v1768079946960!5m2!1sen!2str"
+              width="100%"
+              style="border: 0; border-radius: 8px"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </address>
+      </div>
     </section>
     <!-- contact - end -->
 
     <!-- miniMe - start -->
 
     <div id="characterContainer">
-        <img id="stick" src="./images/character/stick.svg" />
-        <img id="body" src="./images/character/body.svg" />
-        <img id="head" src="./images/character/head.svg" />
-        <div id="textBubble"><span id="bubbleText"></span><span class="cursor">|</span>
-        </div>
+      <img id="stick" src="./images/character/stick.svg" />
+      <img id="body" src="./images/character/body.svg" />
+      <img id="head" src="./images/character/head.svg" />
+      <div id="textBubble">
+        <span id="bubbleText"></span><span class="cursor">|</span>
+      </div>
     </div>
     <img id="leftHand" src="./images/character/left-hand.svg" />
     <img id="rightHand" src="./images/character/right-hand.svg" />
-
 
     <!-- miniMe - end -->
 
     <!-- footer - start -->
     <footer>
-        <div class="footer-container">
-            <p class="montserratFont"> <span data-i18n="footer.half1">Made with</span> <img
-                    src="./images/icons/heart.svg" alt="heart"> <span data-i18n="footer.half2">by Taner Talas</span></p>
-            <div>
-                <a href="https://github.com/TanerTalas" target="_blank" rel="noopener noreferrer"><img
-                        src="./images/icons/githubhero.svg" alt="Link to Github icon"></a>
-                <a href="https://www.linkedin.com/in/taner-talas-a43a2236a/" target="_blank"
-                    rel="noopener noreferrer"><img src="./images/icons/linkedinhero.svg"
-                        alt="Link to Linkedin icon"></a>
-            </div>
+      <div class="footer-container">
+        <p class="montserratFont">
+          <span data-i18n="footer.half1">Made with</span>
+          <img src="./images/icons/heart.svg" alt="heart" />
+          <span data-i18n="footer.half2">by Taner Talas</span>
+        </p>
+        <div>
+          <a
+            href="https://github.com/TanerTalas"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img src="./images/icons/githubhero.svg" alt="Link to Github icon"
+          /></a>
+          <a
+            href="https://www.linkedin.com/in/taner-talas-a43a2236a/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img
+              src="./images/icons/linkedinhero.svg"
+              alt="Link to Linkedin icon"
+          /></a>
         </div>
+      </div>
     </footer>
     <!-- footer - end -->
     <!-- design inspired from https://aakash-sharma.netlify.app -->
-</body>
-
+  </body>
 </html>
