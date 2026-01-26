@@ -77,8 +77,6 @@
         h3: "Get in Touch",
         p: "You can reach out to me using the contact information below. Feel free to write just to say “hi,” or come by in person and expect me to burst out of the door like crazy (just kidding).",
         email: "Email",
-        adress: "Adress",
-        adressp: "Turkey, Istanbul, Tuzla",
         links: "Links",
       },
       footer: {
@@ -163,8 +161,6 @@
         h3: "İletişime Geç",
         p: "Bana aşağıdaki iletişim bilgilerim üzerinden ulaşabilirsiniz. Sadece “merhaba” demek için bile yazabilirsiniz veya adrese gelip kapımdan deli gibi çıkmamı bekleyebilirsiniz (dalga geçiyorum).",
         email: "E-posta",
-        adress: "Adres",
-        adressp: "Türkiye, İstanbul, Tuzla",
         links: "Profillerim",
       },
       footer: {
