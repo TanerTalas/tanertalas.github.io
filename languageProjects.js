@@ -48,6 +48,10 @@
             h4: "CSS Authentication UI",
             p: "A single-page authentication project with Sign In, Sign Up, and Forgot Password sections, featuring animated transitions, form validations, day & night themes, and dynamic backgrounds.",
           },
+          project5: {
+            h4: "PatiPop",
+            p: "PatiPop is a Tailwind CSS project consisting of 7 pages, each with its own dedicated CSS file to maintain a modular and organized structure.",
+          },
           codeAndInfo: "Code & More Info >",
           liveWebsite: "Live Website",
         },
@@ -105,7 +109,10 @@
             h4: "CSS Kimlik Doğrulama Kullanıcı Arayüzü",
             p: "Giriş, Kayıt ve Şifremi Unuttum bölümleri olan tek sayfalık bir kimlik doğrulama projesi; animasyonlu geçişler, form doğrulamaları, gündüz & gece temaları ve dinamik arka planlar içerir.",
           },
-
+          project5: {
+            h4: "PatiPop",
+            p: "PatiPop, her biri modüler ve düzenli bir yapı sağlamak için kendine ait bir CSS dosyasına sahip 7 sayfadan oluşan bir Tailwind CSS projesidir.",
+          },
           codeAndInfo: "Kodu & Fazlası >",
           liveWebsite: "Canlı Site",
         },
