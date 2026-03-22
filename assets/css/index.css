@@ -407,7 +407,8 @@
 
 /* ******************** MINI ME - END ******************** */
 
-@media (max-width: 767.98px) {
+@media (max-width: 767.98px),
+(max-height: 588.99px) {
     /* header - start */
     #header-container {
         grid-template-columns: 1fr;
