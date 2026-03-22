@@ -40,11 +40,13 @@
       rel="stylesheet"
     />
     <!-- Icon -->
-    <link rel="icon" href="./images/icons/logo.svg" />
+    <link rel="icon" href="./assets/img/icons/logo.svg" />
     <!-- Files -->
-    <link rel="stylesheet" href="./styles.css" />
-    <script src="./script.js" defer></script>
-    <script src="./language.js" defer></script>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <script src="./assets/js/script.js" defer></script>
+    <script src="./assets/js/components.js"></script>
+    <script src="./assets/js/languageHomepage.js" defer></script>
     <script type="module" defer>
       import Lenis from "https://cdn.jsdelivr.net/npm/lenis@1.3.16/+esm";
 
@@ -82,7 +84,7 @@
     <!-- nav - start -->
     <nav>
       <div class="nav-container">
-        <img src="./images/icons/logo.svg" alt="Logo" id="navLogo" />
+        <img src="./assets/img/icons/logo.svg" alt="Logo" id="navLogo" />
 
         <ul id="navMenu">
           <li><a href="#header" data-i18n="nav.menu.home">Home</a></li>
@@ -99,12 +101,12 @@
         <button id="themeButton" aria-label="Toggle light/dark mode">
           <span class="themeIcon-wrapper">
             <img
-              src="./images/icons/sunup.svg"
+              src="./assets/img/icons/sunup.svg"
               alt="light mode"
               class="sunUp"
             />
             <img
-              src="./images/icons/sundown.svg"
+              src="./assets/img/icons/sundown.svg"
               alt="dark mode"
               class="sunDown"
             />
@@ -112,7 +114,7 @@
         </button>
 
         <button id="menuButton">
-          <img src="./images/icons/menuicon.svg" alt="menu" id="menuIcon" />
+          <img src="./assets/img/icons/menuicon.svg" alt="menu" id="menuIcon" />
         </button>
 
         <div id="languageSwitcher">
@@ -161,13 +163,15 @@
               href="https://github.com/TanerTalas"
               target="_blank"
               rel="noopener noreferrer"
-              ><img src="./images/icons/githubhero.svg" alt="Github Icon"
+              ><img src="./assets/img/icons/githubhero.svg" alt="Github Icon"
             /></a>
             <a
               href="https://www.linkedin.com/in/taner-talas-a43a2236a/"
               target="_blank"
               rel="noopener noreferrer"
-              ><img src="./images/icons/linkedinhero.svg" alt="Linkedin Icon"
+              ><img
+                src="./assets/img/icons/linkedinhero.svg"
+                alt="Linkedin Icon"
             /></a>
           </div>
           <a href="#about" id="headerButton" data-i18n="header.button"
@@ -175,17 +179,57 @@
           >
         </div>
         <div id="header-right">
-          <img src="./images/avatar.svg" alt="" />
+          <img src="./assets/img/avatar.svg" alt="" />
         </div>
       </div>
-      <img src="./images/clouds/light/8.svg" id="c1" class="clouds" alt="" />
-      <img src="./images/clouds/light/7.svg" id="c2" class="clouds" alt="" />
-      <img src="./images/clouds/light/6.svg" id="c3" class="clouds" alt="" />
-      <img src="./images/clouds/light/5.svg" id="c4" class="clouds" alt="" />
-      <img src="./images/clouds/light/4.svg" id="c5" class="clouds" alt="" />
-      <img src="./images/clouds/light/3.svg" id="c6" class="clouds" alt="" />
-      <img src="./images/clouds/light/2.svg" id="c7" class="clouds" alt="" />
-      <img src="./images/clouds/light/1.svg" id="c8" class="clouds" alt="" />
+      <img
+        src="./assets/img/clouds/light/8.svg"
+        id="c1"
+        class="clouds"
+        alt=""
+      />
+      <img
+        src="./assets/img/clouds/light/7.svg"
+        id="c2"
+        class="clouds"
+        alt=""
+      />
+      <img
+        src="./assets/img/clouds/light/6.svg"
+        id="c3"
+        class="clouds"
+        alt=""
+      />
+      <img
+        src="./assets/img/clouds/light/5.svg"
+        id="c4"
+        class="clouds"
+        alt=""
+      />
+      <img
+        src="./assets/img/clouds/light/4.svg"
+        id="c5"
+        class="clouds"
+        alt=""
+      />
+      <img
+        src="./assets/img/clouds/light/3.svg"
+        id="c6"
+        class="clouds"
+        alt=""
+      />
+      <img
+        src="./assets/img/clouds/light/2.svg"
+        id="c7"
+        class="clouds"
+        alt=""
+      />
+      <img
+        src="./assets/img/clouds/light/1.svg"
+        id="c8"
+        class="clouds"
+        alt=""
+      />
     </header>
     <!-- header - end -->
 
@@ -218,85 +262,9 @@
           understand any programming language or tool I’m learning before moving
           on to other topics.
         </p>
-        <div id="technologies" style="margin-top: 16px">
-          <div class="fade-up">
-            <div class="tool">
-              <img src="./images/toolicons/htmlicon.svg" alt="" /><span
-                >HTML</span
-              >
-            </div>
-          </div>
-          <div class="fade-up">
-            <div class="tool">
-              <img src="./images/toolicons/cssicon.svg" alt="" /><span
-                >CSS</span
-              >
-            </div>
-          </div>
-          <div class="fade-up">
-            <div class="tool">
-              <img src="./images/toolicons/javascripticon.svg" alt="" /><span
-                >JavaScript</span
-              >
-            </div>
-          </div>
-          <div class="fade-up">
-            <div class="tool">
-              <img src="./images/toolicons/bootstrap.svg" alt="" /><span
-                >Bootstrap</span
-              >
-            </div>
-          </div>
-          <div class="fade-up">
-            <div class="tool">
-              <img src="./images/toolicons/tailwindicon.svg" alt="" /><span
-                >Tailwind</span
-              >
-            </div>
-          </div>
-          <div class="fade-up">
-            <div class="tool">
-              <img src="./images/toolicons/figmaicon.svg" alt="" /><span
-                >Figma</span
-              >
-            </div>
-          </div>
-          <div class="fade-up">
-            <div class="tool">
-              <img src="./images/toolicons/giticon.svg" alt="" /><span
-                >Git</span
-              >
-            </div>
-          </div>
-          <div class="fade-up">
-            <div class="tool">
-              <img src="./images/toolicons/mysqlicon.svg" alt="" /><span
-                >MySQL</span
-              >
-            </div>
-          </div>
-          <div class="fade-up">
-            <div class="tool">
-              <img src="./images/toolicons/mongodbicon.svg" alt="" /><span
-                >MongoDB</span
-              >
-            </div>
-          </div>
-          <div class="fade-up">
-            <div class="tool">
-              <img src="./images/toolicons/javaicon.svg" alt="" /><span
-                >Java</span
-              >
-            </div>
-          </div>
-          <div class="fade-up">
-            <div class="tool">
-              <img src="./images/toolicons/pythonicon.svg" alt="" /><span
-                >Python</span
-              >
-            </div>
-          </div>
-        </div>
+        <tech-list
+          tools="html,css,javascript,bootstrap,tailwind,figma,git,mysql,mongodb,java,python"
+        ></tech-list>
       </div>
     </section>
     <!-- about - end -->
@@ -312,128 +280,26 @@
         </h3>
         <div class="myServices">
           <!-- Service 1 -->
-          <div class="fade-up">
-            <div class="service">
-              <h4>
-                <img
-                  src="./images/frontendicon.svg"
-                  alt="Front-End Icon"
-                /><span data-i18n="service.service1.h4"
-                  >Front End Development</span
-                >
-              </h4>
-              <p data-i18n="service.service1.p">
-                I focus on creating projects that are intuitive for users, with
-                clear UI and a smooth UX experience. I also place great
-                importance on writing code that is organized, clean, and easy to
-                understand.
-              </p>
-              <h5 data-i18n="service.h5">I Use</h5>
-              <div class="serviceTools">
-                <div>
-                  <img src="./images/toolicons/htmlicon.svg" alt="" /><span
-                    >HTML</span
-                  >
-                </div>
-                <div>
-                  <img src="./images/toolicons/cssicon.svg" alt="" /><span
-                    >CSS</span
-                  >
-                </div>
-                <div>
-                  <img
-                    src="./images/toolicons/javascripticon.svg"
-                    alt=""
-                  /><span>JavaScript</span>
-                </div>
-                <div>
-                  <img src="./images/toolicons/bootstrap.svg" alt="" /><span
-                    >Bootstrap</span
-                  >
-                </div>
-                <div>
-                  <img src="./images/toolicons/tailwindicon.svg" alt="" /><span
-                    >Tailwind</span
-                  >
-                </div>
-                <div>
-                  <img src="./images/toolicons/giticon.svg" alt="" /><span
-                    >Git</span
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
+          <service-card
+            icon="./assets/img/frontendicon.svg"
+            title-key="service.service1.h4"
+            desc-key="service.service1.p"
+            tools="html,css,javascript,bootstrap,tailwind,git"
+          ></service-card>
           <!-- Service 2 -->
-          <div class="fade-up">
-            <div class="service">
-              <h4>
-                <img src="./images/designicon.svg" alt="Design Icon" /><span
-                  data-i18n="service.service2.h4"
-                  >Design Rules</span
-                >
-              </h4>
-              <p data-i18n="service.service2.p">
-                I don’t just write code; I aim to enhance the user experience by
-                following design principles. I create or research SVGs and
-                incorporate them into my websites using the programming
-                languages and technologies I’ve learned, all to improve the user
-                experience.
-              </p>
-              <h5 data-i18n="service.h5">I Use</h5>
-              <div class="serviceTools">
-                <div>
-                  <img src="./images/toolicons/figmaicon.svg" alt="" /><span
-                    >Figma</span
-                  >
-                </div>
-                <div>
-                  <img src="./images/toolicons/bootstrap.svg" alt="" /><span
-                    >Bootstrap</span
-                  >
-                </div>
-                <div>
-                  <img src="./images/toolicons/tailwindicon.svg" alt="" /><span
-                    >Tailwind</span
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
+          <service-card
+            icon="./assets/img/designicon.svg"
+            title-key="service.service2.h4"
+            desc-key="service.service2.p"
+            tools="figma,bootstrap,tailwind"
+          ></service-card>
           <!-- Service 3 -->
-          <div class="fade-up">
-            <div class="service">
-              <h4>
-                <img src="./images/designicon.svg" alt="Design Icon" /><span
-                  data-i18n="service.service3.h4"
-                  >UI / UX Design</span
-                >
-              </h4>
-              <p data-i18n="service.service3.p">
-                I design interfaces that prioritize user experience, combining
-                usability, accessibility, and visual clarity to make every
-                interaction intuitive and enjoyable.
-              </p>
-              <h5 data-i18n="service.h5">I Use</h5>
-              <div class="serviceTools">
-                <div>
-                  <img src="./images/toolicons/figmaicon.svg" alt="" /><span
-                    >Figma</span
-                  >
-                </div>
-                <div>
-                  <img src="./images/toolicons/bootstrap.svg" alt="" /><span
-                    >Bootstrap</span
-                  >
-                </div>
-                <div>
-                  <img src="./images/toolicons/tailwindicon.svg" alt="" /><span
-                    >Tailwind</span
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
+          <service-card
+            icon="./assets/img/designicon.svg"
+            title-key="service.service3.h4"
+            desc-key="service.service3.p"
+            tools="figma,bootstrap,tailwind"
+          ></service-card>
         </div>
       </div>
     </section>
@@ -450,92 +316,34 @@
         </h3>
         <div class="projectShowcase">
           <!-- Project 1 -->
-          <div class="fade-up">
-            <div class="project">
-              <img src="./images/projects/tincat.png" alt="" />
-              <h4 data-i18n="projects.projects.project1.h4">TinCat</h4>
-              <p data-i18n="projects.projects.project1.p">
-                TinCat is a fictional landing page inspired by modern dating
-                apps, reimagined for cat lovers. This project was built as a
-                frontend-focused portfolio project to practice layout,
-                animations, performance optimization, and UI/UX details.
-              </p>
-              <a
-                href="https://github.com/TanerTalas/TinCat"
-                class="projectGithubLink"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="./images/icons/githubcontact.svg"
-                  alt="Github Icon"
-                /><span
-                  class="codeFont"
-                  data-i18n="projects.projects.codeAndInfo"
-                  >Code &amp; More Info &gt;</span
-                >
-              </a>
-              <div class="projectWebsiteLink-wrapper">
-                <a
-                  href="https://tanertalas.github.io/TinCat/"
-                  class="projectWebsiteLink codeFont"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-i18n="projects.projects.liveWebsite"
-                  >Live Website</a
-                >
-              </div>
-            </div>
-          </div>
+          <project-card
+            image="./assets/img/projects/tincat.png"
+            title-key="projects.projects.project1.h4"
+            desc-key="projects.projects.project1.p"
+            github="https://github.com/TanerTalas/TinCat"
+            live="https://tanertalas.github.io/TinCat/"
+          ></project-card>
           <!-- Project 2 -->
-          <div class="fade-up">
-            <div class="project">
-              <img src="./images/projects/restaurant-promotion.svg" alt="" />
-              <h4 data-i18n="projects.projects.project2.h4">Paris Beaubourg</h4>
-              <p data-i18n="projects.projects.project2.p">
-                This project showcases a modern café website concept inspired by
-                contemporary French design.
-              </p>
-              <a
-                href="https://github.com/TanerTalas/restaurant-promotion"
-                class="projectGithubLink"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="./images/icons/githubcontact.svg"
-                  alt="Github Icon"
-                /><span
-                  class="codeFont"
-                  data-i18n="projects.projects.codeAndInfo"
-                  >Code &amp; More Info &gt;</span
-                >
-              </a>
-              <div class="projectWebsiteLink-wrapper">
-                <a
-                  href="https://tanertalas.github.io/Paris-Beaubourg/"
-                  class="projectWebsiteLink codeFont"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-i18n="projects.projects.liveWebsite"
-                  >Live Website</a
-                >
-              </div>
-            </div>
-          </div>
+          <project-card
+            image="./assets/img/projects/restaurant-promotion.svg"
+            title-key="projects.projects.project2.h4"
+            desc-key="projects.projects.project2.p"
+            github="https://github.com/TanerTalas/Paris-Beaubourg"
+            live="https://tanertalas.github.io/Paris-Beaubourg/"
+          ></project-card>
         </div>
-        <div class="projectsButton-wrapper fade-up">
+        <div class="projectsButton-wrapper show-fade-up">
           <a
             href="./projects.html"
             class="projectsButton"
             rel="noopener noreferrer"
           >
-            <span data-i18n="projects.seeAllProjects">See All Projects</span>
+            <span data-i18n="projects.seeAllProjects">Tüm Projeler</span>
             <span class="chevrons">
-              <img src="./images/icons/chevron-right.svg" alt="" /><img
-                src="./images/icons/chevron-right.svg"
+              <img src="./assets/img/icons/chevron-right.svg" alt="" /><img
+                src="./assets/img/icons/chevron-right.svg"
                 alt=""
-              /><img src="./images/icons/chevron-right.svg" alt="" />
+              /><img src="./assets/img/icons/chevron-right.svg" alt="" />
             </span>
           </a>
         </div>
@@ -553,15 +361,15 @@
           Get in Touch
         </h3>
         <p class="fade-up" data-i18n="contact.p">
-          Whether you’d like to learn more about me and my work — or just want
-          to say hi — feel free to reach out!
+          You can reach me through the contact information below. I'm always
+          open to new projects and opportunities.
         </p>
         <address id="contactInfo" style="margin-top: 32px">
           <div id="info">
             <h4 class="fade-up" data-i18n="contact.email">Email</h4>
             <div class="contactLinkWrapper fade-up">
               <a href="mailto:r7byx0@gmail.com" class="codeFont"
-                ><img src="./images/icons/mailcontact.svg" alt="" />
+                ><img src="./assets/img/icons/mailcontact.svg" alt="" />
                 r7byx0@gmail.com</a
               >
             </div>
@@ -572,7 +380,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 ><img
-                  src="./images/icons/githubcontact.svg"
+                  src="./assets/img/icons/githubcontact.svg"
                   alt=""
                   class="codeFont"
                 />Github / Taner Talas</a
@@ -582,8 +390,10 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 class="codeFont"
-                ><img src="./images/icons/linkedincontact.svg" alt="" />LinkedIn
-                / Taner Talas</a
+                ><img
+                  src="./assets/img/icons/linkedincontact.svg"
+                  alt=""
+                />LinkedIn / Taner Talas</a
               >
             </div>
           </div>
@@ -595,15 +405,15 @@
     <!-- miniMe - start -->
 
     <div id="characterContainer">
-      <img id="stick" src="./images/character/stick.svg" />
-      <img id="body" src="./images/character/body.svg" />
-      <img id="head" src="./images/character/head.svg" />
+      <img id="stick" src="./assets/img/character/stick.svg" />
+      <img id="body" src="./assets/img/character/body.svg" />
+      <img id="head" src="./assets/img/character/head.svg" />
       <div id="textBubble">
         <span id="bubbleText"></span><span class="cursor">|</span>
       </div>
     </div>
-    <img id="leftHand" src="./images/character/left-hand.svg" />
-    <img id="rightHand" src="./images/character/right-hand.svg" />
+    <img id="leftHand" src="./assets/img/character/left-hand.svg" />
+    <img id="rightHand" src="./assets/img/character/right-hand.svg" />
 
     <!-- miniMe - end -->
 
@@ -612,7 +422,7 @@
       <div class="footer-container">
         <p class="montserratFont">
           <span data-i18n="footer.half1">Made with</span>
-          <img src="./images/icons/heart.svg" alt="heart" />
+          <img src="./assets/img/icons/heart.svg" alt="heart" />
           <span data-i18n="footer.half2">by Taner Talas</span>
         </p>
         <div>
@@ -620,14 +430,16 @@
             href="https://github.com/TanerTalas"
             target="_blank"
             rel="noopener noreferrer"
-            ><img src="./images/icons/githubhero.svg" alt="Link to Github icon"
+            ><img
+              src="./assets/img/icons/githubhero.svg"
+              alt="Link to Github icon"
           /></a>
           <a
             href="https://www.linkedin.com/in/taner-talas-a43a2236a/"
             target="_blank"
             rel="noopener noreferrer"
             ><img
-              src="./images/icons/linkedinhero.svg"
+              src="./assets/img/icons/linkedinhero.svg"
               alt="Link to Linkedin icon"
           /></a>
         </div>

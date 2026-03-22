@@ -75,7 +75,7 @@
       contact: {
         h2: "Contact Me",
         h3: "Get in Touch",
-        p: "You can reach out to me using the contact information below. Feel free to write just to say “hi,” or come by in person and expect me to burst out of the door like crazy (just kidding).",
+        p: "You can reach me through the contact information below. I'm always open to new projects and opportunities.",
         email: "Email",
         links: "Links",
       },
@@ -129,7 +129,7 @@
         },
         service3: {
           h4: "UI / UX Tasarımı",
-          p: "Kullanıcı deneyimini önceliklendiren arayüzler tasarlıyorum; kullanılabilirlik, erişilebilirlik ve görsel netliği birleştirerek her etkileşimi sezgisel ve keyifli hâle getiriyorum."
+          p: "Kullanıcı deneyimini önceliklendiren arayüzler tasarlıyorum; kullanılabilirlik, erişilebilirlik ve görsel netliği birleştirerek her etkileşimi sezgisel ve keyifli hâle getiriyorum.",
         },
         h5: "Kullandıklarım",
       },
@@ -159,7 +159,7 @@
       contact: {
         h2: "Bana Ulaş",
         h3: "İletişime Geç",
-        p: "Bana aşağıdaki iletişim bilgilerim üzerinden ulaşabilirsiniz. Sadece “merhaba” demek için bile yazabilirsiniz veya adrese gelip kapımdan deli gibi çıkmamı bekleyebilirsiniz (dalga geçiyorum).",
+        p: "Aşağıdaki iletişim bilgilerim üzerinden bana ulaşabilirsiniz. Yeni projeler ve fırsatlar için her zaman açığım.",
         email: "E-posta",
         links: "Profillerim",
       },
@@ -214,6 +214,8 @@
     }
   };
 
+  window.setLang = setLang;
+
   // language buttons
   $$(".lang-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -227,5 +229,10 @@
   });
 
   // initial
-  setLang(localStorage.getItem("lang") || "EN");
+  const initialLang = localStorage.getItem("lang") || "EN";
+  setLang(initialLang);
+
+  document.addEventListener("DOMContentLoaded", () => {
+    applyI18n(initialLang);
+  });
 })();

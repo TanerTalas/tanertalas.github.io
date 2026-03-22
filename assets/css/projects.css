@@ -7,7 +7,7 @@
             #1aabcf 0%,
             white 10%,
             white 100%);
-}
+} 
 
 .dark {
     --projects-background-dark: linear-gradient(to bottom,
@@ -70,7 +70,3 @@ h3 + p {
     line-height: 0.912;
 }
 /* ******************** HEADER SECTION - END ******************** */ 
-
-/* ******************** PROJECTS SECTION - START ******************** */
-
-/* ******************** NAVIGATION SECTION - END ******************** */ 

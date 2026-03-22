@@ -42,7 +42,7 @@ toggleBtn?.addEventListener("click", () => {
     for (let i = 1; i <= cloudCount; i++) {
         const cloud = document.getElementById(`c${i}`);
         if (cloud) {
-            cloud.src = `./images/clouds/${themeFolder}/${9 - i}.svg`;
+            cloud.src = `./assets/img/clouds/${themeFolder}/${9 - i}.svg`;
         }
     }
 });
@@ -63,8 +63,8 @@ if (menuBtn && navbarMenu && menuIcon) {
 
         const isOpen = navbarMenu.classList.toggle("menu-open");
         menuIcon.src = isOpen
-            ? "./images/icons/close.svg"
-            : "./images/icons/menuicon.svg";
+            ? "./assets/img/icons/close.svg"
+            : "./assets/img/icons/menuicon.svg";
         menuIcon.alt = isOpen ? "close menu" : "open menu";
     });
 }

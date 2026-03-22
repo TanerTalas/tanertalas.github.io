@@ -164,6 +164,8 @@
     applyI18n(lang);
   };
 
+  window.setLang = setLang;
+
   // language buttons
   $$(".lang-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -177,5 +179,10 @@
   });
 
   // initial
-  setLang(localStorage.getItem("lang") || "EN");
+  const initialLang = localStorage.getItem("lang") || "EN";
+  setLang(initialLang);
+
+  document.addEventListener("DOMContentLoaded", () => {
+    applyI18n(initialLang);
+  });
 })();
