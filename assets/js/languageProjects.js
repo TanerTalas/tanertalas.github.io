@@ -52,6 +52,10 @@
             h4: "PatiPop",
             p: "PatiPop is a Tailwind CSS project consisting of 7 pages, each with its own dedicated CSS file to maintain a modular and organized structure.",
           },
+          project6: {
+            h4: "Modu",
+            p: "Modu is a single-page landing page project designed to showcase a concept of an AI-powered emotional companion robot."
+          },
           codeAndInfo: "Code & More Info >",
           liveWebsite: "Live Website",
         },
@@ -112,6 +116,10 @@
           project5: {
             h4: "PatiPop",
             p: "PatiPop, her biri modüler ve düzenli bir yapı sağlamak için kendine ait bir CSS dosyasına sahip 7 sayfadan oluşan bir Tailwind CSS projesidir.",
+          },
+          project6: {
+            h4: "Modu",
+            p: "Modu, yapay zekâ destekli duygusal arkadaş robot konseptini sergilemek üzere tasarlanmış tek sayfalık bir açılış sayfası projesidir.",
           },
           codeAndInfo: "Kodu & Fazlası >",
           liveWebsite: "Canlı Site",
