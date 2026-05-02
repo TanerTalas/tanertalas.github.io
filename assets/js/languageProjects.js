@@ -56,6 +56,10 @@
             h4: "Modu",
             p: "Modu is a single-page landing page project designed to showcase a concept of an AI-powered emotional companion robot."
           },
+          project7: {
+            h4: "Forno",
+            p: "A fictional pizza restaurant website built as a portfolio project. Retro American diner aesthetic — dark background, fire red and mustard yellow accents."
+          },
           codeAndInfo: "Code & More Info >",
           liveWebsite: "Live Website",
         },
@@ -120,6 +124,10 @@
           project6: {
             h4: "Modu",
             p: "Modu, yapay zekâ destekli duygusal arkadaş robot konseptini sergilemek üzere tasarlanmış tek sayfalık bir açılış sayfası projesidir.",
+          },
+          project7: {
+            h4: "Forno",
+            p: "Portföy projesi olarak geliştirilen kurgusal bir pizza restoranı sitesi. Retro Amerikan diner estetiği — koyu zemin, ateş kırmızısı ve hardal sarısı aksan."
           },
           codeAndInfo: "Kodu & Fazlası >",
           liveWebsite: "Canlı Site",
