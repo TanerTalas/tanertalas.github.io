@@ -64,7 +64,7 @@
             p: "TinCat is a fictional landing page inspired by modern dating apps, reimagined for cat lovers. This project was built as a frontend-focused portfolio project to practice layout, animations, performance optimization, and UI/UX details.",
           },
           project2: {
-            h4: "Forno",
+            h4: "Braci",
             p: "A fictional pizza restaurant website built as a portfolio project. Retro American diner aesthetic — dark background, fire red and mustard yellow accents."
           },
           codeAndInfo: "Code & More Info >",
@@ -148,7 +148,7 @@
             p: "TinCat, modern tanışma uygulamalarından esinlenerek kedi severler için yeniden tasarlanmış kurgusal bir açılış sayfasıdır. Bu proje, tasarım, animasyonlar, performans optimizasyonu ve UI/UX detayları üzerinde pratik yapmak amacıyla ön uç odaklı bir portföy projesi olarak geliştirilmiştir.",
           },
           project2: {
-            h4: "Forno",
+            h4: "Braci",
             p: "Portföy projesi olarak geliştirilen kurgusal bir pizza restoranı sitesi. Retro Amerikan diner estetiği — koyu zemin, ateş kırmızısı ve hardal sarısı aksan."
           },
           codeAndInfo: "Kodu & Fazlası >",
