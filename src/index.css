@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+/* Enable class-based dark mode (html.dark) — theme colors are swapped via CSS variables below. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ---------- Design tokens exposed to Tailwind ---------- */
+/* `inline` keeps utilities pointing at the runtime CSS variables so light/dark swaps live-update. */
+@theme inline {
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Rubik", sans-serif;
+  --font-mono: "Fira Code", monospace;
+
+  --color-accent: var(--accent);
+  --color-header-bg: var(--header-bg);
+  --color-paper: var(--paper);
+  --color-navy: var(--navy);
+  --color-navy2: var(--navy2);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-card: var(--card);
+  --color-chip-bg: var(--chip-bg);
+  --color-chip-border: var(--chip-border);
+}
+
+/* ---------- Theme palettes ---------- */
+:root {
+  --accent: #2563eb;
+  --header-bg: #44ccee;
+  --paper: #f6f3ec;
+  --navy: #0b1d33;
+  --navy2: #10263f;
+  --ink: #16233b;
+  --muted: #5a6b84;
+  --card: #ffffff;
+  --chip-bg: #edf1f8;
+  --chip-border: #d8e0ee;
+  --nav-bg: rgba(246, 243, 236, 0.6);
+  --glass: rgba(255, 255, 255, 0.07);
+  --glass-border: rgba(255, 255, 255, 0.16);
+  --icon-invert: invert(1);
+  --theme-rot: rotateX(0deg);
+}
+
+html.dark {
+  --accent: #4f8dfb;
+  --header-bg: #000000;
+  --paper: #0f1624;
+  --navy: #060b14;
+  --navy2: #0b1322;
+  --ink: #e9eef7;
+  --muted: #93a1b8;
+  --card: #182133;
+  --chip-bg: #212c42;
+  --chip-border: #33415c;
+  --nav-bg: rgba(10, 15, 26, 0.6);
+  --glass: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --icon-invert: none;
+  --theme-rot: rotateX(180deg);
+}
+
+/* ---------- Base ---------- */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 72px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--paper);
+  transition: background 1s ease;
+}
+
+/* ---------- Keyframes ---------- */
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes cloudFloat {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(18px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes avatarFloat {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
