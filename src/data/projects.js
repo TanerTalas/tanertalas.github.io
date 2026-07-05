@@ -1,0 +1,68 @@
+// Projects, newest-relevant first. The home page previews the first two; the
+// projects page lists them all. `urlLabel` is the text shown in the card's fake browser bar.
+// NOTE: taglines for the projects beyond TinCat/Braci are best-guess placeholders — confirm copy.
+export const projects = [
+  {
+    name: "TinCat",
+    tagline: "Cat dating app landing page",
+    urlLabel: "tanertalas.github.io/TinCat",
+    image: "/img/projects/tincat_desktop.png",
+    live: "https://tanertalas.github.io/TinCat/",
+    github: "https://github.com/TanerTalas/TinCat",
+    tech: ["HTML", "CSS", "JS"],
+  },
+  {
+    name: "Braci",
+    tagline: "Pizza restaurant website",
+    urlLabel: "tanertalas.github.io/BRACI",
+    image: "/img/projects/braci_desktop.png",
+    live: "https://tanertalas.github.io/BRACI/",
+    github: "https://github.com/TanerTalas/BRACI",
+    tech: ["HTML", "CSS", "JS"],
+  },
+  {
+    name: "Paris-Beaubourg",
+    tagline: "Centre Pompidou tribute page",
+    urlLabel: "tanertalas.github.io/Paris-Beaubourg",
+    image: "/img/projects/paris-beaubourg_desktop.png",
+    live: "https://tanertalas.github.io/Paris-Beaubourg/",
+    github: "https://github.com/TanerTalas/Paris-Beaubourg",
+    tech: ["HTML", "CSS", "JS"],
+  },
+  {
+    name: "CSS-Mondrian",
+    tagline: "Mondrian artwork recreated in CSS",
+    urlLabel: "tanertalas.github.io/CSS-Mondrian",
+    image: "/img/projects/css-mondrian_desktop.png",
+    live: "https://tanertalas.github.io/CSS-Mondrian/",
+    github: "https://github.com/TanerTalas/CSS-Mondrian",
+    tech: ["HTML", "CSS"],
+  },
+  {
+    name: "CSS-Authentication-UI",
+    tagline: "Authentication UI built with pure CSS",
+    urlLabel: "tanertalas.github.io/CSS-Authentication-UI",
+    image: "/img/projects/css-authui_desktop.png",
+    live: "https://tanertalas.github.io/CSS-Authentication-UI/",
+    github: "https://github.com/TanerTalas/CSS-Authentication-UI",
+    tech: ["HTML", "CSS"],
+  },
+  {
+    name: "PatiPop",
+    tagline: "Pet-themed landing page",
+    urlLabel: "tanertalas.github.io/PatiPop",
+    image: "/img/projects/patipop_desktop.png",
+    live: "https://tanertalas.github.io/PatiPop/",
+    github: "https://github.com/TanerTalas/PatiPop",
+    tech: ["HTML", "CSS", "JS"],
+  },
+  {
+    name: "Modu",
+    tagline: "Modern brand concept site",
+    urlLabel: "tanertalas.github.io/Modu",
+    image: "/img/projects/modu_desktop.png",
+    live: "https://tanertalas.github.io/Modu/",
+    github: "https://github.com/TanerTalas/Modu",
+    tech: ["HTML", "CSS", "JS"],
+  },
+];
