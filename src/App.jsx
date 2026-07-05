@@ -1,8 +1,16 @@
-// Temporary shell — sections are added in the following commits.
+import Navbar from "./components/Navbar.jsx";
+import Hero from "./components/Hero.jsx";
+import { useTheme } from "./hooks/useTheme.js";
+
 export default function App() {
+  const { toggle } = useTheme();
+
   return (
-    <main className="grid min-h-screen place-items-center bg-paper">
-      <h1 className="font-display text-4xl font-bold text-ink">Portfolio v3 — building…</h1>
-    </main>
+    <>
+      <Navbar onToggleTheme={toggle} />
+      <main>
+        <Hero />
+      </main>
+    </>
   );
 }
