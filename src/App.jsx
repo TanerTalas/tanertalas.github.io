@@ -1,5 +1,7 @@
 import Navbar from "./components/Navbar.jsx";
 import Hero from "./components/Hero.jsx";
+import About from "./components/About.jsx";
+import Stack from "./components/Stack.jsx";
 import { useTheme } from "./hooks/useTheme.js";
 
 export default function App() {
@@ -10,6 +12,8 @@ export default function App() {
       <Navbar onToggleTheme={toggle} />
       <main>
         <Hero />
+        <About />
+        <Stack />
       </main>
     </>
   );
