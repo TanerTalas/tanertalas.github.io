@@ -6,9 +6,13 @@ import { useScrollSpy } from "../hooks/useScrollSpy.js";
 // Fixed top navigation: section links with scroll-spy highlight, a light/dark
 // toggle, and a hamburger menu that collapses the links on small screens.
 // On the home page it tracks sections; on other routes it links back home.
-export default function Navbar({ onToggleTheme }) {
+export default function Navbar({ onToggleTheme, isDark }) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [themeHover, setThemeHover] = useState(false);
   const onHome = useLocation().pathname === "/";
+
+  // The sun/moon face flips with the theme; hovering previews the opposite face.
+  const themeFlip = (isDark ? 180 : 0) + (themeHover ? 180 : 0);
 
   // Home: in-page anchors with scroll-spy. Elsewhere: a slim link back home.
   const links = onHome
@@ -41,11 +45,11 @@ export default function Navbar({ onToggleTheme }) {
               <li key={link.id}>
                 <a
                   href={link.href}
-                  className="inline-block rounded-full px-3.5 py-2 font-display text-[0.95rem] font-medium transition-colors duration-200"
-                  style={{
-                    backgroundColor: active ? "var(--accent)" : "transparent",
-                    color: active ? "#ffffff" : "var(--ink)",
-                  }}
+                  className={`inline-block rounded-full px-3.5 py-2 font-display text-[0.95rem] font-medium transition-colors duration-200 ${
+                    active
+                      ? "bg-accent text-white"
+                      : "text-ink hover:bg-[color-mix(in_srgb,var(--accent)_16%,transparent)] hover:text-accent"
+                  }`}
                 >
                   {link.label}
                 </a>
@@ -57,10 +61,15 @@ export default function Navbar({ onToggleTheme }) {
         {/* Theme toggle */}
         <button
           onClick={onToggleTheme}
+          onMouseEnter={() => setThemeHover(true)}
+          onMouseLeave={() => setThemeHover(false)}
           aria-label="Toggle light/dark mode"
-          className="[perspective:600px]"
+          className="cursor-pointer [perspective:600px]"
         >
-          <span className="relative block h-11 w-11 [transform-style:preserve-3d] [transform:var(--theme-rot)] transition-transform duration-500">
+          <span
+            className="relative block h-11 w-11 [transform-style:preserve-3d] transition-transform duration-500"
+            style={{ transform: `rotateX(${themeFlip}deg)` }}
+          >
             <img
               src="/img/icons/sunup.svg"
               alt="light mode"
@@ -78,7 +87,7 @@ export default function Navbar({ onToggleTheme }) {
         <button
           onClick={() => setMenuOpen((open) => !open)}
           aria-label="Toggle menu"
-          className="md:hidden"
+          className="cursor-pointer md:hidden"
         >
           <img
             src={menuOpen ? "/img/icons/close.svg" : "/img/icons/menuicon.svg"}
@@ -95,7 +104,7 @@ export default function Navbar({ onToggleTheme }) {
                 <a
                   href={link.href}
                   onClick={() => setMenuOpen(false)}
-                  className="block rounded-full px-4 py-2.5 font-display font-medium text-ink"
+                  className="block rounded-full px-4 py-2.5 font-display font-medium text-ink transition-colors duration-200 hover:bg-[color-mix(in_srgb,var(--accent)_16%,transparent)] hover:text-accent"
                 >
                   {link.label}
                 </a>

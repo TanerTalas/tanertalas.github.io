@@ -39,12 +39,12 @@ function ScrollToTop() {
 }
 
 export default function App() {
-  const { toggle } = useTheme();
+  const { isDark, toggle } = useTheme();
 
   return (
     <>
       <ScrollToTop />
-      <Navbar onToggleTheme={toggle} />
+      <Navbar onToggleTheme={toggle} isDark={isDark} />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/projects" element={<ProjectsPage />} />

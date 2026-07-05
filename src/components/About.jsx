@@ -19,7 +19,7 @@ export default function About() {
       <div className="w-full max-w-[1200px] px-6">
         <SectionHeading eyebrow="01 · about-me" title="Behind the Screen" variant="paper" />
 
-        <div className="grid grid-cols-1 items-stretch gap-7 md:grid-cols-[1.4fr_1fr]">
+        <div className="grid grid-cols-1 items-stretch gap-7 lg:grid-cols-[1.4fr_1fr]">
           {/* Bio card */}
           <Reveal>
             <div className="box-border h-full rounded-[20px] border border-[var(--chip-border)] bg-card p-9 shadow-[0_4px_16px_rgba(22,35,59,0.07)] transition-[background] duration-1000">

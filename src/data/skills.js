@@ -13,7 +13,7 @@ export const frontendSkills = [
 ];
 
 export const backendSkills = [
-  { name: "Node.js", icon: devicon("nodejs"), learning: true },
+  { name: "Node.js", icon: devicon("nodejs")},
   { name: "Express", icon: devicon("express"), learning: true },
   { name: "MongoDB", icon: "/img/toolicons/mongodbicon.svg", learning: true },
 ];

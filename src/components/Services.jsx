@@ -6,7 +6,7 @@ import { services } from "../data/services.js";
 function ServiceCard({ service }) {
   return (
     <div
-      className="flex h-full flex-col gap-3.5 rounded-[20px] border border-[var(--chip-border)] bg-card p-8 shadow-[0_4px_16px_rgba(22,35,59,0.07)] transition-[transform,box-shadow,background] duration-300 hover:-translate-y-2 hover:shadow-[0_16px_32px_rgba(22,35,59,0.16)]"
+      className="flex h-full flex-col gap-3.5 rounded-[20px] border border-[var(--chip-border)] bg-card p-8 shadow-[0_4px_16px_rgba(22,35,59,0.07)] transition-[transform,translate,box-shadow,background] duration-300 hover:-translate-y-2 hover:shadow-[0_16px_32px_rgba(22,35,59,0.16)]"
       style={service.featured ? { borderTop: "6px solid var(--accent)" } : undefined}
     >
       <div className="flex items-center justify-between">
@@ -47,7 +47,7 @@ export default function Services() {
       <div className="w-full max-w-[1200px] px-6">
         <SectionHeading eyebrow="03 · services" title="What I Can Do for You" variant="paper" />
 
-        <div className="grid grid-cols-1 items-stretch gap-6 md:grid-cols-3">
+        <div className="grid grid-cols-1 items-stretch gap-6 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, idx) => (
             // Card 1 / Card 2 / Card 3
             <Reveal key={service.title} delay={idx * 120}>

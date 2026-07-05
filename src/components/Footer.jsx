@@ -15,7 +15,11 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="inline-block transition-transform duration-300 hover:scale-110"
           >
-            <img src="/img/icons/githubhero.svg" alt="Link to Github icon" />
+            <img
+              src="/img/icons/githubhero.svg"
+              alt="Link to Github icon"
+              className="[filter:brightness(0)_invert(1)]"
+            />
           </a>
           <a
             href="https://www.linkedin.com/in/taner-talas-a43a2236a/"
@@ -23,7 +27,11 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="inline-block transition-transform duration-300 hover:scale-110"
           >
-            <img src="/img/icons/linkedinhero.svg" alt="Link to Linkedin icon" />
+            <img
+              src="/img/icons/linkedinhero.svg"
+              alt="Link to Linkedin icon"
+              className="[filter:brightness(0)_invert(1)]"
+            />
           </a>
         </div>
       </div>

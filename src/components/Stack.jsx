@@ -82,7 +82,7 @@ export default function Stack() {
                 {toolSkills.map((skill) => (
                   <div
                     key={skill.name}
-                    className="flex cursor-default items-center gap-2.5 rounded-full bg-[#F6F8FC] px-5 py-2.5 transition-[transform,box-shadow] duration-[250ms] hover:-translate-y-[5px] hover:shadow-[0_10px_20px_rgba(0,0,0,0.4)]"
+                    className="flex cursor-default items-center gap-2.5 rounded-full bg-[#F6F8FC] px-5 py-2.5 transition-[transform,translate,box-shadow] duration-[250ms] hover:-translate-y-[5px] hover:shadow-[0_10px_20px_rgba(0,0,0,0.4)]"
                   >
                     <img src={skill.icon} alt={skill.name} className="h-7 w-7" />
                     <span className="font-display text-[0.95rem] font-semibold text-[#16233B]">

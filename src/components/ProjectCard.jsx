@@ -5,7 +5,7 @@ export default function ProjectCard({ project }) {
   const { name, tagline, urlLabel, image, live, github, tech } = project;
 
   return (
-    <div className="group flex h-full flex-col overflow-hidden rounded-2xl bg-[#F6F8FC] shadow-[0_6px_24px_rgba(0,0,0,0.3)] transition-[transform,box-shadow] duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.5)]">
+    <div className="group flex h-full flex-col overflow-hidden rounded-2xl bg-[#F6F8FC] shadow-[0_6px_24px_rgba(0,0,0,0.3)] transition-[transform,translate,box-shadow] duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.5)]">
       {/* Browser chrome */}
       <div className="flex items-center gap-2 border-b border-[#D8E0EE] bg-[#E7ECF4] px-4 py-2.5">
         <span className="h-3 w-3 rounded-full bg-[#ff5f57]" />
@@ -57,7 +57,7 @@ export default function ProjectCard({ project }) {
               href={live}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block rounded-full bg-accent px-6 py-2.5 font-display text-[0.95rem] font-semibold text-white transition-[transform,opacity] duration-300 hover:-translate-y-0.5 hover:opacity-90"
+              className="inline-block rounded-full bg-accent px-6 py-2.5 font-display text-[0.95rem] font-semibold text-white transition-[transform,translate,opacity] duration-300 hover:-translate-y-0.5 hover:opacity-90"
             >
               Live Website
             </a>

@@ -42,7 +42,7 @@ export default function Hero() {
     >
       <div
         ref={contentRef}
-        className="relative z-[9] grid w-full max-w-[1200px] grid-cols-1 items-center justify-items-center gap-10 px-6 py-8 md:grid-cols-2"
+        className="relative z-[9] grid w-full max-w-[1200px] grid-cols-1 items-center justify-items-center gap-10 px-6 py-8 lg:grid-cols-2"
       >
         {/* Hero left — intro copy */}
         <div className="justify-self-start" style={enterStyle()}>
@@ -79,14 +79,14 @@ export default function Hero() {
           </div>
           <a
             href="#about"
-            className="inline-block rounded-full bg-accent px-14 py-4 font-display text-[1.05rem] font-semibold text-white shadow-[0_6px_20px_rgba(0,0,0,0.18)] transition-[transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:shadow-[0_10px_26px_rgba(0,0,0,0.25)] active:translate-y-0"
+            className="inline-block rounded-full bg-accent px-14 py-4 font-display text-[1.05rem] font-semibold text-white shadow-[0_6px_20px_rgba(0,0,0,0.18)] transition duration-[400ms] [transition-timing-function:cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:shadow-[0_14px_30px_rgba(0,0,0,0.28)] active:translate-y-0"
           >
             Continue
           </a>
         </div>
 
-        {/* Hero right — floating avatar */}
-        <div className="z-[6] flex w-full items-center justify-center" style={enterStyle("0.1s")}>
+        {/* Hero right — floating avatar (hidden below lg) */}
+        <div className="z-[6] hidden w-full items-center justify-center lg:flex" style={enterStyle("0.1s")}>
           <img
             src="/img/avatar.svg"
             alt=""
