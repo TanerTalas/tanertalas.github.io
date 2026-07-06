@@ -9,7 +9,7 @@ export const projects = [
     image: "/img/projects/tincat.png",
     live: "https://tanertalas.github.io/TinCat/",
     github: "https://github.com/TanerTalas/TinCat",
-    tech: ["HTML", "CSS", "JS"],
+    tech: ["HTML", "CSS", "Bootstrap", "JS"],
   },
   {
     name: "Braci",
@@ -18,7 +18,7 @@ export const projects = [
     image: "/img/projects/braci.png",
     live: "https://tanertalas.github.io/BRACI/",
     github: "https://github.com/TanerTalas/BRACI",
-    tech: ["HTML", "CSS", "JS"],
+    tech: ["HTML", "CSS", "Tailwind","JS"],
   },
   {
     name: "Paris-Beaubourg",
@@ -27,7 +27,7 @@ export const projects = [
     image: "/img/projects/paris_beaubourg.png",
     live: "https://tanertalas.github.io/Paris-Beaubourg/",
     github: "https://github.com/TanerTalas/Paris-Beaubourg",
-    tech: ["HTML", "CSS", "JS"],
+    tech: ["HTML", "CSS", "Bootstrap", "JS"],
   },
   {
     name: "CSS-Mondrian",
@@ -36,7 +36,7 @@ export const projects = [
     image: "/img/projects/css-mondrian.png",
     live: "https://tanertalas.github.io/CSS-Mondrian/",
     github: "https://github.com/TanerTalas/CSS-Mondrian",
-    tech: ["HTML", "CSS"],
+    tech: ["HTML", "CSS", "JavaScript"],
   },
   {
     name: "CSS-Authentication-UI",
@@ -45,7 +45,7 @@ export const projects = [
     image: "/img/projects/css-auth.png",
     live: "https://tanertalas.github.io/CSS-Authentication-UI/",
     github: "https://github.com/TanerTalas/CSS-Authentication-UI",
-    tech: ["HTML", "CSS"],
+    tech: ["HTML", "CSS", "JavaScript"],
   },
   {
     name: "PatiPop",
@@ -54,7 +54,7 @@ export const projects = [
     image: "/img/projects/patipop.png",
     live: "https://tanertalas.github.io/PatiPop/",
     github: "https://github.com/TanerTalas/PatiPop",
-    tech: ["HTML", "CSS", "JS"],
+    tech: ["HTML", "CSS", "Tailwind","JS"],
   },
   {
     name: "Modu",
@@ -63,6 +63,6 @@ export const projects = [
     image: "/img/projects/modu.png",
     live: "https://tanertalas.github.io/Modu/",
     github: "https://github.com/TanerTalas/Modu",
-    tech: ["HTML", "CSS", "JS"],
+    tech: ["HTML", "CSS", "Tailwind", "JS"],
   },
 ];
