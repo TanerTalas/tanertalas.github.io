@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import Lenis from "lenis";
 
-// Height of the fixed navbar; in-page anchors stop this far above their target
+// In-page anchors bring the target section flush to the top of the viewport
 // (mirrors the CSS `scroll-padding-top`).
-const NAV_OFFSET = -72;
+const NAV_OFFSET = 0;
 
 // Module-level handle so non-React code (route-change jumps in App) can drive the
 // same Lenis instance that the hook owns.

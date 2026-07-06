@@ -27,7 +27,7 @@ function ScrollToTop() {
         // Jump straight to the section once it has mounted; Lenis drives the
         // scroll when present so its internal position stays in sync.
         requestAnimationFrame(() => {
-          if (lenis) lenis.scrollTo(target, { offset: -72, immediate: true });
+          if (lenis) lenis.scrollTo(target, { offset: 0, immediate: true });
           else target.scrollIntoView();
         });
         return;
