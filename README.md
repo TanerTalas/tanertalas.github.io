@@ -1,49 +1,66 @@
-# 👨‍💻 Taner Talas | Front-End Portfolio
+# Taner Talas — Front-End Portfolio
 
-## 🇬🇧 English
+Personal portfolio website of **Taner Talas**, a front-end / fullstack-oriented developer.
+Designed, built, and maintained entirely by myself.
 
-This is the source code of my personal portfolio website. Designed, coded, and maintained by myself.
+🔗 **Live:** [tanertalas-portfolio.vercel.app](https://tanertalas-portfolio.vercel.app)
 
-🛠️ Built with:
-- HTML5
-- CSS3
-- JavaScript
-- Lenis
+## Tech Stack
 
-✨ Features:
-- Responsive Layout
-- Light/Dark Mode Toggle
-- Language Switcher with JavaScript
-- Interactive Elements and Animations
-- Smooth Scroll with Lenis
+- **React 19** — component-based UI
+- **Vite** — dev server and build tooling
+- **Tailwind CSS 4** — utility-first styling
+- **React Router** — client-side routing
+- **Lenis** — smooth scrolling
 
-🔗 **Live Demo**: [tanertalas.github.io](https://tanertalas.github.io)
+## Features
 
+- Single-page app with a dedicated projects route
+- Light / dark theme toggle (persisted)
+- Smooth scrolling powered by Lenis
+- Scroll-spy navigation highlighting the active section
+- Typewriter effect in the hero
+- Reveal-on-scroll animations
+- Decorative cloud, wind, and character animations
+- Fully responsive layout
 
----
+## Getting Started
 
-## 🇹🇷 Türkçe
+```bash
+# Install dependencies
+npm install
 
-Bu repo, kişisel portföy sitemin kaynak kodlarını içerir. Tasarım ve geliştirme süreci tamamen bana aittir.
+# Start the dev server
+npm run dev
 
-🛠️ Kullanılan Teknolojiler:
-- HTML5
-- CSS3
-- JavaScript
-- Lenis
+# Build for production
+npm run build
 
-✨ Özellikler:
-- Duyarlı (responsive) yapı
-- Açık/Koyu Tema Desteği
-- JavaScript ile Dil Desteği
-- Etkileşimli öğeler ve animasyonlar
-- Lenis ile Akıcı Scroll
+# Preview the production build
+npm run preview
+```
 
-🔗 **Canlı Site**: [tanertalas.github.io](https://tanertalas.github.io/index.html)
+## Project Structure
 
----
+```
+src/
+├── components/
+│   ├── effects/     # Decorative animations (clouds, wind, mini-me)
+│   ├── layout/      # Navbar, Footer
+│   ├── sections/    # Hero, About, Services, Stack, Projects, Contact
+│   └── ui/          # Reusable UI (ProjectCard, SectionHeading, Reveal)
+├── data/            # Content data (projects, services, skills, nav links)
+├── hooks/           # Custom hooks (theme, Lenis, scroll-spy, typewriter, in-view)
+├── pages/           # HomePage, ProjectsPage
+├── App.jsx          # Routes and layout
+└── main.jsx         # Entry point
+```
 
-## License / Lisans
+## Deployment
 
-This project is licensed under the MIT License.  
-Bu proje MIT lisansı ile lisanslanmıştır.
+The site is deployed on Vercel. A `vercel.json` rewrite serves `index.html` for all
+routes so client-side routing works on direct visits and page refreshes.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
