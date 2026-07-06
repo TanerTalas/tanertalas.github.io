@@ -20,16 +20,19 @@ export default function About() {
           {/* Bio card */}
           <Reveal>
             <div className="about__bio">
-              <h3 className="about__bio-title">Frontend roots, fullstack ambitions</h3>
+              <h3 className="about__bio-title">Always learning, never finished</h3>
               <p className="about__bio-text">
-                I'm a final-year Computer Programming student at Istanbul Gedik University. I started
-                with front-end development and learned it in depth. Now I'm expanding into back-end
-                technologies to become a well-rounded fullstack developer.
+                With over four years of software experience, I'm on a learning journey that never
+                stops. Technology keeps moving, and I like to move with it. Whenever I run into
+                something I don't know, I stay curious about it, research it, dig into the details,
+                and keep going until I truly understand how and why it works.
               </p>
               <p className="about__bio-text">
-                I develop well-crafted projects by paying attention to design principles and writing
-                clean, organized code. I make sure to fully understand every language or tool I learn
-                before moving on to the next one.
+                That same mindset shapes the way I build. I care about writing clean, organized code
+                and giving every project a sense of structure and beauty. For me, good work isn't
+                just about making something function; it's about crafting an experience that feels
+                polished and intentional, and carrying that quality all the way through to the person
+                using it.
               </p>
             </div>
           </Reveal>

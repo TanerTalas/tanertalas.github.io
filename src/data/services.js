@@ -9,7 +9,7 @@ export const services = [
     featured: true,
     description:
       "Complete web applications end to end: responsive interfaces on the front, REST APIs and databases on the back. One project, one developer, everything connected.",
-    tags: ["React", "Node.js", "Express", "MongoDB"],
+    tags: ["React", "Node.js", "Express", "MySQL","PostgreSQL"],
   },
   {
     title: "Frontend Development",
