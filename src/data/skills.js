@@ -1,25 +1,43 @@
-// Stack section data. Icons are local SVGs under /img/toolicons, except a few
-// pulled from the devicon CDN where a local asset doesn't exist.
-const devicon = (name, variant = "original") =>
-  `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${name}/${name}-${variant}.svg`;
+// Stack section data. All icons are local SVGs, each category in its own
+// subfolder under /img/toolicons (frontend / backend / everyday / other).
+const fe = (name) => `/img/toolicons/frontend/${name}.svg`;
+const be = (name) => `/img/toolicons/backend/${name}.svg`;
+const everyday = (name) => `/img/toolicons/everyday/${name}.svg`;
+const other = (name) => `/img/toolicons/other/${name}.svg`;
 
 export const frontendSkills = [
-  { name: "HTML", icon: "/img/toolicons/htmlicon.svg" },
-  { name: "CSS", icon: "/img/toolicons/cssicon.svg" },
-  { name: "JavaScript", icon: "/img/toolicons/javascripticon.svg" },
-  { name: "React", icon: devicon("react") },
-  { name: "Tailwind", icon: "/img/toolicons/tailwindicon.svg" },
-  { name: "Bootstrap", icon: "/img/toolicons/bootstrapicon.svg" },
+  { name: "HTML", icon: fe("html") },
+  { name: "CSS", icon: fe("css") },
+  { name: "JavaScript", icon: fe("javascript") },
+  { name: "React", icon: fe("react") },
+  { name: "Tailwind", icon: fe("tailwindcss") },
+  { name: "Bootstrap", icon: fe("bootstrap") },
+  { name: "jQuery", icon: fe("jquery") },
 ];
 
 export const backendSkills = [
-  { name: "Node.js", icon: devicon("nodejs")},
-  { name: "Express", icon: devicon("express"), learning: true },
-  { name: "MongoDB", icon: "/img/toolicons/mongodbicon.svg", learning: true },
+  { name: "Node.js", icon: be("node") },
+  { name: "Express", icon: be("expressjs") },
+  { name: "MongoDB", icon: be("mongodb") },
+  { name: "MySQL", icon: be("mysql") },
+  { name: "PostgreSQL", icon: be("postgresql") },
 ];
 
+// Everyday tools — the pill row.
 export const toolSkills = [
-  { name: "Git", icon: "/img/toolicons/giticon.svg" },
-  { name: "GitHub", icon: devicon("github") },
-  { name: "Figma", icon: "/img/toolicons/figmaicon.svg" },
+  { name: "Git", icon: everyday("git") },
+  { name: "GitHub", icon: everyday("github") },
+  { name: "VS Code", icon: everyday("vscode") },
+  { name: "Figma", icon: everyday("figma") },
+  { name: "Postman", icon: everyday("postman") },
+  { name: "Vite", icon: everyday("vite") },
+  { name: "Claude Code", icon: everyday("claudecode") },
+];
+
+// Other — languages / platforms outside the core web stack.
+export const otherSkills = [
+  { name: "Java", icon: other("java") },
+  { name: "Python", icon: other("python") },
+  { name: "WordPress", icon: other("wordpress") },
+  { name: "JSON", icon: other("json") },
 ];
