@@ -1,4 +1,4 @@
-# Taner Talas — Front-End Portfolio
+# Taner Talas — Full-stack Developer Portfolio
 
 Personal portfolio website of **Taner Talas**, a front-end / fullstack-oriented developer.
 Designed, built, and maintained entirely by myself.
