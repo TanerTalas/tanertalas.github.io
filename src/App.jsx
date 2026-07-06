@@ -5,6 +5,7 @@ import Footer from "./components/layout/Footer.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import ProjectsPage from "./pages/ProjectsPage.jsx";
 import { useTheme } from "./hooks/useTheme.js";
+import { useLenis, getLenis } from "./hooks/useLenis.js";
 
 // Handle scroll position when the route changes. Same-page anchor clicks (only the
 // hash changes) are left to the browser's native smooth scroll. On a page change we
@@ -19,20 +20,21 @@ function ScrollToTop() {
     lastPath.current = pathname;
     if (!pathChanged) return;
 
+    const lenis = getLenis();
     if (hash) {
       const target = document.querySelector(hash);
       if (target) {
-        const root = document.documentElement;
-        const prev = root.style.scrollBehavior;
-        root.style.scrollBehavior = "auto";
+        // Jump straight to the section once it has mounted; Lenis drives the
+        // scroll when present so its internal position stays in sync.
         requestAnimationFrame(() => {
-          target.scrollIntoView();
-          root.style.scrollBehavior = prev;
+          if (lenis) lenis.scrollTo(target, { offset: -72, immediate: true });
+          else target.scrollIntoView();
         });
         return;
       }
     }
-    window.scrollTo(0, 0);
+    if (lenis) lenis.scrollTo(0, { immediate: true });
+    else window.scrollTo(0, 0);
   }, [pathname, hash]);
 
   return null;
@@ -40,6 +42,7 @@ function ScrollToTop() {
 
 export default function App() {
   const { isDark, toggle } = useTheme();
+  useLenis();
 
   return (
     <>

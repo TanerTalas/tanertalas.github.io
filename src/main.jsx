@@ -6,6 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 // inject earlier (App is imported first) and land ahead of `base`, letting Preflight
 // override every component style — the page then renders as if no CSS loaded.
 import "./index.css";
+import "lenis/dist/lenis.css";
 import App from "./App.jsx";
 
 createRoot(document.getElementById("root")).render(
