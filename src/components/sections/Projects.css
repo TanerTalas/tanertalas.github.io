@@ -1,0 +1,41 @@
+@reference "../../index.css";
+
+/* Home projects section: previews the first two projects and links to the full list. */
+@layer components {
+  .projects {
+    @apply relative flex justify-center bg-navy2 py-24 transition-[background] duration-1000;
+  }
+  .projects__inner {
+    @apply w-full max-w-[1200px] px-6;
+  }
+  .projects__grid {
+    @apply mb-12 grid grid-cols-1 gap-7 md:grid-cols-2;
+  }
+  .projects__more {
+    @apply text-center;
+  }
+
+  /* See-all link with animated chevrons */
+  .see-all {
+    @apply inline-flex items-center gap-2 font-display text-[1.3rem] font-medium text-[#F2F5FA] transition-opacity duration-300 hover:opacity-80;
+
+    &:hover .see-all__chevron--1 {
+      @apply translate-x-1.5;
+    }
+    &:hover .see-all__chevron--2 {
+      @apply translate-x-3;
+    }
+    &:hover .see-all__chevron--3 {
+      @apply translate-x-[18px];
+    }
+  }
+  .see-all__label {
+    @apply border-b-2 border-[#F2F5FA];
+  }
+  .see-all__chevrons {
+    @apply relative inline-block h-6 w-6;
+  }
+  .see-all__chevron {
+    @apply absolute left-0 top-1/2 h-6 w-6 -translate-y-1/2 transition-transform duration-[400ms];
+  }
+}

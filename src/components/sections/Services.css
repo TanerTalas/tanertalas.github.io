@@ -1,0 +1,40 @@
+@reference "../../index.css";
+
+/* Services section: three offerings; the featured card gets an accent top border. */
+@layer components {
+  .services {
+    @apply relative flex justify-center bg-paper py-24 transition-[background] duration-1000;
+  }
+  .services__inner {
+    @apply w-full max-w-[1200px] px-6;
+  }
+  .services__grid {
+    @apply grid grid-cols-1 items-stretch gap-6 md:grid-cols-2 lg:grid-cols-3;
+  }
+
+  .service-card {
+    @apply flex h-full flex-col gap-3.5 rounded-[20px] border border-[var(--chip-border)] bg-card p-8 shadow-[0_4px_16px_rgba(22,35,59,0.07)] transition-[transform,translate,box-shadow,background] duration-300 hover:-translate-y-2 hover:shadow-[0_16px_32px_rgba(22,35,59,0.16)];
+
+    &.service-card--featured {
+      @apply border-t-[6px] border-t-accent;
+    }
+  }
+  .service-card__head {
+    @apply flex items-center justify-between;
+  }
+  .service-card__icon {
+    @apply w-[52px] transition-[filter] duration-1000 dark:[filter:invert(1)];
+  }
+  .service-card__title {
+    @apply m-0 font-display text-[1.5rem] font-semibold text-ink transition-[color] duration-1000;
+  }
+  .service-card__desc {
+    @apply m-0 flex-1 text-[1.05rem] leading-[1.65] text-muted transition-[color] duration-1000;
+  }
+  .service-card__tags {
+    @apply flex flex-wrap gap-2;
+  }
+  .service-card__tag {
+    @apply rounded-full border border-[var(--chip-border)] bg-chip-bg px-3 py-1 font-mono text-[0.85rem] text-ink;
+  }
+}

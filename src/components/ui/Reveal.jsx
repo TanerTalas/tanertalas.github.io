@@ -1,4 +1,4 @@
-import { useInView } from "../hooks/useInView.js";
+import { useInView } from "../../hooks/useInView.js";
 
 // Fades + slides its children up the first time they enter the viewport.
 // `delay` (ms) staggers reveals within the same row of cards.

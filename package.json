@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "3.0.0",
-  "description": "Personal portfolio of Taner Talas — React + Tailwind.",
+  "description": "Personal portfolio of Taner Talas, built with React + Tailwind.",
   "type": "module",
   "scripts": {
     "dev": "vite",

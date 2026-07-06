@@ -1,0 +1,31 @@
+@reference "../../index.css";
+
+/* Decorative mascot that pops up once, types two speech bubbles, then ducks down. */
+@layer components {
+  .minime {
+    @apply pointer-events-none fixed bottom-2 left-1/2 z-[999] h-[300px] w-[300px] -translate-x-1/2 overflow-hidden;
+  }
+  .minime__stick {
+    @apply absolute bottom-0 left-1/2 z-[800] w-[100px] -translate-x-1/2;
+  }
+  .minime__body,
+  .minime__head {
+    @apply absolute left-1/2 max-w-[70px] -translate-x-1/2 transition-[bottom] duration-[800ms];
+  }
+  .minime__bubble {
+    @apply absolute bottom-[120px] left-1/2 -translate-x-1/2 whitespace-nowrap rounded-2xl border-2 border-[#333] bg-white px-3.5 py-2.5 text-sm leading-[1.43] text-[#333] opacity-0 shadow-[0_2px_4px_rgba(0,0,0,0.2)] transition-[opacity,transform] duration-[400ms];
+  }
+  .minime__caret {
+    @apply ml-0.5 inline-block animate-[blink_0.8s_steps(1,end)_infinite];
+  }
+  .minime__hand {
+    @apply pointer-events-none fixed bottom-1 z-[1000] w-6 opacity-0 transition-opacity duration-[800ms];
+
+    &.minime__hand--left {
+      @apply left-[calc(50%-42px)];
+    }
+    &.minime__hand--right {
+      @apply left-[calc(50%+18px)];
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@reference "../../index.css";
+
+/* Shared section header: monospace eyebrow chip + large display title.
+   The --paper / --navy modifiers swap the palette for light vs. dark sections. */
+@layer components {
+  .section-heading {
+    @apply mb-11 flex flex-col items-start gap-2.5;
+  }
+
+  .section-heading__eyebrow {
+    @apply rounded-full border px-4 py-1.5 font-mono text-[0.95rem];
+
+    &.section-heading__eyebrow--paper {
+      @apply border-chip-border bg-card text-accent;
+    }
+    &.section-heading__eyebrow--navy {
+      @apply border-[var(--glass-border)] bg-[var(--glass)] text-[#7FB4F5];
+    }
+  }
+
+  .section-heading__title {
+    @apply m-0 font-display text-[2.2rem] font-bold leading-[1.1] transition-[color] duration-1000 sm:text-[3rem];
+
+    &.section-heading__title--paper {
+      @apply text-ink;
+    }
+    &.section-heading__title--navy {
+      @apply text-[#F2F5FA];
+    }
+  }
+}

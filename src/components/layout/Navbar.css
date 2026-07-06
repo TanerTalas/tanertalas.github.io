@@ -1,0 +1,66 @@
+@reference "../../index.css";
+
+/* Fixed top navigation: scroll-spy links, light/dark toggle, mobile hamburger. */
+@layer components {
+  .navbar {
+    @apply fixed inset-x-0 top-0 z-[2000] flex h-[72px] items-center justify-center bg-[var(--nav-bg)] backdrop-blur-md transition-[background] duration-1000;
+  }
+  .navbar__inner {
+    @apply relative flex w-full max-w-[1200px] items-center gap-6 px-6;
+  }
+
+  .navbar__logo {
+    @apply mr-auto shrink-0;
+  }
+  .navbar__logo-img {
+    @apply w-11 [filter:var(--icon-invert)] transition-[filter] duration-1000;
+  }
+
+  .navbar__links {
+    @apply hidden items-center gap-1 md:flex;
+  }
+
+  .nav-link {
+    @apply inline-block rounded-full px-3.5 py-2 font-display text-[0.95rem] font-medium text-ink transition-colors duration-200;
+
+    &:hover {
+      @apply bg-[color-mix(in_srgb,var(--accent)_16%,transparent)] text-accent;
+    }
+    &.nav-link--active,
+    &.nav-link--active:hover {
+      @apply bg-accent text-white;
+    }
+  }
+
+  .theme-toggle {
+    @apply cursor-pointer [perspective:600px];
+  }
+  .theme-toggle__face {
+    @apply relative block h-11 w-11 [transform-style:preserve-3d] transition-transform duration-500;
+  }
+  .theme-toggle__icon {
+    @apply absolute inset-0 h-11 w-11 [backface-visibility:hidden];
+
+    &.theme-toggle__icon--dark {
+      @apply [transform:rotateX(180deg)] [filter:var(--icon-invert)];
+    }
+  }
+
+  .navbar__hamburger {
+    @apply cursor-pointer md:hidden;
+  }
+  .navbar__hamburger-img {
+    @apply w-8 [filter:var(--icon-invert)];
+  }
+
+  .navbar__menu {
+    @apply absolute inset-x-4 top-[68px] flex flex-col gap-1 rounded-2xl border border-[var(--chip-border)] bg-[var(--card)] p-3 shadow-xl md:hidden;
+  }
+  .navbar__menu-link {
+    @apply block rounded-full px-4 py-2.5 font-display font-medium text-ink transition-colors duration-200;
+
+    &:hover {
+      @apply bg-[color-mix(in_srgb,var(--accent)_16%,transparent)] text-accent;
+    }
+  }
+}

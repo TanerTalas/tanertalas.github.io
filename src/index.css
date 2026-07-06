@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Enable class-based dark mode (html.dark) — theme colors are swapped via CSS variables below. */
+/* Enable class-based dark mode (html.dark); theme colors are swapped via CSS variables below. */
 @custom-variant dark (&:where(.dark, .dark *));
 
 /* ---------- Design tokens exposed to Tailwind ---------- */

@@ -1,0 +1,11 @@
+@reference "../../index.css";
+
+/* Parallax cloud layers that fan in on load and drift as the page scrolls. */
+@layer components {
+  .cloud {
+    @apply pointer-events-none absolute inset-x-0 bottom-0 opacity-0 [transform:translateY(120px)] [transition:transform_1.2s_ease-out,opacity_1.2s_ease-out];
+  }
+  .cloud__img {
+    @apply block w-full;
+  }
+}

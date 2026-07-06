@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import "./Clouds.css";
 
 // Eight layered cloud SVGs that fan in on load and drift with a parallax offset
 // as the page scrolls. Each layer moves at a different `depth` for a sense of distance.
@@ -55,14 +56,14 @@ export default function Clouds() {
         <div
           key={layer.cloud}
           ref={(el) => (wrapRefs.current[idx] = el)}
-          className="pointer-events-none absolute inset-x-0 bottom-0 opacity-0 [transform:translateY(120px)] [transition:transform_1.2s_ease-out,opacity_1.2s_ease-out]"
+          className="cloud"
           style={{ zIndex: layer.z }}
         >
           <img
             src={`/img/clouds/light/${layer.cloud}.svg`}
             data-cloud={layer.cloud}
             alt=""
-            className="block w-full"
+            className="cloud__img"
             style={{ animation: `cloudFloat ${layer.float} ease-in-out infinite`, animationDelay: layer.delay }}
           />
         </div>

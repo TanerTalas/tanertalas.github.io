@@ -1,0 +1,26 @@
+@reference "../../index.css";
+
+/* Site footer: signature line and social icons on a navy bar. */
+@layer components {
+  .site-footer {
+    @apply relative flex justify-center bg-navy transition-[background] duration-1000;
+  }
+  .site-footer__inner {
+    @apply flex w-full max-w-[1200px] items-center px-6 py-8 text-[#F2F5FA];
+  }
+  .site-footer__sig {
+    @apply m-0 flex items-center gap-1.5 font-display font-semibold;
+  }
+  .site-footer__heart {
+    @apply w-5;
+  }
+  .site-footer__socials {
+    @apply ml-auto flex gap-4;
+  }
+  .site-footer__social {
+    @apply inline-block transition-transform duration-300 hover:scale-110;
+  }
+  .site-footer__social-icon {
+    @apply [filter:brightness(0)_invert(1)];
+  }
+}

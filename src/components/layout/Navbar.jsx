@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { navLinks } from "../data/navLinks.js";
-import { useScrollSpy } from "../hooks/useScrollSpy.js";
+import { navLinks } from "../../data/navLinks.js";
+import { useScrollSpy } from "../../hooks/useScrollSpy.js";
+import "./Navbar.css";
 
 // Fixed top navigation: section links with scroll-spy highlight, a light/dark
 // toggle, and a hamburger menu that collapses the links on small screens.
@@ -26,31 +27,20 @@ export default function Navbar({ onToggleTheme, isDark }) {
   const activeId = useScrollSpy(onHome ? sectionIds : []);
 
   return (
-    <nav className="fixed inset-x-0 top-0 z-[2000] flex h-[72px] items-center justify-center bg-[var(--nav-bg)] backdrop-blur-md transition-[background] duration-1000">
-      <div className="relative flex w-full max-w-[1200px] items-center gap-6 px-6">
+    <nav className="navbar">
+      <div className="navbar__inner">
         {/* Logo */}
-        <Link to="/" className="mr-auto shrink-0">
-          <img
-            src="/img/icons/brand/logo.svg"
-            alt="Logo"
-            className="w-11 [filter:var(--icon-invert)] transition-[filter] duration-1000"
-          />
+        <Link to="/" className="navbar__logo">
+          <img src="/img/icons/brand/logo.svg" alt="Logo" className="navbar__logo-img" />
         </Link>
 
         {/* Desktop links */}
-        <ul className="hidden items-center gap-1 md:flex">
+        <ul className="navbar__links">
           {links.map((link) => {
             const active = onHome && activeId === link.id;
             return (
               <li key={link.id}>
-                <a
-                  href={link.href}
-                  className={`inline-block rounded-full px-3.5 py-2 font-display text-[0.95rem] font-medium transition-colors duration-200 ${
-                    active
-                      ? "bg-accent text-white"
-                      : "text-ink hover:bg-[color-mix(in_srgb,var(--accent)_16%,transparent)] hover:text-accent"
-                  }`}
-                >
+                <a href={link.href} className={`nav-link${active ? " nav-link--active" : ""}`}>
                   {link.label}
                 </a>
               </li>
@@ -64,21 +54,18 @@ export default function Navbar({ onToggleTheme, isDark }) {
           onMouseEnter={() => setThemeHover(true)}
           onMouseLeave={() => setThemeHover(false)}
           aria-label="Toggle light/dark mode"
-          className="cursor-pointer [perspective:600px]"
+          className="theme-toggle"
         >
-          <span
-            className="relative block h-11 w-11 [transform-style:preserve-3d] transition-transform duration-500"
-            style={{ transform: `rotateX(${themeFlip}deg)` }}
-          >
+          <span className="theme-toggle__face" style={{ transform: `rotateX(${themeFlip}deg)` }}>
             <img
               src="/img/icons/theme/sun-up.svg"
               alt="light mode"
-              className="absolute inset-0 h-11 w-11 [backface-visibility:hidden]"
+              className="theme-toggle__icon"
             />
             <img
               src="/img/icons/theme/sun-down.svg"
               alt="dark mode"
-              className="absolute inset-0 h-11 w-11 [backface-visibility:hidden] [transform:rotateX(180deg)] [filter:var(--icon-invert)]"
+              className="theme-toggle__icon theme-toggle__icon--dark"
             />
           </span>
         </button>
@@ -87,24 +74,24 @@ export default function Navbar({ onToggleTheme, isDark }) {
         <button
           onClick={() => setMenuOpen((open) => !open)}
           aria-label="Toggle menu"
-          className="cursor-pointer md:hidden"
+          className="navbar__hamburger"
         >
           <img
             src={menuOpen ? "/img/icons/ui/close.svg" : "/img/icons/ui/menu.svg"}
             alt=""
-            className="w-8 [filter:var(--icon-invert)]"
+            className="navbar__hamburger-img"
           />
         </button>
 
         {/* Mobile dropdown menu */}
         {menuOpen && (
-          <ul className="absolute inset-x-4 top-[68px] flex flex-col gap-1 rounded-2xl border border-[var(--chip-border)] bg-[var(--card)] p-3 shadow-xl md:hidden">
+          <ul className="navbar__menu">
             {links.map((link) => (
               <li key={link.id}>
                 <a
                   href={link.href}
                   onClick={() => setMenuOpen(false)}
-                  className="block rounded-full px-4 py-2.5 font-display font-medium text-ink transition-colors duration-200 hover:bg-[color-mix(in_srgb,var(--accent)_16%,transparent)] hover:text-accent"
+                  className="navbar__menu-link"
                 >
                   {link.label}
                 </a>

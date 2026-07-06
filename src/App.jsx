@@ -1,15 +1,15 @@
 import { useEffect, useRef } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
-import Navbar from "./components/Navbar.jsx";
-import Footer from "./components/Footer.jsx";
+import Navbar from "./components/layout/Navbar.jsx";
+import Footer from "./components/layout/Footer.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import ProjectsPage from "./pages/ProjectsPage.jsx";
 import { useTheme } from "./hooks/useTheme.js";
 
 // Handle scroll position when the route changes. Same-page anchor clicks (only the
 // hash changes) are left to the browser's native smooth scroll. On a page change we
-// jump instantly: to the #hash target once its section has mounted — SPA content
-// isn't there for the browser's own hash scroll — or to the top otherwise.
+// jump instantly: to the #hash target once its section has mounted (SPA content
+// isn't there for the browser's own hash scroll), or to the top otherwise.
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
   const lastPath = useRef(null);

@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import "./MiniMe.css";
 
 // A little mascot that pops up from the bottom of the page once, types out two
 // speech-bubble messages, then ducks back down. Purely decorative; pointer-events off.
@@ -93,45 +94,38 @@ export default function MiniMe() {
 
   return (
     <>
-      <div className="pointer-events-none fixed bottom-2 left-1/2 z-[999] h-[300px] w-[300px] -translate-x-1/2 overflow-hidden">
-        <img
-          src="/img/character/stick.svg"
-          alt=""
-          className="absolute bottom-0 left-1/2 z-[800] w-[100px] -translate-x-1/2"
-        />
+      <div className="minime">
+        <img src="/img/character/stick.svg" alt="" className="minime__stick" />
         <img
           ref={bodyRef}
           src="/img/character/body.svg"
           alt=""
-          className="absolute left-1/2 max-w-[70px] -translate-x-1/2 transition-[bottom] duration-[800ms]"
+          className="minime__body"
           style={{ bottom: "-110px" }}
         />
         <img
           ref={headRef}
           src="/img/character/head.svg"
           alt=""
-          className="absolute left-1/2 max-w-[70px] -translate-x-1/2 transition-[bottom] duration-[800ms]"
+          className="minime__head"
           style={{ bottom: "-68px" }}
         />
-        <div
-          ref={bubbleRef}
-          className="absolute bottom-[120px] left-1/2 -translate-x-1/2 whitespace-nowrap rounded-2xl border-2 border-[#333] bg-white px-3.5 py-2.5 text-sm leading-[1.43] text-[#333] opacity-0 shadow-[0_2px_4px_rgba(0,0,0,0.2)] transition-[opacity,transform] duration-[400ms]"
-        >
+        <div ref={bubbleRef} className="minime__bubble">
           <span ref={textRef} />
-          <span className="ml-0.5 inline-block animate-[blink_0.8s_steps(1,end)_infinite]">|</span>
+          <span className="minime__caret">|</span>
         </div>
       </div>
       <img
         ref={leftHandRef}
         src="/img/character/left-hand.svg"
         alt=""
-        className="pointer-events-none fixed bottom-1 left-[calc(50%-42px)] z-[1000] w-6 opacity-0 transition-opacity duration-[800ms]"
+        className="minime__hand minime__hand--left"
       />
       <img
         ref={rightHandRef}
         src="/img/character/right-hand.svg"
         alt=""
-        className="pointer-events-none fixed bottom-1 left-[calc(50%+18px)] z-[1000] w-6 opacity-0 transition-opacity duration-[800ms]"
+        className="minime__hand minime__hand--right"
       />
     </>
   );

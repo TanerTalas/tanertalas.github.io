@@ -1,0 +1,28 @@
+@reference "../index.css";
+
+/* Projects page: the full catalogue, reusing the same browser-frame card as the home preview. */
+@layer components {
+  .projects-page {
+    @apply relative min-h-screen bg-navy2 pb-24 pt-[72px] transition-[background] duration-1000;
+  }
+  .projects-page__inner {
+    @apply mx-auto w-full max-w-[1200px] px-6 py-16;
+  }
+
+  .projects-page__heading {
+    @apply mb-11 flex flex-col items-start gap-2.5;
+  }
+  .projects-page__back {
+    @apply rounded-full border border-[var(--glass-border)] bg-[var(--glass)] px-4 py-1.5 font-mono text-[0.95rem] text-[#7FB4F5] transition-opacity duration-300 hover:opacity-80;
+  }
+  .projects-page__title {
+    @apply m-0 font-display text-[2.2rem] font-bold leading-[1.1] text-[#F2F5FA] sm:text-[3rem];
+  }
+  .projects-page__subtitle {
+    @apply m-0 max-w-[560px] font-mono text-[0.95rem] text-[rgba(242,245,250,0.6)];
+  }
+
+  .projects-page__grid {
+    @apply grid grid-cols-1 gap-7 md:grid-cols-2;
+  }
+}

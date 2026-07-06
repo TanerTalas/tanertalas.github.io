@@ -1,0 +1,89 @@
+@reference "../../index.css";
+
+/* A project shown as a mock browser window: chrome + URL bar, a hover-zoom
+   screenshot, then title, tech pills and links. */
+@layer components {
+  .pcard {
+    @apply flex h-full flex-col overflow-hidden rounded-2xl bg-[#F6F8FC] shadow-[0_6px_24px_rgba(0,0,0,0.3)] transition-[transform,translate,box-shadow] duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.5)];
+
+    /* Screenshot zooms slightly while the whole card is hovered. */
+    &:hover .pcard__shot {
+      @apply scale-[1.04];
+    }
+  }
+
+  .pcard__chrome {
+    @apply flex items-center gap-2 border-b border-[#D8E0EE] bg-[#E7ECF4] px-4 py-2.5;
+  }
+  .pcard__dot {
+    @apply h-3 w-3 rounded-full;
+
+    &.pcard__dot--red {
+      @apply bg-[#ff5f57];
+    }
+    &.pcard__dot--amber {
+      @apply bg-[#febc2e];
+    }
+    &.pcard__dot--green {
+      @apply bg-[#28c840];
+    }
+  }
+  .pcard__url {
+    @apply ml-2.5 truncate rounded-md border border-[#D8E0EE] bg-white px-3 py-[3px] font-mono text-[0.8rem] text-[#5A6B84];
+  }
+
+  .pcard__shot-wrap {
+    @apply overflow-hidden;
+  }
+  .pcard__shot {
+    @apply block w-full transition-transform duration-500;
+  }
+
+  .pcard__body {
+    @apply flex flex-1 flex-col gap-4 p-6;
+  }
+  .pcard__head {
+    @apply flex flex-col gap-[7px];
+  }
+  .pcard__title {
+    @apply m-0 font-display text-[1.5rem] font-semibold text-[#16233B];
+  }
+  .pcard__tagline {
+    @apply flex items-center gap-2.5;
+  }
+  .pcard__tagline-dot {
+    @apply h-[7px] w-[7px] shrink-0 rounded-full bg-accent;
+  }
+  .pcard__tagline-text {
+    @apply font-mono text-[0.95rem] text-[#5A6B84];
+  }
+
+  .pcard__foot {
+    @apply mt-auto flex flex-col gap-[18px];
+  }
+  .pcard__tech {
+    @apply flex flex-col gap-2.5;
+  }
+  .pcard__tech-label {
+    @apply font-mono text-[0.78rem] tracking-wide text-[#5A6B84] opacity-70;
+  }
+  .pcard__tech-list {
+    @apply flex flex-wrap gap-2;
+  }
+  .pcard__tech-item {
+    @apply rounded-full border border-[#D8E0EE] bg-[#EDF1F8] px-3 py-1 font-mono text-[0.8rem] text-[#16233B];
+  }
+
+  .pcard__links {
+    @apply flex items-center gap-3.5;
+  }
+  .pcard__live {
+    @apply inline-block rounded-full bg-accent px-6 py-2.5 font-display text-[0.95rem] font-semibold text-white transition-[transform,translate,opacity] duration-300 hover:-translate-y-0.5 hover:opacity-90;
+  }
+  .pcard__source {
+    @apply inline-flex items-center gap-2 font-mono text-[0.9rem] text-[#16233B] transition-opacity duration-300 hover:opacity-60;
+  }
+  .pcard__source-icon {
+    @apply w-[22px] [filter:invert(1)];
+  }
+}

@@ -1,6 +1,6 @@
 // Projects, newest-relevant first. The home page previews the first two; the
 // projects page lists them all. `urlLabel` is the text shown in the card's fake browser bar.
-// NOTE: taglines for the projects beyond TinCat/Braci are best-guess placeholders — confirm copy.
+// NOTE: taglines for the projects beyond TinCat/Braci are best-guess placeholders; confirm copy.
 export const projects = [
   {
     name: "TinCat",

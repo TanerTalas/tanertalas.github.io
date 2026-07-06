@@ -1,0 +1,44 @@
+@reference "../../index.css";
+
+/* About section: a short bio card next to a JSON-styled "quick facts" panel. */
+@layer components {
+  .about {
+    @apply relative flex justify-center bg-paper py-24 transition-[background] duration-1000;
+  }
+  .about__inner {
+    @apply w-full max-w-[1200px] px-6;
+  }
+  .about__grid {
+    @apply grid grid-cols-1 items-stretch gap-7 lg:grid-cols-[1.4fr_1fr];
+  }
+
+  .about__bio {
+    @apply box-border h-full rounded-[20px] border border-[var(--chip-border)] bg-card p-9 shadow-[0_4px_16px_rgba(22,35,59,0.07)] transition-[background] duration-1000;
+  }
+  .about__bio-title {
+    @apply mb-4 font-display text-[1.6rem] font-semibold text-ink transition-[color] duration-1000;
+  }
+  .about__bio-text {
+    @apply text-[1.15rem] leading-[1.7] text-muted transition-[color] duration-1000;
+
+    &:not(:last-child) {
+      @apply mb-4;
+    }
+  }
+
+  .about__facts {
+    @apply box-border flex h-full flex-col gap-[18px] rounded-[20px] bg-navy p-7 transition-[background] duration-1000;
+  }
+  .about__facts-file {
+    @apply m-0 font-mono text-[0.9rem] text-[#7FB4F5];
+  }
+  .about__fact {
+    @apply flex flex-col gap-1;
+  }
+  .about__fact-key {
+    @apply font-mono text-[0.85rem] text-[#7FB4F5];
+  }
+  .about__fact-value {
+    @apply text-[1.05rem] font-medium text-[#F2F5FA];
+  }
+}

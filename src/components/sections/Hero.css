@@ -1,0 +1,65 @@
+@reference "../../index.css";
+
+/* Landing hero: terminal intro, self-typing role headline, and floating avatar. */
+@layer components {
+  .hero {
+    @apply relative mt-[72px] flex min-h-[calc(100vh-72px)] items-center justify-center overflow-hidden bg-header-bg transition-[background] duration-1000;
+  }
+
+  .hero__inner {
+    @apply relative z-[9] grid w-full max-w-[1200px] grid-cols-1 items-center justify-items-center gap-10 px-6 py-8 lg:grid-cols-2;
+  }
+
+  .hero__intro {
+    @apply justify-self-start;
+  }
+
+  .hero__prompt {
+    @apply mb-3 font-mono text-base text-white/85;
+  }
+
+  .hero__title {
+    @apply mb-4 font-display text-[2.6rem] font-bold leading-none text-white [text-shadow:0_0_2px_rgba(0,0,0,0.2)] sm:text-[3.6rem];
+  }
+
+  .hero__role,
+  .hero__caret {
+    @apply text-[2rem] text-[#1d4ed8] sm:text-[2.7rem];
+  }
+  .hero__role {
+    @apply leading-[1.15];
+  }
+  .hero__caret {
+    @apply ml-0.5 inline-block animate-[blink_0.8s_infinite];
+  }
+
+  .hero__lead {
+    @apply mb-6 max-w-[460px] text-xl leading-snug text-white [text-shadow:0_0_8px_rgba(0,0,0,0.2)];
+  }
+
+  .hero__socials {
+    @apply mb-6 flex items-center gap-4;
+  }
+
+  .hero__social {
+    @apply inline-block transition-transform duration-300;
+
+    &.hero__social--gh:hover {
+      @apply -rotate-6 scale-125;
+    }
+    &.hero__social--li:hover {
+      @apply rotate-6 scale-125;
+    }
+  }
+
+  .hero__cta {
+    @apply inline-block rounded-full bg-accent px-14 py-4 font-display text-[1.05rem] font-semibold text-white shadow-[0_6px_20px_rgba(0,0,0,0.18)] transition duration-[400ms] [transition-timing-function:cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:shadow-[0_14px_30px_rgba(0,0,0,0.28)] active:translate-y-0;
+  }
+
+  .hero__avatar-wrap {
+    @apply z-[6] hidden w-full items-center justify-center lg:flex;
+  }
+  .hero__avatar {
+    @apply block w-full [animation:avatarFloat_7s_ease-in-out_infinite];
+  }
+}

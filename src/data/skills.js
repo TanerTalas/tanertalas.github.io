@@ -23,7 +23,7 @@ export const backendSkills = [
   { name: "PostgreSQL", icon: be("postgresql") },
 ];
 
-// Everyday tools — the pill row.
+// Everyday tools: the pill row.
 export const toolSkills = [
   { name: "Git", icon: everyday("git") },
   { name: "GitHub", icon: everyday("github") },
@@ -34,7 +34,7 @@ export const toolSkills = [
   { name: "Claude Code", icon: everyday("claudecode") },
 ];
 
-// Other — languages / platforms outside the core web stack.
+// Other: languages / platforms outside the core web stack.
 export const otherSkills = [
   { name: "Java", icon: other("java") },
   { name: "Python", icon: other("python") },
