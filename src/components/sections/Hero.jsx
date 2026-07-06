@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import Clouds from "../effects/Clouds.jsx";
+import Wind from "../effects/Wind.jsx";
 import { useTypewriter } from "../../hooks/useTypewriter.js";
 import "./Hero.css";
 
@@ -81,6 +82,7 @@ export default function Hero() {
         </div>
       </div>
 
+      <Wind />
       <Clouds />
     </header>
   );

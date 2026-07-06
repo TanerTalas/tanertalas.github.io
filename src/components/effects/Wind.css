@@ -1,0 +1,50 @@
+@reference "../../index.css";
+
+/* Wind gust streaks that sweep endlessly across the hero. The drift keyframes
+   move each streak across the viewport while the dash keyframes draw the stroke
+   in from the front and release it from the tail, so each pass reads as a gust. */
+@layer components {
+  .wind {
+    @apply pointer-events-none absolute inset-0 overflow-hidden;
+  }
+
+  .wind__streak {
+    @apply absolute left-0 overflow-visible;
+    translate: -140px 0;
+    animation: windDrift var(--wind-duration, 10s) linear var(--wind-delay, 0s) infinite;
+  }
+
+  .wind__path {
+    stroke: #fff;
+    stroke-opacity: var(--wind-opacity, 0.45);
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: windDash var(--wind-duration, 10s) linear var(--wind-delay, 0s) infinite;
+  }
+}
+
+@keyframes windDrift {
+  from {
+    translate: -140px 0;
+  }
+  to {
+    translate: 100vw 0;
+  }
+}
+
+@keyframes windDash {
+  from {
+    stroke-dashoffset: 100;
+  }
+  to {
+    stroke-dashoffset: -100;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wind {
+    display: none;
+  }
+}
