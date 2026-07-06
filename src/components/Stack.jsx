@@ -66,7 +66,7 @@ export default function Stack() {
             <div className="box-border h-full rounded-[20px] border border-[var(--glass-border)] bg-[var(--glass)] p-7">
               <div className="mb-5 flex items-baseline gap-3">
                 <TagLabel>&lt;backend /&gt;</TagLabel>
-                <span className="text-[0.95rem] text-[rgba(242,245,250,0.6)]">what powers it all</span>
+                <span className="text-[0.95rem] text-[rgba(242,245,250,0.6)]">what runs behind</span>
               </div>
               <div className="grid grid-cols-3 gap-3">
                 {backendSkills.map((skill) => (
