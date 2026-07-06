@@ -66,7 +66,7 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="inline-block transition-transform duration-300 hover:-rotate-6 hover:scale-125"
             >
-              <img src="/img/icons/githubhero.svg" alt="Github Icon" />
+              <img src="/img/icons/social/github-hero.svg" alt="Github Icon" />
             </a>
             <a
               href="https://www.linkedin.com/in/taner-talas-a43a2236a/"
@@ -74,7 +74,7 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="inline-block transition-transform duration-300 hover:rotate-6 hover:scale-125"
             >
-              <img src="/img/icons/linkedinhero.svg" alt="Linkedin Icon" />
+              <img src="/img/icons/social/linkedin-hero.svg" alt="Linkedin Icon" />
             </a>
           </div>
           <a

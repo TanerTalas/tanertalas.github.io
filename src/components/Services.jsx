@@ -2,7 +2,7 @@ import Reveal from "./Reveal.jsx";
 import SectionHeading from "./SectionHeading.jsx";
 import { services } from "../data/services.js";
 
-// Single service card — the featured one gets an accent top border and "new" badge.
+// Single service card — the featured one gets an accent top border.
 function ServiceCard({ service }) {
   return (
     <div
@@ -10,12 +10,11 @@ function ServiceCard({ service }) {
       style={service.featured ? { borderTop: "6px solid var(--accent)" } : undefined}
     >
       <div className="flex items-center justify-between">
-        <img src={service.icon} alt="" className="w-[52px]" />
-        {service.featured && (
-          <span className="rounded-full bg-accent px-3 py-1 font-mono text-[0.8rem] text-white">
-            new
-          </span>
-        )}
+        <img
+          src={service.icon}
+          alt=""
+          className="w-[52px] transition-[filter] duration-1000 dark:[filter:invert(1)]"
+        />
       </div>
       <h3 className="m-0 font-display text-[1.5rem] font-semibold text-ink transition-[color] duration-1000">
         {service.title}

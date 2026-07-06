@@ -5,7 +5,7 @@ export default function Footer() {
       <div className="flex w-full max-w-[1200px] items-center px-6 py-8 text-[#F2F5FA]">
         <p className="m-0 flex items-center gap-1.5 font-display font-semibold">
           <span>Made with</span>
-          <img src="/img/icons/heart.svg" alt="heart" className="w-5" />
+          <img src="/img/icons/ui/heart.svg" alt="heart" className="w-5" />
           <span>by Taner Talas</span>
         </p>
         <div className="ml-auto flex gap-4">
@@ -16,7 +16,7 @@ export default function Footer() {
             className="inline-block transition-transform duration-300 hover:scale-110"
           >
             <img
-              src="/img/icons/githubhero.svg"
+              src="/img/icons/social/github-hero.svg"
               alt="Link to Github icon"
               className="[filter:brightness(0)_invert(1)]"
             />
@@ -28,7 +28,7 @@ export default function Footer() {
             className="inline-block transition-transform duration-300 hover:scale-110"
           >
             <img
-              src="/img/icons/linkedinhero.svg"
+              src="/img/icons/social/linkedin-hero.svg"
               alt="Link to Linkedin icon"
               className="[filter:brightness(0)_invert(1)]"
             />

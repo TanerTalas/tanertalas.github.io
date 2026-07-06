@@ -67,7 +67,7 @@ export default function ProjectCard({ project }) {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 font-mono text-[0.9rem] text-[#16233B] transition-opacity duration-300 hover:opacity-60"
             >
-              <img src="/img/icons/githubcontact.svg" alt="" className="w-[22px] [filter:invert(1)]" />
+              <img src="/img/icons/social/github-contact.svg" alt="" className="w-[22px] [filter:invert(1)]" />
               source
             </a>
           </div>

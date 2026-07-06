@@ -34,17 +34,17 @@ export default function Projects() {
             <span className="border-b-2 border-[#F2F5FA]">See All Projects</span>
             <span className="relative inline-block h-6 w-6">
               <img
-                src="/img/icons/chevron-right.svg"
+                src="/img/icons/ui/chevron-right.svg"
                 alt=""
                 className="absolute left-0 top-1/2 h-6 w-6 -translate-y-1/2 transition-transform duration-[400ms] group-hover:translate-x-1.5"
               />
               <img
-                src="/img/icons/chevron-right.svg"
+                src="/img/icons/ui/chevron-right.svg"
                 alt=""
                 className="absolute left-0 top-1/2 h-6 w-6 -translate-y-1/2 transition-transform duration-[400ms] group-hover:translate-x-3"
               />
               <img
-                src="/img/icons/chevron-right.svg"
+                src="/img/icons/ui/chevron-right.svg"
                 alt=""
                 className="absolute left-0 top-1/2 h-6 w-6 -translate-y-1/2 transition-transform duration-[400ms] group-hover:translate-x-[18px]"
               />

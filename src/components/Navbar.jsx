@@ -31,7 +31,7 @@ export default function Navbar({ onToggleTheme, isDark }) {
         {/* Logo */}
         <Link to="/" className="mr-auto shrink-0">
           <img
-            src="/img/icons/logo.svg"
+            src="/img/icons/brand/logo.svg"
             alt="Logo"
             className="w-11 [filter:var(--icon-invert)] transition-[filter] duration-1000"
           />
@@ -71,12 +71,12 @@ export default function Navbar({ onToggleTheme, isDark }) {
             style={{ transform: `rotateX(${themeFlip}deg)` }}
           >
             <img
-              src="/img/icons/sunup.svg"
+              src="/img/icons/theme/sun-up.svg"
               alt="light mode"
               className="absolute inset-0 h-11 w-11 [backface-visibility:hidden]"
             />
             <img
-              src="/img/icons/sundown.svg"
+              src="/img/icons/theme/sun-down.svg"
               alt="dark mode"
               className="absolute inset-0 h-11 w-11 [backface-visibility:hidden] [transform:rotateX(180deg)] [filter:var(--icon-invert)]"
             />
@@ -90,7 +90,7 @@ export default function Navbar({ onToggleTheme, isDark }) {
           className="cursor-pointer md:hidden"
         >
           <img
-            src={menuOpen ? "/img/icons/close.svg" : "/img/icons/menuicon.svg"}
+            src={menuOpen ? "/img/icons/ui/close.svg" : "/img/icons/ui/menu.svg"}
             alt=""
             className="w-8 [filter:var(--icon-invert)]"
           />
