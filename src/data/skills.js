@@ -38,6 +38,7 @@ export const toolSkills = [
 export const otherSkills = [
   { name: "Java", icon: other("java") },
   { name: "Python", icon: other("python") },
+  { name: "PHP", icon: other("php") },
   { name: "WordPress", icon: other("wordpress") },
   { name: "JSON", icon: other("json") },
 ];

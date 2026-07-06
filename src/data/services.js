@@ -16,14 +16,21 @@ export const services = [
     icon: icon("frontend"),
     description:
       "Intuitive projects with clear UI and smooth UX, built with organized, clean, easy-to-understand code and careful attention to detail.",
-    tags: ["HTML", "CSS", "JavaScript", "React"],
+    tags: ["HTML", "CSS", "JavaScript", "React", "Tailwind", "Bootstrap", "jQuery"],
   },
   {
     title: "Backend Development",
     icon: icon("backend"),
     description:
       "Reliable server-side logic: REST APIs, databases and authentication built to be secure, scalable and easy to maintain behind the scenes.",
-    tags: ["Node.js", "Express", "MongoDB", "REST API"],
+    tags: ["Node.js", "Express", "MongoDB", "MySQL", "PostgreSQL"],
+  },
+  {
+    title: "WordPress Development",
+    icon: icon("wordpress"),
+    description:
+      "Custom WordPress sites tailored to your needs: themes, page builders and plugins configured for a fast, maintainable site you can update yourself.",
+    tags: ["WordPress", "PHP", "Custom Themes", "CSS"],
   },
   {
     title: "UI / UX Design",
