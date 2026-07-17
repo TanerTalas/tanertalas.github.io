@@ -3,13 +3,13 @@
 // NOTE: taglines for the projects beyond TinCat/Braci are best-guess placeholders; confirm copy.
 export const projects = [
   {
-    name: "TinCat",
-    tagline: "Cat dating app landing page",
-    urlLabel: "tanertalas.github.io/TinCat",
-    image: "/img/projects/tincat.png",
-    live: "https://tanertalas.github.io/TinCat/",
-    github: "https://github.com/TanerTalas/TinCat",
-    tech: ["HTML", "CSS", "Bootstrap", "JS"],
+    name: "Guess the Flag",
+    tagline: "Countries-of-the-world flag quiz game",
+    urlLabel: "guess-the-flag-khw0.onrender.com",
+    image: "/img/projects/flag-game.png",
+    live: "https://guess-the-flag-khw0.onrender.com",
+    github: "https://github.com/TanerTalas/Flag-Game",
+    tech: ["React", "Tailwind", "Node", "SQLite"],
   },
   {
     name: "Braci",
@@ -19,6 +19,15 @@ export const projects = [
     live: "https://tanertalas.github.io/BRACI/",
     github: "https://github.com/TanerTalas/BRACI",
     tech: ["HTML", "CSS", "Tailwind","JS"],
+  },
+  {
+    name: "TinCat",
+    tagline: "Cat dating app landing page",
+    urlLabel: "tanertalas.github.io/TinCat",
+    image: "/img/projects/tincat.png",
+    live: "https://tanertalas.github.io/TinCat/",
+    github: "https://github.com/TanerTalas/TinCat",
+    tech: ["HTML", "CSS", "Bootstrap", "JS"],
   },
   {
     name: "Paris-Beaubourg",
