@@ -436,3 +436,11 @@ todo.md
 # Vite build output
 dist
 .vite
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Vercel CLI
+.vercel
