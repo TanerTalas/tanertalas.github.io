@@ -9,14 +9,14 @@ export const services = [
     featured: true,
     description:
       "Complete web applications end to end: responsive interfaces on the front, REST APIs and databases on the back. One project, one developer, everything connected.",
-    tags: ["React", "Node.js", "Express", "MySQL","PostgreSQL"],
+    tags: ["React", "Next.js", "Node.js", "Express", "MySQL","PostgreSQL"],
   },
   {
     title: "Frontend Development",
     icon: icon("frontend"),
     description:
       "Intuitive projects with clear UI and smooth UX, built with organized, clean, easy-to-understand code and careful attention to detail.",
-    tags: ["HTML", "CSS", "JavaScript", "React", "Tailwind", "Bootstrap", "jQuery"],
+    tags: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind", "Bootstrap", "jQuery"],
   },
   {
     title: "Backend Development",

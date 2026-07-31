@@ -3,6 +3,15 @@
 // NOTE: taglines for the projects beyond TinCat/Braci are best-guess placeholders; confirm copy.
 export const projects = [
   {
+    name: "Logo Quiz",
+    tagline: "Blurred brand logo guessing game",
+    urlLabel: "logo-quiz-lake.vercel.app",
+    image: "/img/projects/logo-quiz.png",
+    live: "https://logo-quiz-lake.vercel.app",
+    github: "https://github.com/TanerTalas/Logo-Quiz",
+    tech: ["Next.js", "TypeScript", "Tailwind", "PostgreSQL"],
+  },
+  {
     name: "Guess the Flag",
     tagline: "Countries-of-the-world flag quiz game",
     urlLabel: "guess-the-flag-khw0.onrender.com",
