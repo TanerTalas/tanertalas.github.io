@@ -12,6 +12,7 @@ export const frontendSkills = [
   { name: "TypeScript", icon: fe("typescript") },
   { name: "React", icon: fe("react") },
   { name: "Next.js", icon: fe("nextjs") },
+  { name: "Three.js", icon: fe("threejs") },
   { name: "Tailwind", icon: fe("tailwindcss") },
   { name: "Bootstrap", icon: fe("bootstrap") },
   { name: "jQuery", icon: fe("jquery") },

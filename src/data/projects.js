@@ -3,6 +3,15 @@
 // NOTE: taglines for the projects beyond TinCat/Braci are best-guess placeholders; confirm copy.
 export const projects = [
   {
+    name: "Solar System Journey",
+    tagline: "3D flight from the Sun out to Neptune",
+    urlLabel: "solar-system-journey-plum.vercel.app",
+    image: "/img/projects/solar-system-journey.png",
+    live: "https://solar-system-journey-plum.vercel.app",
+    github: "https://github.com/TanerTalas/Solar-System-Journey",
+    tech: ["Next.js", "TypeScript", "Three.js", "Tailwind"],
+  },
+  {
     name: "Logo Quiz",
     tagline: "Blurred brand logo guessing game",
     urlLabel: "logo-quiz-lake.vercel.app",
