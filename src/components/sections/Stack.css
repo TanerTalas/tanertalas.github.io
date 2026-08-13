@@ -15,9 +15,9 @@
     @apply md:col-span-2;
   }
 
-  /* A tag-style label like <frontend /> used as each card's header. */
-  .tag-label {
-    @apply rounded-lg bg-[rgba(127,180,245,0.14)] px-3.5 py-[5px] font-mono text-[1.05rem] text-[#F2F5FA];
+  /* Underlined uppercase category label used as each card's header. */
+  .category-label {
+    @apply border-b-2 border-b-[#7FB4F5] pb-1 font-display text-[1.15rem] font-semibold uppercase tracking-[0.06em] text-[#F2F5FA];
   }
 
   /* Grid card (frontend / backend) */
@@ -26,9 +26,6 @@
   }
   .stack-card__head {
     @apply mb-5 flex items-baseline gap-3;
-  }
-  .stack-card__hint {
-    @apply text-[0.95rem] text-[rgba(242,245,250,0.6)];
   }
   .stack-card__tiles {
     @apply grid grid-cols-3 gap-3;

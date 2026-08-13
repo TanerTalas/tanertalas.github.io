@@ -1,6 +1,6 @@
 @reference "../../index.css";
 
-/* About section: a short bio card next to a JSON-styled "quick facts" panel. */
+/* About section: a short bio card next to a dark stat panel. */
 @layer components {
   .about {
     @apply relative flex justify-center bg-paper py-24 transition-[background] duration-1000;
@@ -8,8 +8,20 @@
   .about__inner {
     @apply w-full max-w-[1200px] px-6;
   }
+
+  /* Wrapping flex row so the panel drops below the bio on narrow screens. */
   .about__grid {
-    @apply grid grid-cols-1 items-stretch gap-7 lg:grid-cols-[1.4fr_1fr];
+    @apply flex flex-wrap items-stretch gap-7;
+  }
+  .about__col {
+    @apply box-border;
+
+    &.about__col--bio {
+      @apply flex-[1_1_420px];
+    }
+    &.about__col--facts {
+      @apply flex-[1_1_300px];
+    }
   }
 
   .about__bio {
@@ -27,16 +39,23 @@
   }
 
   .about__facts {
-    @apply box-border flex h-full flex-col gap-[18px] rounded-[20px] bg-navy p-7 transition-[background] duration-1000;
+    @apply box-border flex h-full flex-col justify-between gap-7 rounded-[20px] bg-navy p-9 transition-[background] duration-1000;
   }
-  .about__facts-file {
-    @apply m-0 font-mono text-[0.9rem] text-[#7FB4F5];
+  .about__stat {
+    @apply font-display text-[4.5rem] font-bold leading-none text-[#F2F5FA];
+  }
+  .about__stat-label {
+    @apply mt-1.5 text-[1.05rem] text-[#7FB4F5];
+  }
+
+  .about__fact-list {
+    @apply flex flex-col gap-5;
   }
   .about__fact {
     @apply flex flex-col gap-1;
   }
-  .about__fact-key {
-    @apply font-mono text-[0.85rem] text-[#7FB4F5];
+  .about__fact-label {
+    @apply text-[0.85rem] text-[#7FB4F5];
   }
   .about__fact-value {
     @apply text-[1.05rem] font-medium text-[#F2F5FA];

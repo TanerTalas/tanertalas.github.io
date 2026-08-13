@@ -12,13 +12,6 @@ function ServiceCard({ service }) {
       </div>
       <h3 className="service-card__title">{service.title}</h3>
       <p className="service-card__desc">{service.description}</p>
-      <div className="service-card__tags">
-        {service.tags.map((tag) => (
-          <span key={tag} className="service-card__tag">
-            {tag}
-          </span>
-        ))}
-      </div>
     </div>
   );
 }
@@ -28,7 +21,7 @@ export default function Services() {
   return (
     <section id="services" className="services">
       <div className="services__inner">
-        <SectionHeading eyebrow="03 · services" title="What I Can Do for You" variant="paper" />
+        <SectionHeading title="What I Can Do for You" variant="paper" />
 
         <div className="services__grid">
           {services.map((service, idx) => (

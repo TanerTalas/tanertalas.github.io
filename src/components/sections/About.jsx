@@ -2,23 +2,22 @@ import Reveal from "../ui/Reveal.jsx";
 import SectionHeading from "../ui/SectionHeading.jsx";
 import "./About.css";
 
-// Quick-facts shown in the dark side card.
+// Quick facts listed under the years-of-experience stat in the dark side card.
 const facts = [
-  { key: '"education":', value: "Computer Programming, Istanbul Gedik University" },
-  { key: '"focus":', value: "Fullstack web development" },
-  { key: '"long_term":', value: "Artificial intelligence" },
+  { label: "Education", value: "Computer Programming, Istanbul Gedik University" },
+  { label: "Focus", value: "Fullstack web development" },
 ];
 
-// About section: a short bio card next to a JSON-styled "quick facts" panel.
+// About section: a short bio card next to a dark stat panel.
 export default function About() {
   return (
     <section id="about" className="about">
       <div className="about__inner">
-        <SectionHeading eyebrow="01 · about-me" title="Behind the Screen" variant="paper" />
+        <SectionHeading title="Behind the Screen" variant="paper" />
 
         <div className="about__grid">
           {/* Bio card */}
-          <Reveal>
+          <Reveal className="about__col about__col--bio">
             <div className="about__bio">
               <h3 className="about__bio-title">Always learning, never finished</h3>
               <p className="about__bio-text">
@@ -37,16 +36,22 @@ export default function About() {
             </div>
           </Reveal>
 
-          {/* Quick-facts card */}
-          <Reveal delay={150}>
+          {/* Stat + quick-facts card */}
+          <Reveal delay={150} className="about__col about__col--facts">
             <div className="about__facts">
-              <p className="about__facts-file">// quick-facts.json</p>
-              {facts.map((fact) => (
-                <div key={fact.key} className="about__fact">
-                  <span className="about__fact-key">{fact.key}</span>
-                  <span className="about__fact-value">{fact.value}</span>
-                </div>
-              ))}
+              <div>
+                <div className="about__stat">4+</div>
+                <div className="about__stat-label">years writing software</div>
+              </div>
+
+              <div className="about__fact-list">
+                {facts.map((fact) => (
+                  <div key={fact.label} className="about__fact">
+                    <span className="about__fact-label">{fact.label}</span>
+                    <span className="about__fact-value">{fact.value}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </Reveal>
         </div>

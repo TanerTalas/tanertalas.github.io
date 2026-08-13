@@ -12,7 +12,7 @@ export default function Projects() {
   return (
     <section id="projects" className="projects">
       <div className="projects__inner">
-        <SectionHeading eyebrow="04 · projects" title="Things I've Shipped" variant="navy" />
+        <SectionHeading title="Things I've Shipped" variant="navy" />
 
         <div className="projects__grid">
           {preview.map((project, idx) => (

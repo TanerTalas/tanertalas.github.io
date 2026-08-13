@@ -1,6 +1,6 @@
 @reference "../../index.css";
 
-/* Landing hero: terminal intro, self-typing role headline, and floating avatar. */
+/* Landing hero: self-typing role headline and floating avatar. */
 @layer components {
   .hero {
     @apply relative mt-[72px] flex min-h-[calc(100vh-72px)] items-center justify-center overflow-hidden bg-header-bg transition-[background] duration-1000;
@@ -12,10 +12,6 @@
 
   .hero__intro {
     @apply justify-self-start;
-  }
-
-  .hero__prompt {
-    @apply mb-3 font-mono text-base text-white/85;
   }
 
   .hero__title {

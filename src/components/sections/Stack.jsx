@@ -3,9 +3,9 @@ import SectionHeading from "../ui/SectionHeading.jsx";
 import { frontendSkills, backendSkills, toolSkills, otherSkills } from "../../data/skills.js";
 import "./Stack.css";
 
-// A tag-style label like <frontend /> used as each card's header.
-function TagLabel({ children }) {
-  return <span className="tag-label">{children}</span>;
+// Underlined uppercase category label used as each card's header.
+function CategoryLabel({ children }) {
+  return <span className="category-label">{children}</span>;
 }
 
 // A single skill tile (icon + name) with a lift-on-hover.
@@ -37,15 +37,14 @@ export default function Stack() {
   return (
     <section id="skills" className="stack">
       <div className="stack__inner">
-        <SectionHeading eyebrow="02 · my-stack" title="Tools I Build With" variant="navy" />
+        <SectionHeading title="Tools I Build With" variant="navy" />
 
         <div className="stack__grid">
           {/* Card 1: frontend */}
           <Reveal>
             <div className="stack-card">
               <div className="stack-card__head">
-                <TagLabel>&lt;frontend /&gt;</TagLabel>
-                <span className="stack-card__hint">what users see</span>
+                <CategoryLabel>Frontend</CategoryLabel>
               </div>
               <div className="stack-card__tiles">
                 {frontendSkills.map((skill) => (
@@ -59,8 +58,7 @@ export default function Stack() {
           <Reveal delay={120}>
             <div className="stack-card">
               <div className="stack-card__head">
-                <TagLabel>&lt;backend /&gt;</TagLabel>
-                <span className="stack-card__hint">what runs behind</span>
+                <CategoryLabel>Backend</CategoryLabel>
               </div>
               <div className="stack-card__tiles">
                 {backendSkills.map((skill) => (
@@ -73,7 +71,7 @@ export default function Stack() {
           {/* Card 3: everyday tools (full width) */}
           <Reveal delay={200} className="stack__full">
             <div className="stack-row">
-              <TagLabel>&lt;everyday-tools /&gt;</TagLabel>
+              <CategoryLabel>Everyday tools</CategoryLabel>
               <div className="stack-row__pills">
                 {toolSkills.map((skill) => (
                   <SkillPill key={skill.name} skill={skill} />
@@ -85,7 +83,7 @@ export default function Stack() {
           {/* Card 4: other (full width) */}
           <Reveal delay={280} className="stack__full">
             <div className="stack-row">
-              <TagLabel>&lt;other /&gt;</TagLabel>
+              <CategoryLabel>Other</CategoryLabel>
               <div className="stack-row__pills">
                 {otherSkills.map((skill) => (
                   <SkillPill key={skill.name} skill={skill} />

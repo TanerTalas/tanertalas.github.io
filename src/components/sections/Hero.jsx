@@ -4,9 +4,9 @@ import Wind from "../effects/Wind.jsx";
 import { useTypewriter } from "../../hooks/useTypewriter.js";
 import "./Hero.css";
 
-// Landing hero: terminal-style intro, self-typing role headline, floating avatar,
-// and the parallax cloudscape. The whole content block eases in on load and
-// drifts/fades as the visitor scrolls past.
+// Landing hero: self-typing role headline, floating avatar, and the parallax
+// cloudscape. The whole content block eases in on load and drifts/fades as the
+// visitor scrolls past.
 export default function Hero() {
   const typed = useTypewriter("I'm a Fullstack Developer", { startDelay: 1500, speed: 90 });
   const [entered, setEntered] = useState(false);
@@ -42,7 +42,6 @@ export default function Hero() {
       <div ref={contentRef} className="hero__inner">
         {/* Hero left: intro copy */}
         <div className="hero__intro" style={enterStyle()}>
-          <p className="hero__prompt">~/taner-talas $ whoami</p>
           <h1 className="hero__title">
             <span>Hello, I'm Taner</span>
             <br />

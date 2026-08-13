@@ -1,7 +1,7 @@
 @reference "../../index.css";
 
-/* A project shown as a mock browser window: chrome + URL bar, a hover-zoom
-   screenshot, then title, tech pills and links. */
+/* A project shown as a mock browser window: an address bar with a padlock, a
+   hover-zoom screenshot, then title, tagline and links. */
 @layer components {
   .pcard {
     @apply flex h-full flex-col overflow-hidden rounded-2xl bg-[#F6F8FC] shadow-[0_6px_24px_rgba(0,0,0,0.3)] transition-[transform,translate,box-shadow] duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.5)];
@@ -15,21 +15,14 @@
   .pcard__chrome {
     @apply flex items-center gap-2 border-b border-[#D8E0EE] bg-[#E7ECF4] px-4 py-2.5;
   }
-  .pcard__dot {
-    @apply h-3 w-3 rounded-full;
-
-    &.pcard__dot--red {
-      @apply bg-[#ff5f57];
-    }
-    &.pcard__dot--amber {
-      @apply bg-[#febc2e];
-    }
-    &.pcard__dot--green {
-      @apply bg-[#28c840];
-    }
-  }
   .pcard__url {
-    @apply ml-2.5 truncate rounded-md border border-[#D8E0EE] bg-white px-3 py-[3px] font-mono text-[0.8rem] text-[#5A6B84];
+    @apply flex min-w-0 flex-1 items-center gap-2 rounded-full border border-[#D8E0EE] bg-white px-3.5 py-1 font-mono text-[0.8rem] text-[#5A6B84];
+  }
+  .pcard__lock {
+    @apply shrink-0;
+  }
+  .pcard__url-text {
+    @apply truncate;
   }
 
   .pcard__shot-wrap {
@@ -61,19 +54,6 @@
   .pcard__foot {
     @apply mt-auto flex flex-col gap-[18px];
   }
-  .pcard__tech {
-    @apply flex flex-col gap-2.5;
-  }
-  .pcard__tech-label {
-    @apply font-mono text-[0.78rem] tracking-wide text-[#5A6B84] opacity-70;
-  }
-  .pcard__tech-list {
-    @apply flex flex-wrap gap-2;
-  }
-  .pcard__tech-item {
-    @apply rounded-full border border-[#D8E0EE] bg-[#EDF1F8] px-3 py-1 font-mono text-[0.8rem] text-[#16233B];
-  }
-
   .pcard__links {
     @apply flex items-center gap-3.5;
   }
