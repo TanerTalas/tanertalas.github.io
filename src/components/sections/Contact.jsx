@@ -1,22 +1,36 @@
 import { useState } from "react";
 import Reveal from "../ui/Reveal.jsx";
 import SectionHeading from "../ui/SectionHeading.jsx";
+import Turnstile from "../ui/Turnstile.jsx";
 import "./Contact.css";
 
 const EMAIL = "tanertalas.dev@gmail.com";
 
+// Public Turnstile site key, inlined at build time. When it is absent (local
+// `vite dev`) the challenge is skipped so the form stays testable.
+const TURNSTILE_SITE_KEY = import.meta.env.VITE_TURNSTILE_SITE_KEY || "";
+
 // Contact section: a dark card pairing my direct links with a message form.
-// The form posts to /api/contact, which relays the message to my inbox.
+// The form posts to /api/contact, which verifies the Turnstile token and then
+// relays the message to my inbox.
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [status, setStatus] = useState("idle"); // idle | sending | sent | error
   const [error, setError] = useState("");
+  const [token, setToken] = useState("");
+  const [challengeRound, setChallengeRound] = useState(0);
+
+  // Bots fill every field they find; humans never see this one.
+  const [honeypot, setHoneypot] = useState("");
 
   const update = (field) => (e) => setForm((prev) => ({ ...prev, [field]: e.target.value }));
 
+  const needsChallenge = Boolean(TURNSTILE_SITE_KEY);
+  const blocked = status === "sending" || (needsChallenge && !token);
+
   const onSubmit = async (e) => {
     e.preventDefault();
-    if (status === "sending") return;
+    if (blocked) return;
 
     setStatus("sending");
     setError("");
@@ -25,7 +39,7 @@ export default function Contact() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ ...form, company: honeypot, turnstileToken: token }),
       });
       const data = await res.json().catch(() => ({}));
 
@@ -36,6 +50,9 @@ export default function Contact() {
     } catch (err) {
       setStatus("error");
       setError(err.message || "Something went wrong. Please try again.");
+    } finally {
+      // The token is spent either way, so always ask for a fresh challenge.
+      setChallengeRound((round) => round + 1);
     }
   };
 
@@ -137,7 +154,27 @@ export default function Contact() {
                 />
               </label>
 
-              <button type="submit" disabled={status === "sending"} className="contact__submit">
+              {/* Honeypot: off-screen and skipped by keyboard, so only bots reach it. */}
+              <div className="contact__honeypot" aria-hidden="true">
+                <label htmlFor="contact-company">Company</label>
+                <input
+                  id="contact-company"
+                  type="text"
+                  name="company"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  value={honeypot}
+                  onChange={(e) => setHoneypot(e.target.value)}
+                />
+              </div>
+
+              <Turnstile
+                siteKey={TURNSTILE_SITE_KEY}
+                onToken={setToken}
+                resetKey={challengeRound}
+              />
+
+              <button type="submit" disabled={blocked} className="contact__submit">
                 {sendLabel}
               </button>
 

@@ -44,6 +44,15 @@
     @apply resize-y leading-[1.5];
   }
 
+  /* Honeypot: pushed off-screen rather than display:none, which some bots skip. */
+  .contact__honeypot {
+    @apply absolute -left-[9999px] h-0 w-0 overflow-hidden;
+  }
+
+  .contact__turnstile {
+    @apply min-h-[65px];
+  }
+
   .contact__submit {
     @apply mt-1 cursor-pointer rounded-full bg-accent px-7 py-3.5 font-display text-[1.05rem] font-semibold text-white transition-[transform,translate,opacity] duration-300 hover:-translate-y-0.5 hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-70 disabled:hover:translate-y-0;
   }
