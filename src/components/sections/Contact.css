@@ -1,6 +1,6 @@
 @reference "../../index.css";
 
-/* Contact section: a dark call-to-action card with an email button and social links. */
+/* Contact section: a dark card pairing direct links with a message form. */
 @layer components {
   .contact {
     @apply relative flex justify-center bg-paper py-24 pb-30 transition-[background] duration-1000;
@@ -8,30 +8,51 @@
   .contact__inner {
     @apply w-full max-w-[1200px] px-6;
   }
+
+  /* Wrapping flex row so the form drops below the pitch on narrow screens. */
   .contact__card {
-    @apply grid grid-cols-1 items-center gap-8 rounded-3xl bg-navy p-8 transition-[background] duration-1000 md:grid-cols-[1.2fr_1fr] md:p-12;
+    @apply flex flex-wrap items-stretch gap-10 rounded-3xl bg-navy p-8 transition-[background] duration-1000 md:p-12;
   }
 
   .contact__pitch {
-    @apply flex flex-col gap-4;
+    @apply flex flex-[1_1_340px] flex-col gap-6;
   }
   .contact__lead {
     @apply m-0 max-w-[440px] text-[1.3rem] leading-[1.5] text-[#F2F5FA];
   }
-  .contact__email {
-    @apply inline-flex w-max items-center gap-3 rounded-full bg-[#F2F5FA] px-7 py-3.5 font-display text-[1.1rem] font-semibold text-[#0B1D33] transition-[transform,translate,box-shadow] duration-300 hover:-translate-y-[3px] hover:shadow-[0_10px_24px_rgba(0,0,0,0.4)];
-  }
-  .contact__email-icon {
-    @apply w-[22px] [filter:invert(1)];
-  }
 
-  .contact__socials {
+  .contact__links {
     @apply flex flex-col gap-3;
   }
-  .contact__social {
+  .contact__link {
     @apply flex items-center gap-3 rounded-[14px] border border-[var(--glass-border)] bg-[var(--glass)] px-5 py-3.5 font-mono text-base text-[#F2F5FA] transition-transform duration-300 hover:translate-x-1.5;
   }
-  .contact__social-icon {
+  .contact__link-icon {
     @apply w-6;
+  }
+
+  .contact__form {
+    @apply box-border flex flex-[1_1_340px] flex-col gap-3.5 rounded-[20px] border border-[var(--glass-border)] bg-[var(--glass)] p-7;
+  }
+  .contact__field {
+    @apply flex flex-col gap-[7px] text-[0.85rem] tracking-[0.04em] text-[#7FB4F5];
+  }
+  .contact__input {
+    @apply box-border w-full rounded-xl border border-[var(--glass-border)] bg-white/[0.06] px-4 py-[13px] font-body text-base text-[#F2F5FA] outline-none transition-[border-color] duration-[250ms] placeholder:text-[rgba(242,245,250,0.4)] focus:border-[#7FB4F5];
+  }
+  .contact__textarea {
+    @apply resize-y leading-[1.5];
+  }
+
+  .contact__submit {
+    @apply mt-1 cursor-pointer rounded-full bg-accent px-7 py-3.5 font-display text-[1.05rem] font-semibold text-white transition-[transform,translate,opacity] duration-300 hover:-translate-y-0.5 hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-70 disabled:hover:translate-y-0;
+  }
+
+  .contact__status {
+    @apply m-0 text-[0.9rem] text-[#7FB4F5];
+
+    &.contact__status--error {
+      @apply text-[#ff9b9b];
+    }
   }
 }
