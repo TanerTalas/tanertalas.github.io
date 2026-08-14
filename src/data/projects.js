@@ -3,6 +3,15 @@
 // NOTE: taglines for the projects beyond TinCat/Braci are best-guess placeholders; confirm copy.
 export const projects = [
   {
+    // Private repo, so no `github` key — the card hides the source link without one.
+    name: "Stargazers",
+    tagline: "Send someone words under the stars",
+    urlLabel: "stargazers-rust.vercel.app",
+    image: "/img/projects/stargazers.png",
+    live: "https://stargazers-rust.vercel.app",
+    tech: ["Next.js", "TypeScript", "Three.js", "Tailwind"],
+  },
+  {
     name: "Solar System Journey",
     tagline: "3D flight from the Sun out to Neptune",
     urlLabel: "solar-system-journey-plum.vercel.app",
