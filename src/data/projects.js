@@ -1,6 +1,6 @@
 // Projects, newest-relevant first. The home page previews the first two; the
 // projects page lists them all. `urlLabel` is the text shown in the card's fake browser bar.
-// NOTE: taglines for the projects beyond TinCat/Braci are best-guess placeholders; confirm copy.
+// `threejs: true` is the only tech marker kept — it feeds the Three.js filter on /projects.
 export const projects = [
   {
     // Private repo, so no `github` key — the card hides the source link without one.
@@ -9,7 +9,7 @@ export const projects = [
     urlLabel: "stargazers-rust.vercel.app",
     image: "/img/projects/stargazers.png",
     live: "https://stargazers-rust.vercel.app",
-    tech: ["Next.js", "TypeScript", "Three.js", "Tailwind"],
+    threejs: true,
   },
   {
     name: "Solar System Journey",
@@ -18,7 +18,7 @@ export const projects = [
     image: "/img/projects/solar-system-journey.png",
     live: "https://solar-system-journey-plum.vercel.app",
     github: "https://github.com/TanerTalas/Solar-System-Journey",
-    tech: ["Next.js", "TypeScript", "Three.js", "Tailwind"],
+    threejs: true,
   },
   {
     name: "Fire Eye",
@@ -27,7 +27,7 @@ export const projects = [
     image: "/img/projects/fire-eye.png",
     live: "https://tanertalas.github.io/fire-eye/",
     github: "https://github.com/TanerTalas/fire-eye",
-    tech: ["HTML", "CSS", "JS", "Three.js", "GLSL"],
+    threejs: true,
   },
   {
     name: "Dragon",
@@ -36,7 +36,7 @@ export const projects = [
     image: "/img/projects/dragon.png",
     live: "https://tanertalas.github.io/dragon/",
     github: "https://github.com/TanerTalas/dragon",
-    tech: ["HTML", "CSS", "JS", "Three.js"],
+    threejs: true,
   },
   {
     name: "Logo Quiz",
@@ -45,7 +45,6 @@ export const projects = [
     image: "/img/projects/logo-quiz.png",
     live: "https://logo-quiz-lake.vercel.app",
     github: "https://github.com/TanerTalas/Logo-Quiz",
-    tech: ["Next.js", "TypeScript", "Tailwind", "PostgreSQL"],
   },
   {
     name: "Guess the Flag",
@@ -54,7 +53,6 @@ export const projects = [
     image: "/img/projects/flag-game.png",
     live: "https://guess-the-flag-khw0.onrender.com",
     github: "https://github.com/TanerTalas/Flag-Game",
-    tech: ["React", "Tailwind", "Node", "SQLite"],
   },
   {
     name: "Braci",
@@ -63,7 +61,6 @@ export const projects = [
     image: "/img/projects/braci.png",
     live: "https://tanertalas.github.io/BRACI/",
     github: "https://github.com/TanerTalas/BRACI",
-    tech: ["HTML", "CSS", "Tailwind","JS"],
   },
   {
     name: "TinCat",
@@ -72,7 +69,6 @@ export const projects = [
     image: "/img/projects/tincat.png",
     live: "https://tanertalas.github.io/TinCat/",
     github: "https://github.com/TanerTalas/TinCat",
-    tech: ["HTML", "CSS", "Bootstrap", "JS"],
   },
   {
     name: "Paris-Beaubourg",
@@ -81,7 +77,6 @@ export const projects = [
     image: "/img/projects/paris_beaubourg.png",
     live: "https://tanertalas.github.io/Paris-Beaubourg/",
     github: "https://github.com/TanerTalas/Paris-Beaubourg",
-    tech: ["HTML", "CSS", "Bootstrap", "JS"],
   },
   {
     name: "CSS-Mondrian",
@@ -90,7 +85,6 @@ export const projects = [
     image: "/img/projects/css-mondrian.png",
     live: "https://tanertalas.github.io/CSS-Mondrian/",
     github: "https://github.com/TanerTalas/CSS-Mondrian",
-    tech: ["HTML", "CSS", "JavaScript"],
   },
   {
     name: "CSS-Authentication-UI",
@@ -99,7 +93,6 @@ export const projects = [
     image: "/img/projects/css-auth.png",
     live: "https://tanertalas.github.io/CSS-Authentication-UI/",
     github: "https://github.com/TanerTalas/CSS-Authentication-UI",
-    tech: ["HTML", "CSS", "JavaScript"],
   },
   {
     name: "PatiPop",
@@ -108,7 +101,6 @@ export const projects = [
     image: "/img/projects/patipop.png",
     live: "https://tanertalas.github.io/PatiPop/",
     github: "https://github.com/TanerTalas/PatiPop",
-    tech: ["HTML", "CSS", "Tailwind","JS"],
   },
   {
     name: "Modu",
@@ -117,6 +109,5 @@ export const projects = [
     image: "/img/projects/modu.png",
     live: "https://tanertalas.github.io/Modu/",
     github: "https://github.com/TanerTalas/Modu",
-    tech: ["HTML", "CSS", "Tailwind", "JS"],
   },
 ];

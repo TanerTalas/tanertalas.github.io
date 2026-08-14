@@ -51,11 +51,9 @@
     @apply font-mono text-[0.95rem] text-[#5A6B84];
   }
 
-  .pcard__foot {
-    @apply mt-auto flex flex-col gap-[18px];
-  }
+  /* `mt-auto` pins the links to the bottom so cards of unequal height still line up. */
   .pcard__links {
-    @apply flex items-center gap-3.5;
+    @apply mt-auto flex items-center gap-3.5;
   }
   .pcard__live {
     @apply inline-block rounded-full bg-accent px-6 py-2.5 font-display text-[0.95rem] font-semibold text-white transition-[transform,translate,opacity] duration-300 hover:-translate-y-0.5 hover:opacity-90;

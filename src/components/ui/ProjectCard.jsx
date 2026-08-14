@@ -39,23 +39,21 @@ export default function ProjectCard({ project }) {
           </div>
         </div>
 
-        <div className="pcard__foot">
-          <div className="pcard__links">
-            <a href={live} target="_blank" rel="noopener noreferrer" className="pcard__live">
-              Live Website
+        <div className="pcard__links">
+          <a href={live} target="_blank" rel="noopener noreferrer" className="pcard__live">
+            Live Website
+          </a>
+          {/* Private repos have no `github`, so the source link is dropped entirely. */}
+          {github && (
+            <a href={github} target="_blank" rel="noopener noreferrer" className="pcard__source">
+              <img
+                src="/img/icons/social/github-contact.svg"
+                alt=""
+                className="pcard__source-icon"
+              />
+              source
             </a>
-            {/* Private repos have no `github`, so the source link is dropped entirely. */}
-            {github && (
-              <a href={github} target="_blank" rel="noopener noreferrer" className="pcard__source">
-                <img
-                  src="/img/icons/social/github-contact.svg"
-                  alt=""
-                  className="pcard__source-icon"
-                />
-                source
-              </a>
-            )}
-          </div>
+          )}
         </div>
       </div>
     </div>

@@ -16,7 +16,7 @@ function ServiceCard({ service }) {
   );
 }
 
-// Services section: three offerings, staggered in as they scroll into view.
+// Services section: every offering, staggered in as it scrolls into view.
 export default function Services() {
   return (
     <section id="services" className="services">
@@ -25,7 +25,7 @@ export default function Services() {
 
         <div className="services__grid">
           {services.map((service, idx) => (
-            // Card 1 / Card 2 / Card 3
+            // Card 1 … Card 5
             <Reveal key={service.title} delay={idx * 120}>
               <ServiceCard service={service} />
             </Reveal>

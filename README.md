@@ -41,7 +41,8 @@ no page builder, no UI kit. Every section, animation and SVG in this repo was ma
 for this site.
 
 It is a single-page React app with one extra route for the full project catalogue.
-The whole thing is static: no backend, no database, no analytics.
+Static apart from one serverless function: the contact form posts to `api/contact.js`,
+which screens the message for spam and relays it to my inbox. No database, no analytics.
 
 ---
 
@@ -51,11 +52,11 @@ The two cards on the home page, plus everything else on `/projects`:
 
 | Project | What it is | Built with |
 | --- | --- | --- |
+| **[Stargazers](https://stargazers-rust.vercel.app)** | Send someone words under the stars | Next.js · TypeScript · Three.js · Tailwind |
 | **[Solar System Journey](https://solar-system-journey-plum.vercel.app)** | A 3D flight from the Sun out to Neptune at true spacing | Next.js · TypeScript · Three.js · Tailwind |
+| **[Fire Eye](https://tanertalas.github.io/fire-eye/)** | A burning eye drawn by a custom GLSL shader | Three.js · GLSL · JS |
+| **[Dragon](https://tanertalas.github.io/dragon/)** | A dragon that builds its own scales in the browser | Three.js · JS |
 | **[Logo Quiz](https://logo-quiz-lake.vercel.app)** | Guess the brand behind the blurred logo | Next.js · TypeScript · Tailwind · PostgreSQL |
-| **[Guess the Flag](https://guess-the-flag-khw0.onrender.com)** | Countries-of-the-world flag quiz | React · Tailwind · Node · SQLite |
-| **[Braci](https://tanertalas.github.io/BRACI/)** | Pizza restaurant website | HTML · CSS · Tailwind · JS |
-| **[TinCat](https://tanertalas.github.io/TinCat/)** | Cat dating app landing page | HTML · CSS · Bootstrap · JS |
 
 <sub>…and more on the [projects page](https://tanertalas-portfolio.vercel.app/projects).</sub>
 
@@ -71,9 +72,9 @@ variant rather than just dimming.
 **The mini me.** A small character assembled from separate SVG parts (head, body,
 hands, stick) that runs a timed animation sequence while you sit on the hero.
 
-**Themes that persist.** The palette is a set of CSS custom properties on `:root` and
-`.dark`; the toggle flips one class on `<html>` and stores the choice, so a reload
-keeps the mood you picked.
+**One class, two skies.** The palette is a set of CSS custom properties on `:root` and
+`.dark`; the toggle flips a single class on `<html>` and the whole site — clouds
+included — changes with it.
 
 **Motion that follows you.** [Lenis](https://github.com/darkroomengineering/lenis)
 smooths the scroll, an `IntersectionObserver` reveals each block as it enters the
@@ -82,9 +83,8 @@ viewport, and a scroll-spy keeps the nav in sync with the section you are readin
 **A typewriter hero.** The headline types itself out one character at a time when the
 page opens, with a blinking caret trailing behind it.
 
-**Projects as browser windows.** Each project card is a mock browser — traffic-light
-chrome, a URL bar with the real domain, and a screenshot that zooms a little when you
-hover it.
+**Projects as browser windows.** Each project card is a mock browser — a URL bar with
+a padlock and the real domain, and a screenshot that zooms a little when you hover it.
 
 **Responsive down to a phone.** Every section reflows; the nav collapses into a
 mobile menu.
@@ -120,13 +120,14 @@ npm run preview  # preview the production build
 ## Project layout
 
 ```
+api/contact.js       # Serverless endpoint behind the contact form
 public/img/          # All artwork: clouds, character, tool icons, project shots
 src/
 ├── components/
 │   ├── effects/     # Clouds, Wind, MiniMe — the decorative layer
 │   ├── layout/      # Navbar, Footer
 │   ├── sections/    # Hero, About, Services, Stack, Projects, Contact
-│   └── ui/          # ProjectCard, SectionHeading, Reveal
+│   └── ui/          # ProjectCard, SectionHeading, Reveal, Turnstile
 ├── data/            # projects.js, services.js, skills.js, navLinks.js
 ├── hooks/           # useTheme, useLenis, useScrollSpy, useTypewriter, useInView
 ├── pages/           # HomePage, ProjectsPage
@@ -149,7 +150,7 @@ projects page renders the whole list, so order is priority:
   image: "/img/projects/solar-system-journey.png",
   live: "https://solar-system-journey-plum.vercel.app",
   github: "https://github.com/TanerTalas/Solar-System-Journey",
-  tech: ["Next.js", "TypeScript", "Three.js", "Tailwind"],
+  threejs: true,   // optional — only marks it for the Three.js filter on /projects
 }
 ```
 

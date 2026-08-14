@@ -1,10 +1,6 @@
 import { useEffect } from "react";
 import Lenis from "lenis";
 
-// In-page anchors bring the target section flush to the top of the viewport
-// (mirrors the CSS `scroll-padding-top`).
-const NAV_OFFSET = 0;
-
 // Module-level handle so non-React code (route-change jumps in App) can drive the
 // same Lenis instance that the hook owns.
 let lenis = null;
@@ -13,8 +9,8 @@ export function getLenis() {
 }
 
 // Boots Lenis smooth-scroll once for the app: runs its RAF loop, routes in-page
-// anchor clicks through `lenis.scrollTo` (so they animate and respect the navbar
-// offset), and tears everything down on unmount.
+// anchor clicks through `lenis.scrollTo` (so they animate instead of jumping),
+// and tears everything down on unmount.
 export function useLenis() {
   useEffect(() => {
     lenis = new Lenis();
@@ -42,7 +38,7 @@ export function useLenis() {
       if (!target) return;
 
       e.preventDefault();
-      lenis.scrollTo(target, { offset: NAV_OFFSET });
+      lenis.scrollTo(target);
       history.pushState(null, "", hash);
     };
     document.addEventListener("click", onClick);

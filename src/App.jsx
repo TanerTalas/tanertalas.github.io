@@ -8,8 +8,8 @@ import { useTheme } from "./hooks/useTheme.js";
 import { useLenis, getLenis } from "./hooks/useLenis.js";
 
 // Handle scroll position when the route changes. Same-page anchor clicks (only the
-// hash changes) are left to the browser's native smooth scroll. On a page change we
-// jump instantly: to the #hash target once its section has mounted (SPA content
+// hash changes) are left to the Lenis click delegate in `useLenis`. On a page change
+// we jump instantly: to the #hash target once its section has mounted (SPA content
 // isn't there for the browser's own hash scroll), or to the top otherwise.
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -27,7 +27,7 @@ function ScrollToTop() {
         // Jump straight to the section once it has mounted; Lenis drives the
         // scroll when present so its internal position stays in sync.
         requestAnimationFrame(() => {
-          if (lenis) lenis.scrollTo(target, { offset: 0, immediate: true });
+          if (lenis) lenis.scrollTo(target, { immediate: true });
           else target.scrollIntoView();
         });
         return;

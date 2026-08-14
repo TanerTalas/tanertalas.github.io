@@ -18,7 +18,6 @@
   --color-ink: var(--ink);
   --color-muted: var(--muted);
   --color-card: var(--card);
-  --color-chip-bg: var(--chip-bg);
   --color-chip-border: var(--chip-border);
 }
 
@@ -32,13 +31,11 @@
   --ink: #16233b;
   --muted: #5a6b84;
   --card: #ffffff;
-  --chip-bg: #edf1f8;
   --chip-border: #d8e0ee;
   --nav-bg: rgba(246, 243, 236, 0.6);
   --glass: rgba(255, 255, 255, 0.07);
   --glass-border: rgba(255, 255, 255, 0.16);
   --icon-invert: invert(1);
-  --theme-rot: rotateX(0deg);
 }
 
 html.dark {
@@ -50,19 +47,16 @@ html.dark {
   --ink: #e9eef7;
   --muted: #93a1b8;
   --card: #182133;
-  --chip-bg: #212c42;
   --chip-border: #33415c;
   --nav-bg: rgba(10, 15, 26, 0.6);
   --glass: rgba(255, 255, 255, 0.05);
   --glass-border: rgba(255, 255, 255, 0.12);
   --icon-invert: none;
-  --theme-rot: rotateX(180deg);
 }
 
 /* ---------- Base ---------- */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 0;
 }
 
 body {

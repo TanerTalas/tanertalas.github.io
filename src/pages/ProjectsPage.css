@@ -19,7 +19,7 @@
     @apply m-0 max-w-[560px] text-[1.05rem] leading-[1.5] text-[rgba(242,245,250,0.6)];
   }
 
-  /* Tech filters above the grid; the active one fills with the accent colour. */
+  /* Filters above the grid; the active one fills with the accent colour. */
   .projects-page__filters {
     @apply mb-8 flex flex-wrap gap-2.5;
   }

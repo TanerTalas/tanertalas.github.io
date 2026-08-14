@@ -4,18 +4,17 @@ import ProjectCard from "../components/ui/ProjectCard.jsx";
 import { projects } from "../data/projects.js";
 import "./ProjectsPage.css";
 
-// Filters offered above the grid. `tech` narrows the list to projects using it.
+// Filters offered above the grid.
 const filters = [
   { id: "all", label: "All projects" },
-  { id: "three", label: "Three.js", tech: "Three.js" },
+  { id: "three", label: "Three.js" },
 ];
 
 // Projects page: the full catalogue, reusing the same browser-frame card as the home preview.
 export default function ProjectsPage() {
   const [activeFilter, setActiveFilter] = useState("all");
 
-  const tech = filters.find((f) => f.id === activeFilter)?.tech;
-  const shown = tech ? projects.filter((project) => project.tech.includes(tech)) : projects;
+  const shown = activeFilter === "three" ? projects.filter((p) => p.threejs) : projects;
 
   return (
     <main className="projects-page">
