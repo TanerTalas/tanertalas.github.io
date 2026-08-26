@@ -3,12 +3,21 @@
 // `threejs: true` is the only tech marker kept — it feeds the Three.js filter on /projects.
 export const projects = [
   {
-    // Private repo, so no `github` key — the card hides the source link without one.
+    name: "Butterfly Garden",
+    tagline: "Release a butterfly that lives for seven days",
+    urlLabel: "butterfly-garden-khaki.vercel.app",
+    image: "/img/projects/butterfly-garden.png",
+    live: "https://butterfly-garden-khaki.vercel.app",
+    github: "https://github.com/TanerTalas/Butterfly-Garden",
+    threejs: true,
+  },
+  {
     name: "Stargazers",
     tagline: "Send someone words under the stars",
     urlLabel: "stargazers-rust.vercel.app",
     image: "/img/projects/stargazers.png",
     live: "https://stargazers-rust.vercel.app",
+    github: "https://github.com/TanerTalas/stargazers",
     threejs: true,
   },
   {
