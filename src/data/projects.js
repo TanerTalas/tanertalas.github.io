@@ -1,6 +1,8 @@
 // Projects, newest-relevant first. The home page previews the first two; the
-// projects page lists them all. `urlLabel` is the text shown in the card's fake browser bar.
-// `threejs: true` is the only tech marker kept — it feeds the Three.js filter on /projects.
+// projects page lists them all. `urlLabel` is the text shown in the card's fake browser bar;
+// tools that never ship a hosted page use their repo path there and omit `live`.
+// `tags` feeds the filter row on /projects — "web", "three", "other"; a project can carry
+// more than one. Every entry needs at least one tag or it only shows under "All projects".
 export const projects = [
   {
     name: "Butterfly Garden",
@@ -9,7 +11,7 @@ export const projects = [
     image: "/img/projects/butterfly-garden.png",
     live: "https://butterfly-garden-khaki.vercel.app",
     github: "https://github.com/TanerTalas/Butterfly-Garden",
-    threejs: true,
+    tags: ["three"],
   },
   {
     name: "Stargazers",
@@ -18,7 +20,41 @@ export const projects = [
     image: "/img/projects/stargazers.png",
     live: "https://stargazers-rust.vercel.app",
     github: "https://github.com/TanerTalas/stargazers",
-    threejs: true,
+    tags: ["three"],
+  },
+  {
+    name: "Rig Tool",
+    tagline: "Rig a bare GLB in the browser, joint by joint",
+    urlLabel: "github.com/TanerTalas/Rig-Tool",
+    image: "/img/projects/rig-tool.png",
+    github: "https://github.com/TanerTalas/Rig-Tool",
+    tags: ["three", "other"],
+  },
+  {
+    name: "CodeCraft",
+    tagline: "MCP server that validates Minecraft Bedrock add-ons",
+    urlLabel: "codecraft-ashy-seven.vercel.app",
+    image: "/img/projects/codecraft.png",
+    live: "https://codecraft-ashy-seven.vercel.app",
+    github: "https://github.com/TanerTalas/codecraft",
+    tags: ["other"],
+  },
+  {
+    name: "Post Manager",
+    tagline: "Draft posts locally — nothing leaves the browser",
+    urlLabel: "post-manager-rouge.vercel.app",
+    image: "/img/projects/post-manager.png",
+    live: "https://post-manager-rouge.vercel.app",
+    github: "https://github.com/TanerTalas/post-manager",
+    tags: ["web"],
+  },
+  {
+    name: "Berth",
+    tagline: "Name the busy ports on your machine and keep them named",
+    urlLabel: "github.com/TanerTalas/Berth",
+    image: "/img/projects/berth.png",
+    github: "https://github.com/TanerTalas/Berth",
+    tags: ["other"],
   },
   {
     name: "Solar System Journey",
@@ -27,7 +63,7 @@ export const projects = [
     image: "/img/projects/solar-system-journey.png",
     live: "https://solar-system-journey-plum.vercel.app",
     github: "https://github.com/TanerTalas/Solar-System-Journey",
-    threejs: true,
+    tags: ["three"],
   },
   {
     name: "Fire Eye",
@@ -36,7 +72,7 @@ export const projects = [
     image: "/img/projects/fire-eye.png",
     live: "https://tanertalas.github.io/fire-eye/",
     github: "https://github.com/TanerTalas/fire-eye",
-    threejs: true,
+    tags: ["three"],
   },
   {
     name: "Dragon",
@@ -45,7 +81,7 @@ export const projects = [
     image: "/img/projects/dragon.png",
     live: "https://tanertalas.github.io/dragon/",
     github: "https://github.com/TanerTalas/dragon",
-    threejs: true,
+    tags: ["three"],
   },
   {
     name: "Logo Quiz",
@@ -54,6 +90,7 @@ export const projects = [
     image: "/img/projects/logo-quiz.png",
     live: "https://logo-quiz-lake.vercel.app",
     github: "https://github.com/TanerTalas/Logo-Quiz",
+    tags: ["web"],
   },
   {
     name: "Guess the Flag",
@@ -62,6 +99,7 @@ export const projects = [
     image: "/img/projects/flag-game.png",
     live: "https://guess-the-flag-khw0.onrender.com",
     github: "https://github.com/TanerTalas/Flag-Game",
+    tags: ["web"],
   },
   {
     name: "Braci",
@@ -70,6 +108,7 @@ export const projects = [
     image: "/img/projects/braci.png",
     live: "https://tanertalas.github.io/BRACI/",
     github: "https://github.com/TanerTalas/BRACI",
+    tags: ["web"],
   },
   {
     name: "TinCat",
@@ -78,6 +117,7 @@ export const projects = [
     image: "/img/projects/tincat.png",
     live: "https://tanertalas.github.io/TinCat/",
     github: "https://github.com/TanerTalas/TinCat",
+    tags: ["web"],
   },
   {
     name: "Paris-Beaubourg",
@@ -86,6 +126,7 @@ export const projects = [
     image: "/img/projects/paris_beaubourg.png",
     live: "https://tanertalas.github.io/Paris-Beaubourg/",
     github: "https://github.com/TanerTalas/Paris-Beaubourg",
+    tags: ["web"],
   },
   {
     name: "CSS-Mondrian",
@@ -94,6 +135,7 @@ export const projects = [
     image: "/img/projects/css-mondrian.png",
     live: "https://tanertalas.github.io/CSS-Mondrian/",
     github: "https://github.com/TanerTalas/CSS-Mondrian",
+    tags: ["web"],
   },
   {
     name: "CSS-Authentication-UI",
@@ -102,6 +144,7 @@ export const projects = [
     image: "/img/projects/css-auth.png",
     live: "https://tanertalas.github.io/CSS-Authentication-UI/",
     github: "https://github.com/TanerTalas/CSS-Authentication-UI",
+    tags: ["web"],
   },
   {
     name: "PatiPop",
@@ -110,6 +153,7 @@ export const projects = [
     image: "/img/projects/patipop.png",
     live: "https://tanertalas.github.io/PatiPop/",
     github: "https://github.com/TanerTalas/PatiPop",
+    tags: ["web"],
   },
   {
     name: "Modu",
@@ -118,5 +162,6 @@ export const projects = [
     image: "/img/projects/modu.png",
     live: "https://tanertalas.github.io/Modu/",
     github: "https://github.com/TanerTalas/Modu",
+    tags: ["web"],
   },
 ];

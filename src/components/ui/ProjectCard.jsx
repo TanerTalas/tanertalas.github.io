@@ -40,9 +40,12 @@ export default function ProjectCard({ project }) {
         </div>
 
         <div className="pcard__links">
-          <a href={live} target="_blank" rel="noopener noreferrer" className="pcard__live">
-            Live Website
-          </a>
+          {/* Local tools have no hosted page, so the live link is dropped entirely. */}
+          {live && (
+            <a href={live} target="_blank" rel="noopener noreferrer" className="pcard__live">
+              Live Website
+            </a>
+          )}
           {/* Private repos have no `github`, so the source link is dropped entirely. */}
           {github && (
             <a href={github} target="_blank" rel="noopener noreferrer" className="pcard__source">

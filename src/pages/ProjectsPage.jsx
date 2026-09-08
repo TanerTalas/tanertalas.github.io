@@ -4,17 +4,22 @@ import ProjectCard from "../components/ui/ProjectCard.jsx";
 import { projects } from "../data/projects.js";
 import "./ProjectsPage.css";
 
-// Filters offered above the grid.
+// Filters offered above the grid; every id but "all" matches a tag in projects.js.
 const filters = [
   { id: "all", label: "All projects" },
+  { id: "web", label: "Web" },
   { id: "three", label: "Three.js" },
+  { id: "other", label: "Other" },
 ];
 
 // Projects page: the full catalogue, reusing the same browser-frame card as the home preview.
 export default function ProjectsPage() {
   const [activeFilter, setActiveFilter] = useState("all");
 
-  const shown = activeFilter === "three" ? projects.filter((p) => p.threejs) : projects;
+  const shown =
+    activeFilter === "all"
+      ? projects
+      : projects.filter((p) => p.tags?.includes(activeFilter));
 
   return (
     <main className="projects-page">
