@@ -12,6 +12,8 @@ export const frontendSkills = [
   { name: "TypeScript", icon: fe("typescript") },
   { name: "React", icon: fe("react") },
   { name: "Next.js", icon: fe("nextjs") },
+  { name: "Astro", icon: fe("astro") },
+  { name: "Preact", icon: fe("preact") },
   { name: "Three.js", icon: fe("threejs") },
   { name: "Tailwind", icon: fe("tailwindcss") },
   { name: "Bootstrap", icon: fe("bootstrap") },
@@ -34,6 +36,10 @@ export const toolSkills = [
   { name: "Figma", icon: everyday("figma") },
   { name: "Postman", icon: everyday("postman") },
   { name: "Vite", icon: everyday("vite") },
+  { name: "pnpm", icon: everyday("pnpm") },
+  { name: "Vitest", icon: everyday("vitest") },
+  { name: "Playwright", icon: everyday("playwright") },
+  { name: "Vercel", icon: everyday("vercel") },
   { name: "Claude Code", icon: everyday("claudecode") },
 ];
 
@@ -44,4 +50,6 @@ export const otherSkills = [
   { name: "PHP", icon: other("php") },
   { name: "WordPress", icon: other("wordpress") },
   { name: "JSON", icon: other("json") },
+  { name: "GLSL", icon: other("glsl") },
+  { name: "MCP", icon: other("mcp") },
 ];
